@@ -20,6 +20,9 @@ namespace CustomFood
     public class QPatch
     {
         private static readonly ConfigFile Config = new ConfigFile("config");
+        private static bool _juicenabled = true;
+        private static bool _cakeenabled = true;
+
         private static string _juice1_namehere = "namehere1";
         private static int _juice1_foodvalue = 1;
         private static int _juice1_watervalue = 1;
@@ -100,7 +103,9 @@ namespace CustomFood
         {
             Config.Load();
             var configChanged =
-            Config.TryGet(ref _juice1_namehere, "Juice1", "NameHere")
+            Config.TryGet(ref _juicenabled, "JuicesEnabled")
+            | Config.TryGet(ref _cakeenabled, "CakesEnalbed")
+            | Config.TryGet(ref _juice1_namehere, "Juice1", "NameHere")
             | Config.TryGet(ref _juice1_foodvalue, "Juice1", "foodvalue")
             | Config.TryGet(ref _juice1_watervalue, "Juice1", "watervalue")
             | Config.TryGet(ref _juice2_namehere, "Juice2", "NameHere")
@@ -131,6 +136,24 @@ namespace CustomFood
             | Config.TryGet(ref _cake4_foodvalue, "Cake4", "foodvalue")
             | Config.TryGet(ref _cake4_watervalue, "Cake4", "watervalue")
             ;
+            if (_juicenabled == true) { }
+            else if (_juicenabled == false) { }
+            else
+            {
+                _juicenabled = true;
+                Config["JuicesEnabled"] = _juicenabled;
+                Utilites.Logger.Logger.Error("EnabledJuices must be \"true\" or \"false\"", Utilites.Logger.LogType.Custom | Utilites.Logger.LogType.Console);
+                configChanged = true;
+            }
+            if (_cakeenabled == true) { }
+            else if (_cakeenabled == false) { }
+            else
+            {
+                _cakeenabled = true;
+                Config["CakesEnabled"] = _cakeenabled;
+                Utilites.Logger.Logger.Error("CakesEnabled must be \"true\" or \"false\"", Utilites.Logger.LogType.Custom | Utilites.Logger.LogType.Console);
+                configChanged = true;
+            }
             if (_juice1_namehere == "")
             {
                 _juice1_namehere = "namehere1";
@@ -361,301 +384,302 @@ namespace CustomFood
 
             CraftTreePatcher.customTabs.Add(new CustomCraftTab("Survival/Juice", "Juice", CraftScheme.Fabricator, JuiceSprite));
             CraftTreePatcher.customTabs.Add(new CustomCraftTab("Survival/Cakes", "Cakes", CraftScheme.Fabricator, CakesSprite));
-
-            //Juice1
-            Logger.Log("Started Patching Juice1");
-            CustomJuice1TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_1_ITEM_ID, _juice1_namehere, "Bladderfish mixed with a Peeper.");
-            var CustomJuice1Data = new TechDataHelper
+            if (_juicenabled == true)
             {
-                _craftAmount = 1,
-                _ingredients = new List<IngredientHelper>()
+                //Juice1
+                Logger.Log("Started Patching Juice1");
+                CustomJuice1TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_1_ITEM_ID, _juice1_namehere, "Bladderfish mixed with a Peeper.");
+                var CustomJuice1Data = new TechDataHelper
+                {
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
                 {
                     new IngredientHelper(TechType.Bladderfish, 1),
                     new IngredientHelper(TechType.Peeper, 1)
                 },
-                _linkedItems = new List<TechType>()
+                    _linkedItems = new List<TechType>()
+                    {
+                    },
+                    _techType = CustomJuice1TechType
+                };
+                CraftDataPatcher.customTechData.Add(CustomJuice1TechType, CustomJuice1Data);
+                CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.Water, CustomJuice1TechType);
+                CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomJuice1TechType, CraftScheme.Fabricator, "Survival/Juice/Juice1"));
+                KnownTechPatcher.unlockedAtStart.Add(CustomJuice1TechType);
+
+                CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                    CUSTOM_JUICE_1_ITEM_ID,
+                    CUSTOM_JUICE_1_PREFABPATH,
+                    CustomJuice1TechType,
+                    GetJuice1Bottlle));
+
+                //Juice2
+                Logger.Log("Started Patching Juice2");
+                CustomJuice2TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_2_ITEM_ID, _juice2_namehere, "Bladderfish mixed with a Boomerang.");
+                var CustomJuice2Data = new TechDataHelper
                 {
-                },
-                _techType = CustomJuice1TechType
-            };
-            CraftDataPatcher.customTechData.Add(CustomJuice1TechType, CustomJuice1Data);
-            CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.Water, CustomJuice1TechType);
-            CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomJuice1TechType, CraftScheme.Fabricator, "Survival/Juice/Juice1"));
-            KnownTechPatcher.unlockedAtStart.Add(CustomJuice1TechType);
-
-            CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
-                CUSTOM_JUICE_1_ITEM_ID,
-                CUSTOM_JUICE_1_PREFABPATH,
-                CustomJuice1TechType,
-                GetJuice1Bottlle));
-
-            //Juice2
-            Logger.Log("Started Patching Juice2");
-            CustomJuice2TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_2_ITEM_ID, _juice2_namehere, "Bladderfish mixed with a Boomerang.");
-            var CustomJuice2Data = new TechDataHelper
-            {
-                _craftAmount = 1,
-                _ingredients = new List<IngredientHelper>()
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
                 {
                     new IngredientHelper(TechType.Bladderfish, 1),
                     new IngredientHelper(TechType.Boomerang, 1)
                 },
-                _linkedItems = new List<TechType>()
+                    _linkedItems = new List<TechType>()
+                    {
+                    },
+                    _techType = CustomJuice2TechType
+                };
+                CraftDataPatcher.customTechData.Add(CustomJuice2TechType, CustomJuice2Data);
+                CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.Water, CustomJuice2TechType);
+                CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomJuice2TechType, CraftScheme.Fabricator, "Survival/Juice/Juice2"));
+                KnownTechPatcher.unlockedAtStart.Add(CustomJuice2TechType);
+
+                CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                    CUSTOM_JUICE_2_ITEM_ID,
+                    CUSTOM_JUICE_2_PREFABPATH,
+                    CustomJuice2TechType,
+                    GetJuice2Bottlle));
+
+                //Juice3
+                Logger.Log("Started Patching Juice3");
+                CustomJuice3TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_3_ITEM_ID, _juice3_namehere, "Bladderfish mixed with a Garryfish.");
+                var CustomJuice3Data = new TechDataHelper
                 {
-                },
-                _techType = CustomJuice2TechType
-            };
-            CraftDataPatcher.customTechData.Add(CustomJuice2TechType, CustomJuice2Data);
-            CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.Water, CustomJuice2TechType);
-            CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomJuice2TechType, CraftScheme.Fabricator, "Survival/Juice/Juice2"));
-            KnownTechPatcher.unlockedAtStart.Add(CustomJuice2TechType);
-
-            CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
-                CUSTOM_JUICE_2_ITEM_ID,
-                CUSTOM_JUICE_2_PREFABPATH,
-                CustomJuice2TechType,
-                GetJuice2Bottlle));
-
-            //Juice3
-            Logger.Log("Started Patching Juice3");
-            CustomJuice3TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_3_ITEM_ID, _juice3_namehere, "Bladderfish mixed with a Garryfish.");
-            var CustomJuice3Data = new TechDataHelper
-            {
-                _craftAmount = 1,
-                _ingredients = new List<IngredientHelper>()
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
                 {
                     new IngredientHelper(TechType.Bladderfish, 1),
                     new IngredientHelper(TechType.GarryFish, 1)
                 },
-                _linkedItems = new List<TechType>()
+                    _linkedItems = new List<TechType>()
+                    {
+                    },
+                    _techType = CustomJuice3TechType
+                };
+                CraftDataPatcher.customTechData.Add(CustomJuice3TechType, CustomJuice3Data);
+                CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.Water, CustomJuice3TechType);
+                CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomJuice3TechType, CraftScheme.Fabricator, "Survival/Juice/Juice3"));
+                KnownTechPatcher.unlockedAtStart.Add(CustomJuice3TechType);
+
+                CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                    CUSTOM_JUICE_3_ITEM_ID,
+                    CUSTOM_JUICE_3_PREFABPATH,
+                    CustomJuice3TechType,
+                    GetJuice3Bottlle));
+
+                //Juice4
+                Logger.Log("Started Patching Juice4");
+                CustomJuice4TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_4_ITEM_ID, _juice4_namehere, "Bladderfish mixed with a Holefish.");
+                var CustomJuice4Data = new TechDataHelper
                 {
-                },
-                _techType = CustomJuice3TechType
-            };
-            CraftDataPatcher.customTechData.Add(CustomJuice3TechType, CustomJuice3Data);
-            CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.Water, CustomJuice3TechType);
-            CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomJuice3TechType, CraftScheme.Fabricator, "Survival/Juice/Juice3"));
-            KnownTechPatcher.unlockedAtStart.Add(CustomJuice3TechType);
-
-            CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
-                CUSTOM_JUICE_3_ITEM_ID,
-                CUSTOM_JUICE_3_PREFABPATH,
-                CustomJuice3TechType,
-                GetJuice3Bottlle));
-
-            //Juice4
-            Logger.Log("Started Patching Juice4");
-            CustomJuice4TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_4_ITEM_ID, _juice4_namehere, "Bladderfish mixed with a Holefish.");
-            var CustomJuice4Data = new TechDataHelper
-            {
-                _craftAmount = 1,
-                _ingredients = new List<IngredientHelper>()
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
                 {
                     new IngredientHelper(TechType.Bladderfish, 1),
                     new IngredientHelper(TechType.HoleFish, 1)
                 },
-                _linkedItems = new List<TechType>()
+                    _linkedItems = new List<TechType>()
+                    {
+                    },
+                    _techType = CustomJuice4TechType
+                };
+                CraftDataPatcher.customTechData.Add(CustomJuice4TechType, CustomJuice4Data);
+                CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.Water, CustomJuice4TechType);
+                CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomJuice4TechType, CraftScheme.Fabricator, "Survival/Juice/Juice4"));
+                KnownTechPatcher.unlockedAtStart.Add(CustomJuice4TechType);
+
+                CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                    CUSTOM_JUICE_4_ITEM_ID,
+                    CUSTOM_JUICE_4_PREFABPATH,
+                    CustomJuice4TechType,
+                    GetJuice4Bottlle));
+
+                //Juice5
+                Logger.Log("Started Patching Juice5");
+                CustomJuice5TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_5_ITEM_ID, _juice5_namehere, "Bladderfish mixed with a Spadefish.");
+                var CustomJuice5Data = new TechDataHelper
                 {
-                },
-                _techType = CustomJuice4TechType
-            };
-            CraftDataPatcher.customTechData.Add(CustomJuice4TechType, CustomJuice4Data);
-            CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.Water, CustomJuice4TechType);
-            CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomJuice4TechType, CraftScheme.Fabricator, "Survival/Juice/Juice4"));
-            KnownTechPatcher.unlockedAtStart.Add(CustomJuice4TechType);
-
-            CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
-                CUSTOM_JUICE_4_ITEM_ID,
-                CUSTOM_JUICE_4_PREFABPATH,
-                CustomJuice4TechType,
-                GetJuice4Bottlle));
-
-            //Juice5
-            Logger.Log("Started Patching Juice5");
-            CustomJuice5TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_5_ITEM_ID, _juice5_namehere, "Bladderfish mixed with a Spadefish.");
-            var CustomJuice5Data = new TechDataHelper
-            {
-                _craftAmount = 1,
-                _ingredients = new List<IngredientHelper>()
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
                 {
                     new IngredientHelper(TechType.Bladderfish, 1),
                     new IngredientHelper(TechType.Spadefish, 1)
                 },
-                _linkedItems = new List<TechType>()
+                    _linkedItems = new List<TechType>()
+                    {
+                    },
+                    _techType = CustomJuice5TechType
+                };
+                CraftDataPatcher.customTechData.Add(CustomJuice5TechType, CustomJuice5Data);
+                CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.Water, CustomJuice5TechType);
+                CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomJuice5TechType, CraftScheme.Fabricator, "Survival/Juice/Juice5"));
+                KnownTechPatcher.unlockedAtStart.Add(CustomJuice5TechType);
+
+                CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                    CUSTOM_JUICE_2_ITEM_ID,
+                    CUSTOM_JUICE_2_PREFABPATH,
+                    CustomJuice5TechType,
+                    GetJuice2Bottlle));
+
+                //Juice6
+                Logger.Log("Started Patching Juice6");
+                CustomJuice6TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_6_ITEM_ID, _juice6_namehere, "Bladderfish mixed with a Hoverfish.");
+                var CustomJuice6Data = new TechDataHelper
                 {
-                },
-                _techType = CustomJuice5TechType
-            };
-            CraftDataPatcher.customTechData.Add(CustomJuice5TechType, CustomJuice5Data);
-            CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.Water, CustomJuice5TechType);
-            CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomJuice5TechType, CraftScheme.Fabricator, "Survival/Juice/Juice5"));
-            KnownTechPatcher.unlockedAtStart.Add(CustomJuice5TechType);
-
-            CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
-                CUSTOM_JUICE_2_ITEM_ID,
-                CUSTOM_JUICE_2_PREFABPATH,
-                CustomJuice5TechType,
-                GetJuice2Bottlle));
-
-            //Juice6
-            Logger.Log("Started Patching Juice6");
-            CustomJuice6TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_6_ITEM_ID, _juice6_namehere, "Bladderfish mixed with a Hoverfish.");
-            var CustomJuice6Data = new TechDataHelper
-            {
-                _craftAmount = 1,
-                _ingredients = new List<IngredientHelper>()
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
                 {
                     new IngredientHelper(TechType.Bladderfish, 1),
                     new IngredientHelper(TechType.Hoverfish, 1)
                 },
-                _linkedItems = new List<TechType>()
-                {
-                },
-                _techType = CustomJuice6TechType
-            };
-            CraftDataPatcher.customTechData.Add(CustomJuice6TechType, CustomJuice6Data);
-            CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.Water, CustomJuice6TechType);
-            CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomJuice6TechType, CraftScheme.Fabricator, "Survival/Juice/Juice6"));
-            KnownTechPatcher.unlockedAtStart.Add(CustomJuice6TechType);
+                    _linkedItems = new List<TechType>()
+                    {
+                    },
+                    _techType = CustomJuice6TechType
+                };
+                CraftDataPatcher.customTechData.Add(CustomJuice6TechType, CustomJuice6Data);
+                CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.Water, CustomJuice6TechType);
+                CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomJuice6TechType, CraftScheme.Fabricator, "Survival/Juice/Juice6"));
+                KnownTechPatcher.unlockedAtStart.Add(CustomJuice6TechType);
 
-            CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
-                CUSTOM_JUICE_6_ITEM_ID,
-                CUSTOM_JUICE_6_PREFABPATH,
-                CustomJuice6TechType,
-                GetJuice6Bottlle));
+                CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                    CUSTOM_JUICE_6_ITEM_ID,
+                    CUSTOM_JUICE_6_PREFABPATH,
+                    CustomJuice6TechType,
+                    GetJuice6Bottlle));
 
-            //CustomCake1
-            Logger.Log("Started Patching CustomCake1");
-            CustomCake1TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_1_ITEM_ID, _cake1_namehere, "Coral Tube Sample mixed with a Creepvine sample.");
-            var CustomCake1Data = new TechDataHelper
+                var CustomJuice1Sprite = AssetBundle.LoadAsset<Sprite>("Filtered_Water");
+                CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomJuice1TechType, CustomJuice1Sprite));
+                var CustomJuice2Sprite = AssetBundle.LoadAsset<Sprite>("Filtered_Water");
+                CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomJuice2TechType, CustomJuice2Sprite));
+                var CustomJuice3Sprite = AssetBundle.LoadAsset<Sprite>("Filtered_Water");
+                CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomJuice3TechType, CustomJuice3Sprite));
+                var CustomJuice4Sprite = AssetBundle.LoadAsset<Sprite>("Filtered_Water");
+                CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomJuice4TechType, CustomJuice4Sprite));
+                var CustomJuice5Sprite = AssetBundle.LoadAsset<Sprite>("Filtered_Water");
+                CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomJuice5TechType, CustomJuice5Sprite));
+                var CustomJuice6Sprite = AssetBundle.LoadAsset<Sprite>("Filtered_Water");
+                CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomJuice6TechType, CustomJuice6Sprite));
+            }
+            if (_cakeenabled == true)
             {
-                _craftAmount = 1,
-                _ingredients = new List<IngredientHelper>()
+                //CustomCake1
+                Logger.Log("Started Patching CustomCake1");
+                CustomCake1TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_1_ITEM_ID, _cake1_namehere, "Coral Tube Sample mixed with a Creepvine sample.");
+                var CustomCake1Data = new TechDataHelper
+                {
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
                 {
                     new IngredientHelper(TechType.CoralChunk, 1),
                     new IngredientHelper(TechType.CreepvinePiece, 1)
                 },
-                _linkedItems = new List<TechType>()
+                    _linkedItems = new List<TechType>()
+                    {
+                    },
+                    _techType = CustomCake1TechType
+                };
+                CraftDataPatcher.customTechData.Add(CustomCake1TechType, CustomCake1Data);
+                CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.CookedFood, CustomCake1TechType);
+                CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomCake1TechType, CraftScheme.Fabricator, "Survival/Cakes/CustomCake1"));
+                KnownTechPatcher.unlockedAtStart.Add(CustomCake1TechType);
+
+                CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                    CUSTOM_CAKE_1_ITEM_ID,
+                    CUSTOM_CAKE_1_PREFABPATH,
+                    CustomCake1TechType,
+                    GetCustomCake1Bottle));
+
+                //CustomCake2
+                Logger.Log("Started Patching CustomCake2");
+                CustomCake2TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_2_ITEM_ID, _cake2_namehere, "Coral Tube Sample mixed with a Lantern fruit sample.");
+                var CustomCake2Data = new TechDataHelper
                 {
-                },
-                _techType = CustomCake1TechType
-            };
-            CraftDataPatcher.customTechData.Add(CustomCake1TechType, CustomCake1Data);
-            CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.CookedFood, CustomCake1TechType);
-            CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomCake1TechType, CraftScheme.Fabricator, "Survival/Cakes/CustomCake1"));
-            KnownTechPatcher.unlockedAtStart.Add(CustomCake1TechType);
-
-            CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
-                CUSTOM_CAKE_1_ITEM_ID,
-                CUSTOM_CAKE_1_PREFABPATH,
-                CustomCake1TechType,
-                GetCustomCake1Bottle));
-
-            //CustomCake2
-            Logger.Log("Started Patching CustomCake2");
-            CustomCake2TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_2_ITEM_ID, _cake2_namehere, "Coral Tube Sample mixed with a Lantern fruit sample.");
-            var CustomCake2Data = new TechDataHelper
-            {
-                _craftAmount = 1,
-                _ingredients = new List<IngredientHelper>()
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
                 {
                     new IngredientHelper(TechType.CoralChunk, 1),
                     new IngredientHelper(TechType.HangingFruit, 1)
                 },
-                _linkedItems = new List<TechType>()
+                    _linkedItems = new List<TechType>()
+                    {
+                    },
+                    _techType = CustomCake2TechType
+                };
+                CraftDataPatcher.customTechData.Add(CustomCake2TechType, CustomCake2Data);
+                CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.CookedFood, CustomCake2TechType);
+                CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomCake2TechType, CraftScheme.Fabricator, "Survival/Cakes/CustomCake2"));
+                KnownTechPatcher.unlockedAtStart.Add(CustomCake2TechType);
+
+                CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                    CUSTOM_CAKE_2_ITEM_ID,
+                    CUSTOM_CAKE_2_PREFABPATH,
+                    CustomCake2TechType,
+                    GetCustomCake2Bottle));
+
+                //CustomCake3
+                Logger.Log("Started Patching CustomCake3");
+                CustomCake3TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_3_ITEM_ID, _cake3_namehere, "Coral Tube Sample mixed with a Chinese Potato.");
+                var CustomCake3Data = new TechDataHelper
                 {
-                },
-                _techType = CustomCake2TechType
-            };
-            CraftDataPatcher.customTechData.Add(CustomCake2TechType, CustomCake2Data);
-            CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.CookedFood, CustomCake2TechType);
-            CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomCake2TechType, CraftScheme.Fabricator, "Survival/Cakes/CustomCake2"));
-            KnownTechPatcher.unlockedAtStart.Add(CustomCake2TechType);
-
-            CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
-                CUSTOM_CAKE_2_ITEM_ID,
-                CUSTOM_CAKE_2_PREFABPATH,
-                CustomCake2TechType,
-                GetCustomCake2Bottle));
-
-            //CustomCake3
-            Logger.Log("Started Patching CustomCake3");
-            CustomCake3TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_3_ITEM_ID, _cake3_namehere, "Coral Tube Sample mixed with a Chinese Potato.");
-            var CustomCake3Data = new TechDataHelper
-            {
-                _craftAmount = 1,
-                _ingredients = new List<IngredientHelper>()
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
                 {
                     new IngredientHelper(TechType.CoralChunk, 1),
                     new IngredientHelper(TechType.PurpleVegetable, 1)
                 },
-                _linkedItems = new List<TechType>()
+                    _linkedItems = new List<TechType>()
+                    {
+                    },
+                    _techType = CustomCake3TechType
+                };
+                CraftDataPatcher.customTechData.Add(CustomCake3TechType, CustomCake3Data);
+                CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.CookedFood, CustomCake3TechType);
+                CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomCake3TechType, CraftScheme.Fabricator, "Survival/Cakes/CustomCake3"));
+                KnownTechPatcher.unlockedAtStart.Add(CustomCake3TechType);
+
+                CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                    CUSTOM_CAKE_3_ITEM_ID,
+                    CUSTOM_CAKE_3_PREFABPATH,
+                    CustomCake3TechType,
+                    GetCustomCake3Bottle));
+
+                //CustomCake4
+                Logger.Log("Started Patching CustomCake4");
+                CustomCake4TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_4_ITEM_ID, _cake4_namehere, "Coral Tube Sample mixed with a Bulbo Tree Sample.");
+                var CustomCake4Data = new TechDataHelper
                 {
-                },
-                _techType = CustomCake3TechType
-            };
-            CraftDataPatcher.customTechData.Add(CustomCake3TechType, CustomCake3Data);
-            CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.CookedFood, CustomCake3TechType);
-            CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomCake3TechType, CraftScheme.Fabricator, "Survival/Cakes/CustomCake3"));
-            KnownTechPatcher.unlockedAtStart.Add(CustomCake3TechType);
-
-            CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
-                CUSTOM_CAKE_3_ITEM_ID,
-                CUSTOM_CAKE_3_PREFABPATH,
-                CustomCake3TechType,
-                GetCustomCake3Bottle));
-
-            //CustomCake4
-            Logger.Log("Started Patching CustomCake4");
-            CustomCake4TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_4_ITEM_ID, _cake4_namehere, "Coral Tube Sample mixed with a Bulbo Tree Sample.");
-            var CustomCake4Data = new TechDataHelper
-            {
-                _craftAmount = 1,
-                _ingredients = new List<IngredientHelper>()
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
                 {
                     new IngredientHelper(TechType.CoralChunk, 1),
                     new IngredientHelper(TechType.BulboTreePiece, 1)
                 },
-                _linkedItems = new List<TechType>()
-                {
-                },
-                _techType = CustomCake4TechType
-            };
-            CraftDataPatcher.customTechData.Add(CustomCake4TechType, CustomCake4Data);
-            CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.CookedFood, CustomCake4TechType);
-            CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomCake4TechType, CraftScheme.Fabricator, "Survival/Cakes/CustomCake4"));
-            KnownTechPatcher.unlockedAtStart.Add(CustomCake4TechType);
+                    _linkedItems = new List<TechType>()
+                    {
+                    },
+                    _techType = CustomCake4TechType
+                };
+                CraftDataPatcher.customTechData.Add(CustomCake4TechType, CustomCake4Data);
+                CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.CookedFood, CustomCake4TechType);
+                CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomCake4TechType, CraftScheme.Fabricator, "Survival/Cakes/CustomCake4"));
+                KnownTechPatcher.unlockedAtStart.Add(CustomCake4TechType);
 
-            CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
-                CUSTOM_CAKE_4_ITEM_ID,
-                CUSTOM_CAKE_4_PREFABPATH,
-                CustomCake4TechType,
-                GetCustomCake4Bottle));
+                CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                    CUSTOM_CAKE_4_ITEM_ID,
+                    CUSTOM_CAKE_4_PREFABPATH,
+                    CustomCake4TechType,
+                    GetCustomCake4Bottle));
 
-            //
-            //ASSETS
-            //
-
-            var CustomJuice1Sprite = AssetBundle.LoadAsset<Sprite>("Filtered_Water");
-            CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomJuice1TechType, CustomJuice1Sprite));
-            var CustomJuice2Sprite = AssetBundle.LoadAsset<Sprite>("Filtered_Water");
-            CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomJuice2TechType, CustomJuice2Sprite));
-            var CustomJuice3Sprite = AssetBundle.LoadAsset<Sprite>("Filtered_Water");
-            CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomJuice3TechType, CustomJuice3Sprite));
-            var CustomJuice4Sprite = AssetBundle.LoadAsset<Sprite>("Filtered_Water");
-            CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomJuice4TechType, CustomJuice4Sprite));
-            var CustomJuice5Sprite = AssetBundle.LoadAsset<Sprite>("Filtered_Water");
-            CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomJuice5TechType, CustomJuice5Sprite));
-            var CustomJuice6Sprite = AssetBundle.LoadAsset<Sprite>("Filtered_Water");
-            CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomJuice6TechType, CustomJuice6Sprite));
-            var CustomCake1Sprite = AssetBundle.LoadAsset<Sprite>("Nutrient_Block");
-            CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomCake1TechType, CustomCake1Sprite));
-            var CustomCake2Sprite = AssetBundle.LoadAsset<Sprite>("Nutrient_Block");
-            CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomCake2TechType, CustomCake2Sprite));
-            var CustomCake3Sprite = AssetBundle.LoadAsset<Sprite>("Nutrient_Block");
-            CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomCake3TechType, CustomCake3Sprite));
-            var CustomCake4Sprite = AssetBundle.LoadAsset<Sprite>("Nutrient_Block");
-            CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomCake4TechType, CustomCake4Sprite));
+                var CustomCake1Sprite = AssetBundle.LoadAsset<Sprite>("Nutrient_Block");
+                CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomCake1TechType, CustomCake1Sprite));
+                var CustomCake2Sprite = AssetBundle.LoadAsset<Sprite>("Nutrient_Block");
+                CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomCake2TechType, CustomCake2Sprite));
+                var CustomCake3Sprite = AssetBundle.LoadAsset<Sprite>("Nutrient_Block");
+                CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomCake3TechType, CustomCake3Sprite));
+                var CustomCake4Sprite = AssetBundle.LoadAsset<Sprite>("Nutrient_Block");
+                CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomCake4TechType, CustomCake4Sprite));
+            }
         }
         public static GameObject GetJuice1Bottlle()
         {
