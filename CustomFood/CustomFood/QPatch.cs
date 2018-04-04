@@ -104,7 +104,7 @@ namespace CustomFood
             Config.Load();
             var configChanged =
             Config.TryGet(ref _juicenabled, "JuicesEnabled")
-            | Config.TryGet(ref _cakeenabled, "CakesEnalbed")
+            | Config.TryGet(ref _cakeenabled, "CakesEnabled")
             | Config.TryGet(ref _juice1_namehere, "Juice1", "NameHere")
             | Config.TryGet(ref _juice1_foodvalue, "Juice1", "foodvalue")
             | Config.TryGet(ref _juice1_watervalue, "Juice1", "watervalue")
