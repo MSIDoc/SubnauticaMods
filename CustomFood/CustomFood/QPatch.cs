@@ -54,6 +54,12 @@ namespace CustomFood
         private static string _cake4_namehere = "namehere4";
         private static int _cake4_foodvalue = 1;
         private static int _cake4_watervalue = 1;
+        private static string _cake5_namehere = "namehere5";
+        private static int _cake5_foodvalue = 1;
+        private static int _cake5_watervalue = 1;
+        private static string _cake6_namehere = "namehere6";
+        private static int _cake6_foodvalue = 1;
+        private static int _cake6_watervalue = 1;
 
 
         public static AssetBundle AssetBundle;
@@ -97,6 +103,14 @@ namespace CustomFood
         public static string CUSTOM_CAKE_4_PREFABPATH = "WorldEntities/Food/CustomCake4";
         public static TechType CustomCake4TechType;
 
+        public const string CUSTOM_CAKE_5_ITEM_ID = "CustomCake5";
+        public static string CUSTOM_CAKE_5_PREFABPATH = "WorldEntities/Food/CustomCake5";
+        public static TechType CustomCake5TechType;
+
+        public const string CUSTOM_CAKE_6_ITEM_ID = "CustomCake6";
+        public static string CUSTOM_CAKE_6_PREFABPATH = "WorldEntities/Food/CustomCake6";
+        public static TechType CustomCake6TechType;
+
         public static string filePath = @"./QMods/CustomFood/Config.json";
 
         public static void Patch()
@@ -135,6 +149,12 @@ namespace CustomFood
             | Config.TryGet(ref _cake4_namehere, "Cake4", "NameHere")
             | Config.TryGet(ref _cake4_foodvalue, "Cake4", "foodvalue")
             | Config.TryGet(ref _cake4_watervalue, "Cake4", "watervalue")
+            | Config.TryGet(ref _cake5_namehere, "Cake5", "NameHere")
+            | Config.TryGet(ref _cake5_foodvalue, "Cake5", "foodvalue")
+            | Config.TryGet(ref _cake5_watervalue, "Cake5", "watervalue")
+            | Config.TryGet(ref _cake6_namehere, "Cake6", "NameHere")
+            | Config.TryGet(ref _cake6_foodvalue, "Cake6", "foodvalue")
+            | Config.TryGet(ref _cake6_watervalue, "Cake6", "watervalue")
             ;
             if (_juicenabled == true) { }
             else if (_juicenabled == false) { }
@@ -326,7 +346,7 @@ namespace CustomFood
             {
                 _cake3_namehere = "namehere3";
                 Config["Cake3", "NameHere"] = _cake3_namehere;
-                Utilites.Logger.Logger.Error("namehere was set to namehere2", Utilites.Logger.LogType.Custom | Utilites.Logger.LogType.Console);
+                Utilites.Logger.Logger.Error("namehere was set to namehere3", Utilites.Logger.LogType.Custom | Utilites.Logger.LogType.Console);
                 configChanged = true;
             }
             if (_cake3_foodvalue < 0)
@@ -347,7 +367,7 @@ namespace CustomFood
             {
                 _cake4_namehere = "namehere4";
                 Config["Cake4", "NameHere"] = _cake4_namehere;
-                Utilites.Logger.Logger.Error("namehere was set to namehere2", Utilites.Logger.LogType.Custom | Utilites.Logger.LogType.Console);
+                Utilites.Logger.Logger.Error("namehere was set to namehere4", Utilites.Logger.LogType.Custom | Utilites.Logger.LogType.Console);
                 configChanged = true;
             }
             if (_cake4_foodvalue < 0)
@@ -361,6 +381,48 @@ namespace CustomFood
             {
                 _cake4_watervalue = 1;
                 Config["Cake4", "watervalue"] = _cake4_watervalue;
+                Utilites.Logger.Logger.Error("Watervalue was set to 1", Utilites.Logger.LogType.Custom | Utilites.Logger.LogType.Console);
+                configChanged = true;
+            }
+            if (_cake5_namehere == "")
+            {
+                _cake5_namehere = "namehere4";
+                Config["Cake5", "NameHere"] = _cake5_namehere;
+                Utilites.Logger.Logger.Error("namehere was set to namehere5", Utilites.Logger.LogType.Custom | Utilites.Logger.LogType.Console);
+                configChanged = true;
+            }
+            if (_cake5_foodvalue < 0)
+            {
+                _cake5_foodvalue = 1;
+                Config["Cake5", "foodvalue"] = _cake5_foodvalue;
+                Utilites.Logger.Logger.Error("Foodvalue was set to 1", Utilites.Logger.LogType.Custom | Utilites.Logger.LogType.Console);
+                configChanged = true;
+            }
+            if (_cake5_watervalue < 0)
+            {
+                _cake5_watervalue = 1;
+                Config["Cake5", "watervalue"] = _cake5_watervalue;
+                Utilites.Logger.Logger.Error("Watervalue was set to 1", Utilites.Logger.LogType.Custom | Utilites.Logger.LogType.Console);
+                configChanged = true;
+            }
+            if (_cake6_namehere == "")
+            {
+                _cake6_namehere = "namehere4";
+                Config["Cake6", "NameHere"] = _cake6_namehere;
+                Utilites.Logger.Logger.Error("namehere was set to namehere6", Utilites.Logger.LogType.Custom | Utilites.Logger.LogType.Console);
+                configChanged = true;
+            }
+            if (_cake6_foodvalue < 0)
+            {
+                _cake6_foodvalue = 1;
+                Config["Cake6", "foodvalue"] = _cake6_foodvalue;
+                Utilites.Logger.Logger.Error("Foodvalue was set to 1", Utilites.Logger.LogType.Custom | Utilites.Logger.LogType.Console);
+                configChanged = true;
+            }
+            if (_cake6_watervalue < 0)
+            {
+                _cake6_watervalue = 1;
+                Config["Cake6", "watervalue"] = _cake6_watervalue;
                 Utilites.Logger.Logger.Error("Watervalue was set to 1", Utilites.Logger.LogType.Custom | Utilites.Logger.LogType.Console);
                 configChanged = true;
             }
@@ -388,14 +450,14 @@ namespace CustomFood
             {
                 //Juice1
                 Logger.Log("Started Patching Juice1");
-                CustomJuice1TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_1_ITEM_ID, _juice1_namehere, "Bladderfish mixed with a Peeper.");
+                CustomJuice1TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_1_ITEM_ID, _juice1_namehere, "Water mixed with a Bulbo Tree Sample.");
                 var CustomJuice1Data = new TechDataHelper
                 {
                     _craftAmount = 1,
                     _ingredients = new List<IngredientHelper>()
                 {
-                    new IngredientHelper(TechType.Bladderfish, 1),
-                    new IngredientHelper(TechType.Peeper, 1)
+                    new IngredientHelper(TechType.FilteredWater, 1),
+                    new IngredientHelper(TechType.BulboTreePiece, 1)
                 },
                     _linkedItems = new List<TechType>()
                     {
@@ -415,14 +477,14 @@ namespace CustomFood
 
                 //Juice2
                 Logger.Log("Started Patching Juice2");
-                CustomJuice2TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_2_ITEM_ID, _juice2_namehere, "Bladderfish mixed with a Boomerang.");
+                CustomJuice2TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_2_ITEM_ID, _juice2_namehere, "Water mixed with a Lantern Fruit.");
                 var CustomJuice2Data = new TechDataHelper
                 {
                     _craftAmount = 1,
                     _ingredients = new List<IngredientHelper>()
                 {
-                    new IngredientHelper(TechType.Bladderfish, 1),
-                    new IngredientHelper(TechType.Boomerang, 1)
+                    new IngredientHelper(TechType.FilteredWater, 1),
+                    new IngredientHelper(TechType.HangingFruit, 1)
                 },
                     _linkedItems = new List<TechType>()
                     {
@@ -442,14 +504,14 @@ namespace CustomFood
 
                 //Juice3
                 Logger.Log("Started Patching Juice3");
-                CustomJuice3TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_3_ITEM_ID, _juice3_namehere, "Bladderfish mixed with a Garryfish.");
+                CustomJuice3TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_3_ITEM_ID, _juice3_namehere, "Water mixed with a Marblemelon.");
                 var CustomJuice3Data = new TechDataHelper
                 {
                     _craftAmount = 1,
                     _ingredients = new List<IngredientHelper>()
                 {
-                    new IngredientHelper(TechType.Bladderfish, 1),
-                    new IngredientHelper(TechType.GarryFish, 1)
+                    new IngredientHelper(TechType.FilteredWater, 1),
+                    new IngredientHelper(TechType.Melon, 1)
                 },
                     _linkedItems = new List<TechType>()
                     {
@@ -469,14 +531,14 @@ namespace CustomFood
 
                 //Juice4
                 Logger.Log("Started Patching Juice4");
-                CustomJuice4TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_4_ITEM_ID, _juice4_namehere, "Bladderfish mixed with a Holefish.");
+                CustomJuice4TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_4_ITEM_ID, _juice4_namehere, "Water mixed with a Creepvine Sample.");
                 var CustomJuice4Data = new TechDataHelper
                 {
                     _craftAmount = 1,
                     _ingredients = new List<IngredientHelper>()
                 {
-                    new IngredientHelper(TechType.Bladderfish, 1),
-                    new IngredientHelper(TechType.HoleFish, 1)
+                    new IngredientHelper(TechType.FilteredWater, 1),
+                    new IngredientHelper(TechType.CreepvinePiece, 1)
                 },
                     _linkedItems = new List<TechType>()
                     {
@@ -496,14 +558,14 @@ namespace CustomFood
 
                 //Juice5
                 Logger.Log("Started Patching Juice5");
-                CustomJuice5TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_5_ITEM_ID, _juice5_namehere, "Bladderfish mixed with a Spadefish.");
+                CustomJuice5TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_5_ITEM_ID, _juice5_namehere, "Water mixed with a Gel Sack.");
                 var CustomJuice5Data = new TechDataHelper
                 {
                     _craftAmount = 1,
                     _ingredients = new List<IngredientHelper>()
                 {
-                    new IngredientHelper(TechType.Bladderfish, 1),
-                    new IngredientHelper(TechType.Spadefish, 1)
+                    new IngredientHelper(TechType.FilteredWater, 1),
+                    new IngredientHelper(TechType.JellyPlant, 1)
                 },
                     _linkedItems = new List<TechType>()
                     {
@@ -523,14 +585,14 @@ namespace CustomFood
 
                 //Juice6
                 Logger.Log("Started Patching Juice6");
-                CustomJuice6TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_6_ITEM_ID, _juice6_namehere, "Bladderfish mixed with a Hoverfish.");
+                CustomJuice6TechType = TechTypePatcher.AddTechType(CUSTOM_JUICE_6_ITEM_ID, _juice6_namehere, "Water mixed with a Bulb Bush Sample.");
                 var CustomJuice6Data = new TechDataHelper
                 {
                     _craftAmount = 1,
                     _ingredients = new List<IngredientHelper>()
                 {
-                    new IngredientHelper(TechType.Bladderfish, 1),
-                    new IngredientHelper(TechType.Hoverfish, 1)
+                    new IngredientHelper(TechType.FilteredWater, 1),
+                    new IngredientHelper(TechType.KooshChunk, 1)
                 },
                     _linkedItems = new List<TechType>()
                     {
@@ -565,14 +627,14 @@ namespace CustomFood
             {
                 //CustomCake1
                 Logger.Log("Started Patching CustomCake1");
-                CustomCake1TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_1_ITEM_ID, _cake1_namehere, "Coral Tube Sample mixed with a Creepvine sample.");
+                CustomCake1TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_1_ITEM_ID, _cake1_namehere, "Coral Tube Sample mixed with a Peeper.");
                 var CustomCake1Data = new TechDataHelper
                 {
                     _craftAmount = 1,
                     _ingredients = new List<IngredientHelper>()
                 {
                     new IngredientHelper(TechType.CoralChunk, 1),
-                    new IngredientHelper(TechType.CreepvinePiece, 1)
+                    new IngredientHelper(TechType.Peeper, 1)
                 },
                     _linkedItems = new List<TechType>()
                     {
@@ -592,14 +654,14 @@ namespace CustomFood
 
                 //CustomCake2
                 Logger.Log("Started Patching CustomCake2");
-                CustomCake2TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_2_ITEM_ID, _cake2_namehere, "Coral Tube Sample mixed with a Lantern fruit sample.");
+                CustomCake2TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_2_ITEM_ID, _cake2_namehere, "Coral Tube Sample mixed with a Chinese Potato.");
                 var CustomCake2Data = new TechDataHelper
                 {
                     _craftAmount = 1,
                     _ingredients = new List<IngredientHelper>()
                 {
                     new IngredientHelper(TechType.CoralChunk, 1),
-                    new IngredientHelper(TechType.HangingFruit, 1)
+                    new IngredientHelper(TechType.PurpleVegetable, 1)
                 },
                     _linkedItems = new List<TechType>()
                     {
@@ -619,14 +681,14 @@ namespace CustomFood
 
                 //CustomCake3
                 Logger.Log("Started Patching CustomCake3");
-                CustomCake3TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_3_ITEM_ID, _cake3_namehere, "Coral Tube Sample mixed with a Chinese Potato.");
+                CustomCake3TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_3_ITEM_ID, _cake3_namehere, "Coral Tube Sample mixed with a Bladderfish.");
                 var CustomCake3Data = new TechDataHelper
                 {
                     _craftAmount = 1,
                     _ingredients = new List<IngredientHelper>()
                 {
                     new IngredientHelper(TechType.CoralChunk, 1),
-                    new IngredientHelper(TechType.PurpleVegetable, 1)
+                    new IngredientHelper(TechType.Bladderfish, 1)
                 },
                     _linkedItems = new List<TechType>()
                     {
@@ -646,14 +708,14 @@ namespace CustomFood
 
                 //CustomCake4
                 Logger.Log("Started Patching CustomCake4");
-                CustomCake4TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_4_ITEM_ID, _cake4_namehere, "Coral Tube Sample mixed with a Bulbo Tree Sample.");
+                CustomCake4TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_4_ITEM_ID, _cake4_namehere, "Coral Tube Sample mixed with a Boomerang.");
                 var CustomCake4Data = new TechDataHelper
                 {
                     _craftAmount = 1,
                     _ingredients = new List<IngredientHelper>()
                 {
                     new IngredientHelper(TechType.CoralChunk, 1),
-                    new IngredientHelper(TechType.BulboTreePiece, 1)
+                    new IngredientHelper(TechType.Boomerang, 1)
                 },
                     _linkedItems = new List<TechType>()
                     {
@@ -671,6 +733,60 @@ namespace CustomFood
                     CustomCake4TechType,
                     GetCustomCake4Bottle));
 
+                //CustomCake5
+                Logger.Log("Started Patching CustomCake5");
+                CustomCake5TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_5_ITEM_ID, _cake5_namehere, "Coral Tube Sample mixed with a Hoverfish.");
+                var CustomCake5Data = new TechDataHelper
+                {
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
+                {
+                    new IngredientHelper(TechType.CoralChunk, 1),
+                    new IngredientHelper(TechType.Hoverfish, 1)
+                },
+                    _linkedItems = new List<TechType>()
+                    {
+                    },
+                    _techType = CustomCake5TechType
+                };
+                CraftDataPatcher.customTechData.Add(CustomCake5TechType, CustomCake5Data);
+                CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.CookedFood, CustomCake5TechType);
+                CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomCake5TechType, CraftScheme.Fabricator, "Survival/Cakes/CustomCake5"));
+                KnownTechPatcher.unlockedAtStart.Add(CustomCake5TechType);
+
+                CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                    CUSTOM_CAKE_5_ITEM_ID,
+                    CUSTOM_CAKE_5_PREFABPATH,
+                    CustomCake5TechType,
+                    GetCustomCake5Bottle));
+
+                //CustomCake6
+                Logger.Log("Started Patching CustomCake6");
+                CustomCake6TechType = TechTypePatcher.AddTechType(CUSTOM_CAKE_6_ITEM_ID, _cake6_namehere, "Coral Tube Sample mixed with a Spadefish.");
+                var CustomCake6Data = new TechDataHelper
+                {
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
+                {
+                    new IngredientHelper(TechType.CoralChunk, 1),
+                    new IngredientHelper(TechType.Spadefish, 1)
+                },
+                    _linkedItems = new List<TechType>()
+                    {
+                    },
+                    _techType = CustomCake6TechType
+                };
+                CraftDataPatcher.customTechData.Add(CustomCake6TechType, CustomCake6Data);
+                CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.CookedFood, CustomCake6TechType);
+                CraftTreePatcher.customNodes.Add(new CustomCraftNode(CustomCake6TechType, CraftScheme.Fabricator, "Survival/Cakes/CustomCake6"));
+                KnownTechPatcher.unlockedAtStart.Add(CustomCake6TechType);
+
+                CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                    CUSTOM_CAKE_6_ITEM_ID,
+                    CUSTOM_CAKE_6_PREFABPATH,
+                    CustomCake6TechType,
+                    GetCustomCake6Bottle));
+
                 var CustomCake1Sprite = AssetBundle.LoadAsset<Sprite>("Nutrient_Block");
                 CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomCake1TechType, CustomCake1Sprite));
                 var CustomCake2Sprite = AssetBundle.LoadAsset<Sprite>("Nutrient_Block");
@@ -679,6 +795,10 @@ namespace CustomFood
                 CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomCake3TechType, CustomCake3Sprite));
                 var CustomCake4Sprite = AssetBundle.LoadAsset<Sprite>("Nutrient_Block");
                 CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomCake4TechType, CustomCake4Sprite));
+                var CustomCake5Sprite = AssetBundle.LoadAsset<Sprite>("Nutrient_Block");
+                CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomCake5TechType, CustomCake5Sprite));
+                var CustomCake6Sprite = AssetBundle.LoadAsset<Sprite>("Nutrient_Block");
+                CustomSpriteHandler.customSprites.Add(new CustomSprite(CustomCake6TechType, CustomCake6Sprite));
             }
         }
         public static GameObject GetJuice1Bottlle()
@@ -834,6 +954,38 @@ namespace CustomFood
             techTag.type = CustomCake4TechType;
             eatable.foodValue = _cake4_foodvalue;
             eatable.waterValue = _cake4_watervalue;
+
+            return obj;
+        }
+        public static GameObject GetCustomCake5Bottle()
+        {
+            var prefab = Resources.Load<GameObject>("WorldEntities/Food/NutrientBlock");
+            var obj = GameObject.Instantiate(prefab);
+
+            var identifier = obj.GetComponent<PrefabIdentifier>();
+            var techTag = obj.GetComponent<TechTag>();
+            var eatable = obj.GetComponent<Eatable>();
+
+            identifier.ClassId = CUSTOM_CAKE_5_ITEM_ID;
+            techTag.type = CustomCake5TechType;
+            eatable.foodValue = _cake5_foodvalue;
+            eatable.waterValue = _cake5_watervalue;
+
+            return obj;
+        }
+        public static GameObject GetCustomCake6Bottle()
+        {
+            var prefab = Resources.Load<GameObject>("WorldEntities/Food/NutrientBlock");
+            var obj = GameObject.Instantiate(prefab);
+
+            var identifier = obj.GetComponent<PrefabIdentifier>();
+            var techTag = obj.GetComponent<TechTag>();
+            var eatable = obj.GetComponent<Eatable>();
+
+            identifier.ClassId = CUSTOM_CAKE_6_ITEM_ID;
+            techTag.type = CustomCake6TechType;
+            eatable.foodValue = _cake6_foodvalue;
+            eatable.waterValue = _cake6_watervalue;
 
             return obj;
         }

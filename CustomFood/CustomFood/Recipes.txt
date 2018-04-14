@@ -1,0 +1,13 @@
+Juice 1 = "Water mixed with a Bulbo Tree Sample."
+Juice 2 = "Water mixed with a Lantern Fruit."
+Juice 3 = "Water mixed with a Marblemelon."
+Juice 4 = "Water mixed with a Creepvine Sample."
+Juice 5 = "Water mixed with a Gel Sack."
+Juice 6 = "Water mixed with a Bulb Bush Sample."
+
+Cake 1 = "Coral Tube Sample mixed with a Peeper."
+Cake 2 = "Coral Tube Sample mixed with a Chinese Potato."
+Cake 3 = "Coral Tube Sample mixed with a Bladderfish."
+Cake 4 = "Coral Tube Sample mixed with a Boomerang."
+Cake 5 = "Coral Tube Sample mixed with a Hoverfish."
+Cake 6 = "Coral Tube Sample mixed with a Spadefish."
