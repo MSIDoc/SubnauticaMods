@@ -40,7 +40,7 @@ namespace CustomFood
             var eatable = obj.GetComponent<Eatable>();
 
             identifier.ClassId = "CustomJuice1";
-            techTag.type = LoadItem.juice1tt;
+            techTag.type = LoadItem.techType;
             eatable.foodValue = Cfg._juice1_foodvalue;
             eatable.waterValue = Cfg._juice1_watervalue;
 
@@ -60,7 +60,7 @@ namespace CustomFood
             var eatable = obj.GetComponent<Eatable>();
 
             identifier.ClassId = "CustomJuice2";
-            techTag.type = LoadItem.juice2tt;
+            techTag.type = LoadItem.techType;
             eatable.foodValue = Cfg._juice2_foodvalue;
             eatable.waterValue = Cfg._juice2_watervalue;
             return obj;
@@ -79,7 +79,7 @@ namespace CustomFood
             var eatable = obj.GetComponent<Eatable>();
 
             identifier.ClassId = "CustomJuice3";
-            techTag.type = LoadItem.juice3tt;
+            techTag.type = LoadItem.techType;
             eatable.foodValue = Cfg._juice3_foodvalue;
             eatable.waterValue = Cfg._juice3_watervalue;
             return obj;
@@ -98,7 +98,7 @@ namespace CustomFood
             var eatable = obj.GetComponent<Eatable>();
 
             identifier.ClassId = "CustomJuice4";
-            techTag.type = LoadItem.juice4tt;
+            techTag.type = LoadItem.techType;
             eatable.foodValue = Cfg._juice4_foodvalue;
             eatable.waterValue = Cfg._juice4_watervalue;
             return obj;
@@ -117,7 +117,7 @@ namespace CustomFood
             var eatable = obj.GetComponent<Eatable>();
 
             identifier.ClassId = "CustomJuice5";
-            techTag.type = LoadItem.juice5tt;
+            techTag.type = LoadItem.techType;
             eatable.foodValue = Cfg._juice5_foodvalue;
             eatable.waterValue = Cfg._juice5_watervalue;
             return obj;
@@ -136,7 +136,7 @@ namespace CustomFood
             var eatable = obj.GetComponent<Eatable>();
 
             identifier.ClassId = "CustomJuice6";
-            techTag.type = LoadItem.juice6tt;
+            techTag.type = LoadItem.techType;
             eatable.foodValue = Cfg._juice6_foodvalue;
             eatable.waterValue = Cfg._juice6_watervalue;
             return obj;
@@ -151,7 +151,7 @@ namespace CustomFood
             var eatable = obj.GetComponent<Eatable>();
 
             identifier.ClassId = "CustomCake1";
-            techTag.type = LoadItem.cake1tt;
+            techTag.type = LoadItem.techType;
             eatable.foodValue = Cfg._cake1_foodvalue;
             eatable.waterValue = Cfg._cake1_watervalue;
 
@@ -167,7 +167,7 @@ namespace CustomFood
             var eatable = obj.GetComponent<Eatable>();
 
             identifier.ClassId = "CustomCake2";
-            techTag.type = LoadItem.cake2tt;
+            techTag.type = LoadItem.techType;
             eatable.foodValue = Cfg._cake2_foodvalue;
             eatable.waterValue = Cfg._cake2_watervalue;
 
@@ -183,7 +183,7 @@ namespace CustomFood
             var eatable = obj.GetComponent<Eatable>();
 
             identifier.ClassId = "CustomCake3";
-            techTag.type = LoadItem.cake3tt;
+            techTag.type = LoadItem.techType;
             eatable.foodValue = Cfg._cake3_foodvalue;
             eatable.waterValue = Cfg._cake3_watervalue;
 
@@ -199,7 +199,7 @@ namespace CustomFood
             var eatable = obj.GetComponent<Eatable>();
 
             identifier.ClassId = "CustomCake4";
-            techTag.type = LoadItem.cake4tt;
+            techTag.type = LoadItem.techType;
             eatable.foodValue = Cfg._cake4_foodvalue;
             eatable.waterValue = Cfg._cake4_watervalue;
 
@@ -215,7 +215,7 @@ namespace CustomFood
             var eatable = obj.GetComponent<Eatable>();
 
             identifier.ClassId = "CustomCake5";
-            techTag.type = LoadItem.cake5tt;
+            techTag.type = LoadItem.techType;
             eatable.foodValue = Cfg._cake5_foodvalue;
             eatable.waterValue = Cfg._cake5_watervalue;
 
@@ -231,7 +231,7 @@ namespace CustomFood
             var eatable = obj.GetComponent<Eatable>();
 
             identifier.ClassId = "CustomCake6";
-            techTag.type = LoadItem.cake6tt;
+            techTag.type = LoadItem.techType;
             eatable.foodValue = Cfg._cake6_foodvalue;
             eatable.waterValue = Cfg._cake6_watervalue;
 

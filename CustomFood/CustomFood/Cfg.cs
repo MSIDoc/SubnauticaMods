@@ -35,7 +35,7 @@ namespace CustomFood
         public static Atlas.Sprite JuiceSprite = SpriteManager.Get(TechType.FilteredWater);
         public static Atlas.Sprite CakesSprite = SpriteManager.Get(TechType.NutrientBlock);
 
-        public static string _tooltipsuffix = "Added by the CustomFood mod. You can change all of the values in the config";
+        public static string _tooltipsuffix = " - Added by the CustomFood mod. You can change all of the values in the config";
 
         public static bool _juice1_enabled = true;
         public static string _juice1_name = "Bulbo Tree Juice";
@@ -46,6 +46,8 @@ namespace CustomFood
         public static int _juice1_ingredient1amount = 1;
         public static string _juice1_ingredient2 = "BulboTreePiece";
         public static int _juice1_ingredient2amount = 1;
+        public static int _juice1_x = 1;
+        public static int _juice1_y = 1;
 
         public static bool _juice2_enabled = true;
         public static string _juice2_name = "Lantern Fruit Juice";
@@ -56,6 +58,8 @@ namespace CustomFood
         public static int _juice2_ingredient1amount = 1;
         public static string _juice2_ingredient2 = "HangingFruit";
         public static int _juice2_ingredient2amount = 1;
+        public static int _juice2_x = 1;
+        public static int _juice2_y = 1;
 
         public static bool _juice3_enabled = true;
         public static string _juice3_name = "Marblemelon Juice";
@@ -66,6 +70,8 @@ namespace CustomFood
         public static int _juice3_ingredient1amount = 1;
         public static string _juice3_ingredient2 = "Melon";
         public static int _juice3_ingredient2amount = 1;
+        public static int _juice3_x = 1;
+        public static int _juice3_y = 1;
 
         public static bool _juice4_enabled = true;
         public static string _juice4_name = "Creepvine Juice";
@@ -76,6 +82,8 @@ namespace CustomFood
         public static int _juice4_ingredient1amount = 1;
         public static string _juice4_ingredient2 = "CreepvinePiece";
         public static int _juice4_ingredient2amount = 1;
+        public static int _juice4_x = 1;
+        public static int _juice4_y = 1;
 
         public static bool _juice5_enabled = true;
         public static string _juice5_name = "Gel Sack Juice";
@@ -86,6 +94,8 @@ namespace CustomFood
         public static int _juice5_ingredient1amount = 1;
         public static string _juice5_ingredient2 = "JellyPlant";
         public static int _juice5_ingredient2amount = 1;
+        public static int _juice5_x = 1;
+        public static int _juice5_y = 1;
 
         public static bool _juice6_enabled = true;
         public static string _juice6_name = "Marblemelon Juice";
@@ -96,6 +106,8 @@ namespace CustomFood
         public static int _juice6_ingredient1amount = 1;
         public static string _juice6_ingredient2 = "KooshChunk";
         public static int _juice6_ingredient2amount = 1;
+        public static int _juice6_x = 1;
+        public static int _juice6_y = 1;
 
         public static bool _cake1_enabled = true;
         public static string _cake1_name = "Peeper Cake";
@@ -106,6 +118,8 @@ namespace CustomFood
         public static int _cake1_ingredient1amount = 1;
         public static string _cake1_ingredient2 = "Peeper";
         public static int _cake1_ingredient2amount = 1;
+        public static int _cake1_x = 1;
+        public static int _cake1_y = 1;
 
         public static bool _cake2_enabled = true;
         public static string _cake2_name = "Chinese Potato Cake";
@@ -116,6 +130,8 @@ namespace CustomFood
         public static int _cake2_ingredient1amount = 1;
         public static string _cake2_ingredient2 = "PurpleVegetable";
         public static int _cake2_ingredient2amount = 1;
+        public static int _cake2_x = 1;
+        public static int _cake2_y = 1;
 
         public static bool _cake3_enabled = true;
         public static string _cake3_name = "Bladderfish Cake";
@@ -126,6 +142,8 @@ namespace CustomFood
         public static int _cake3_ingredient1amount = 1;
         public static string _cake3_ingredient2 = "Bladderfish";
         public static int _cake3_ingredient2amount = 1;
+        public static int _cake3_x = 1;
+        public static int _cake3_y = 1;
 
         public static bool _cake4_enabled = true;
         public static string _cake4_name = "Boomerang Cake";
@@ -136,6 +154,8 @@ namespace CustomFood
         public static int _cake4_ingredient1amount = 1;
         public static string _cake4_ingredient2 = "Boomerang";
         public static int _cake4_ingredient2amount = 1;
+        public static int _cake4_x = 1;
+        public static int _cake4_y = 1;
 
         public static bool _cake5_enabled = true;
         public static string _cake5_name = "Hoverfish Cake";
@@ -146,6 +166,8 @@ namespace CustomFood
         public static int _cake5_ingredient1amount = 1;
         public static string _cake5_ingredient2 = "Hoverfish";
         public static int _cake5_ingredient2amount = 1;
+        public static int _cake5_x = 1;
+        public static int _cake5_y = 1;
 
         public static bool _cake6_enabled = true;
         public static string _cake6_name = "Spadefish Cake";
@@ -156,6 +178,8 @@ namespace CustomFood
         public static int _cake6_ingredient1amount = 1;
         public static string _cake6_ingredient2 = "Spadefish";
         public static int _cake6_ingredient2amount = 1;
+        public static int _cake6_x = 1;
+        public static int _cake6_y = 1;
 
         /// <summary>
         /// Loads the config

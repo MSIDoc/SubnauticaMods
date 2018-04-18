@@ -28,19 +28,7 @@ namespace CustomFood
         public static TechType _ttt1;
         public static TechType _ttt2;
 
-        public static TechType juice1tt;
-        public static TechType juice2tt;
-        public static TechType juice3tt;
-        public static TechType juice4tt;
-        public static TechType juice5tt;
-        public static TechType juice6tt;
-
-        public static TechType cake1tt;
-        public static TechType cake2tt;
-        public static TechType cake3tt;
-        public static TechType cake4tt;
-        public static TechType cake5tt;
-        public static TechType cake6tt;
+        public static TechType techType;
 
         /// <summary>
         /// Loads an item
@@ -152,7 +140,7 @@ namespace CustomFood
                     Log.Info(name, "Ingredient2 amount was set to 1");
                 }
                 Cfg.Save();
-                var techType = TechTypePatcher.AddTechType(internal_name, _name, _tooltip + Cfg._tooltipsuffix);
+                techType = TechTypePatcher.AddTechType(internal_name, _name, _tooltip + Cfg._tooltipsuffix);
                 Log.Debug("Started patching " + name);
                 if (name == "Juice1")
                 {
