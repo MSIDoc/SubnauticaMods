@@ -200,6 +200,8 @@ namespace CustomFood
                 | Config.TryGet(ref _juice1_ingredient1amount, "Juices", "Juice1", "Ingredients", "Ingredient1", "Amount")
                 | Config.TryGet(ref _juice1_ingredient2, "Juices", "Juice1", "Ingredients", "Ingredient2", "Item")
                 | Config.TryGet(ref _juice1_ingredient2amount, "Juices", "Juice1", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _juice1_x, "Juices", "Juice1", "Size", "X")
+                | Config.TryGet(ref _juice1_y, "Juices", "Juice1", "Size", "Y")
 
                 | Config.TryGet(ref _juice2_enabled, "Juices", "Juice2", "Enabled")
                 | Config.TryGet(ref _juice2_name, "Juices", "Juice2", "Name")
@@ -210,6 +212,8 @@ namespace CustomFood
                 | Config.TryGet(ref _juice2_ingredient1amount, "Juices", "Juice2", "Ingredients", "Ingredient1", "Amount")
                 | Config.TryGet(ref _juice2_ingredient2, "Juices", "Juice2", "Ingredients", "Ingredient2", "Item")
                 | Config.TryGet(ref _juice2_ingredient2amount, "Juices", "Juice2", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _juice2_x, "Juices", "Juice2", "Size", "X")
+                | Config.TryGet(ref _juice2_y, "Juices", "Juice2", "Size", "Y")
 
                 | Config.TryGet(ref _juice3_enabled, "Juices", "Juice3", "Enabled")
                 | Config.TryGet(ref _juice3_name, "Juices", "Juice3", "Name")
@@ -220,6 +224,8 @@ namespace CustomFood
                 | Config.TryGet(ref _juice3_ingredient1amount, "Juices", "Juice3", "Ingredients", "Ingredient1", "Amount")
                 | Config.TryGet(ref _juice3_ingredient2, "Juices", "Juice3", "Ingredients", "Ingredient2", "Item")
                 | Config.TryGet(ref _juice3_ingredient2amount, "Juices", "Juice3", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _juice3_x, "Juices", "Juice3", "Size", "X")
+                | Config.TryGet(ref _juice3_y, "Juices", "Juice3", "Size", "Y")
 
                 | Config.TryGet(ref _juice4_enabled, "Juices", "Juice4", "Enabled")
                 | Config.TryGet(ref _juice4_name, "Juices", "Juice4", "Name")
@@ -230,6 +236,8 @@ namespace CustomFood
                 | Config.TryGet(ref _juice4_ingredient1amount, "Juices", "Juice4", "Ingredients", "Ingredient1", "Amount")
                 | Config.TryGet(ref _juice4_ingredient2, "Juices", "Juice4", "Ingredients", "Ingredient2", "Item")
                 | Config.TryGet(ref _juice4_ingredient2amount, "Juices", "Juice4", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _juice4_x, "Juices", "Juice4", "Size", "X")
+                | Config.TryGet(ref _juice4_y, "Juices", "Juice4", "Size", "Y")
 
                 | Config.TryGet(ref _juice5_enabled, "Juices", "Juice5", "Enabled")
                 | Config.TryGet(ref _juice5_name, "Juices", "Juice5", "Name")
@@ -240,6 +248,8 @@ namespace CustomFood
                 | Config.TryGet(ref _juice5_ingredient1amount, "Juices", "Juice5", "Ingredients", "Ingredient1", "Amount")
                 | Config.TryGet(ref _juice5_ingredient2, "Juices", "Juice5", "Ingredients", "Ingredient2", "Item")
                 | Config.TryGet(ref _juice5_ingredient2amount, "Juices", "Juice5", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _juice5_x, "Juices", "Juice5", "Size", "X")
+                | Config.TryGet(ref _juice5_y, "Juices", "Juice5", "Size", "Y")
 
                 | Config.TryGet(ref _juice6_enabled, "Juices", "Juice6", "Enabled")
                 | Config.TryGet(ref _juice6_name, "Juices", "Juice6", "Name")
@@ -250,6 +260,8 @@ namespace CustomFood
                 | Config.TryGet(ref _juice6_ingredient1amount, "Juices", "Juice6", "Ingredients", "Ingredient1", "Amount")
                 | Config.TryGet(ref _juice6_ingredient2, "Juices", "Juice6", "Ingredients", "Ingredient2", "Item")
                 | Config.TryGet(ref _juice6_ingredient2amount, "Juices", "Juice6", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _juice6_x, "Juices", "Juice6", "Size", "X")
+                | Config.TryGet(ref _juice6_y, "Juices", "Juice6", "Size", "Y")
 
                 | Config.TryGet(ref _cake1_enabled, "Cakes", "Cake1", "Enabled")
                 | Config.TryGet(ref _cake1_name, "Cakes", "Cake1", "Name")
@@ -260,6 +272,8 @@ namespace CustomFood
                 | Config.TryGet(ref _cake1_ingredient1amount, "Cakes", "Cake1", "Ingredients", "Ingredient1", "Amount")
                 | Config.TryGet(ref _cake1_ingredient2, "Cakes", "Cake1", "Ingredients", "Ingredient2", "Item")
                 | Config.TryGet(ref _cake1_ingredient2amount, "Cakes", "Cake1", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _cake1_x, "Cakes", "Cake1", "Size", "X")
+                | Config.TryGet(ref _cake1_y, "Cakes", "Cake1", "Size", "Y")
 
                 | Config.TryGet(ref _cake2_enabled, "Cakes", "Cake2", "Enabled")
                 | Config.TryGet(ref _cake2_name, "Cakes", "Cake2", "Name")
@@ -270,6 +284,8 @@ namespace CustomFood
                 | Config.TryGet(ref _cake2_ingredient1amount, "Cakes", "Cake2", "Ingredients", "Ingredient1", "Amount")
                 | Config.TryGet(ref _cake2_ingredient2, "Cakes", "Cake2", "Ingredients", "Ingredient2", "Item")
                 | Config.TryGet(ref _cake2_ingredient2amount, "Cakes", "Cake2", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _cake2_x, "Cakes", "Cake2", "Size", "X")
+                | Config.TryGet(ref _cake2_y, "Cakes", "Cake2", "Size", "Y")
 
                 | Config.TryGet(ref _cake3_enabled, "Cakes", "Cake3", "Enabled")
                 | Config.TryGet(ref _cake3_name, "Cakes", "Cake3", "Name")
@@ -280,6 +296,8 @@ namespace CustomFood
                 | Config.TryGet(ref _cake3_ingredient1amount, "Cakes", "Cake3", "Ingredients", "Ingredient1", "Amount")
                 | Config.TryGet(ref _cake3_ingredient2, "Cakes", "Cake3", "Ingredients", "Ingredient2", "Item")
                 | Config.TryGet(ref _cake3_ingredient2amount, "Cakes", "Cake3", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _cake3_x, "Cakes", "Cake3", "Size", "X")
+                | Config.TryGet(ref _cake3_y, "Cakes", "Cake3", "Size", "Y")
 
                 | Config.TryGet(ref _cake4_enabled, "Cakes", "Cake4", "Enabled")
                 | Config.TryGet(ref _cake4_name, "Cakes", "Cake4", "Name")
@@ -290,6 +308,8 @@ namespace CustomFood
                 | Config.TryGet(ref _cake4_ingredient1amount, "Cakes", "Cake4", "Ingredients", "Ingredient1", "Amount")
                 | Config.TryGet(ref _cake4_ingredient2, "Cakes", "Cake4", "Ingredients", "Ingredient2", "Item")
                 | Config.TryGet(ref _cake4_ingredient2amount, "Cakes", "Cake4", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _cake4_x, "Cakes", "Cake4", "Size", "X")
+                | Config.TryGet(ref _cake4_y, "Cakes", "Cake4", "Size", "Y")
 
                 | Config.TryGet(ref _cake5_enabled, "Cakes", "Cake5", "Enabled")
                 | Config.TryGet(ref _cake5_name, "Cakes", "Cake5", "Name")
@@ -300,6 +320,8 @@ namespace CustomFood
                 | Config.TryGet(ref _cake5_ingredient1amount, "Cakes", "Cake5", "Ingredients", "Ingredient1", "Amount")
                 | Config.TryGet(ref _cake5_ingredient2, "Cakes", "Cake5", "Ingredients", "Ingredient2", "Item")
                 | Config.TryGet(ref _cake5_ingredient2amount, "Cakes", "Cake5", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _cake5_x, "Cakes", "Cake5", "Size", "X")
+                | Config.TryGet(ref _cake5_y, "Cakes", "Cake5", "Size", "Y")
 
                 | Config.TryGet(ref _cake6_enabled, "Cakes", "Cake6", "Enabled")
                 | Config.TryGet(ref _cake6_name, "Cakes", "Cake6", "Name")
@@ -309,7 +331,10 @@ namespace CustomFood
                 | Config.TryGet(ref _cake6_ingredient1, "Cakes", "Cake6", "Ingredients", "Ingredient1", "Item")
                 | Config.TryGet(ref _cake6_ingredient1amount, "Cakes", "Cake6", "Ingredients", "Ingredient1", "Amount")
                 | Config.TryGet(ref _cake6_ingredient2, "Cakes", "Cake6", "Ingredients", "Ingredient2", "Item")
-                | Config.TryGet(ref _cake6_ingredient2amount, "Cakes", "Cake6", "Ingredients", "Ingredient2", "Amount");
+                | Config.TryGet(ref _cake6_ingredient2amount, "Cakes", "Cake6", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _cake6_x, "Cakes", "Cake6", "Size", "X")
+                | Config.TryGet(ref _cake6_y, "Cakes", "Cake6", "Size", "Y");
+
                 if (configChanged)
                 {
                     Log.Info("Config", "Some values are missing from the config, adding them now...");

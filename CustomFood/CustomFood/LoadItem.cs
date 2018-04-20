@@ -49,6 +49,8 @@ namespace CustomFood
                 var _ingredient1amount = 1;
                 var _ingredient2 = "None";
                 var _ingredient2amount = 1;
+                var _x = 1;
+                var _y = 1;
                 var Config = Cfg.Config;
                 var number = numbr.ToString();
                 var type = typ + "s";
@@ -63,19 +65,12 @@ namespace CustomFood
                 Config.TryGet(ref _ingredient1amount, type, name, "Ingredients", "Ingredient1", "Amount");
                 Config.TryGet(ref _ingredient2, type, name, "Ingredients", "Ingredient2", "Item");
                 Config.TryGet(ref _ingredient2amount, type, name, "Ingredients", "Ingredient2", "Amount");
+                Config.TryGet(ref _x, type, name, "Size", "X");
+                Config.TryGet(ref _y, type, name, "Size", "Y");
                 if (_enabled == false)
                 {
                     return;
                 }
-                if (_enabled == true) { }
-                else if (_enabled == false) { }
-                else                    
-                {
-                    _enabled = true;
-                    Config[type, name, "Enabled"] = _enabled;
-                    Log.Warning(name, "Enabled must be a boolean value(\"true\" or \"false\")");
-                    Log.Info(name, "Enabled was set to \"true\"");
-                };
                 if (_name == "")
                 {
                     _name = "Name can't be blank";
@@ -138,6 +133,34 @@ namespace CustomFood
                     Config[type, name, "Ingredients", "Ingredient2", "Amount"] = _ingredient2amount;
                     Log.Warning(name, "Ingredient2 amount must not be less than 1");
                     Log.Info(name, "Ingredient2 amount was set to 1");
+                }
+                if (_x < 1)
+                {
+                    _x = 1;
+                    Config[type, name, "Size", "X"] = _x;
+                    Log.Warning(name, "X Size can't be less than 1");
+                    Log.Info(name, "X was set to 1");
+                }
+                if (_x > 6)
+                {
+                    _x = 1;
+                    Config[type, name, "Size", "X"] = _x;
+                    Log.Warning(name, "X Size can't be greater than 6");
+                    Log.Info(name, "X was set to 1");
+                }
+                if (_y < 1)
+                {
+                    _y = 1;
+                    Config[type, name, "Size", "Y"] = _y;
+                    Log.Warning(name, "Y Size can't be less than 1");
+                    Log.Info(name, "Y was set to 1");
+                }
+                if (_y > 8)
+                {
+                    _y = 1;
+                    Config[type, name, "Size", "Y"] = _y;
+                    Log.Warning(name, "Y Size can't be greater than 8");
+                    Log.Info(name, "Y was set to 1");
                 }
                 Cfg.Save();
                 techType = TechTypePatcher.AddTechType(internal_name, _name, _tooltip + Cfg._tooltipsuffix);
@@ -274,6 +297,7 @@ namespace CustomFood
                     CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.Water, techType);
                     CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, Cfg.JuiceSprite));
                 }
+                CraftDataPatcher.customItemSizes[key: techType] = new Vector2int(_x, _y);
             }
             catch (Exception e)
             {

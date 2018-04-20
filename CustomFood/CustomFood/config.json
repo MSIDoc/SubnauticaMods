@@ -13,6 +13,10 @@
         }
       },
       "Name": "Peeper Cake",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
       "Tooltip": "Coral Tube Sample mixed with a Peeper",
       "Values": {
         "Food": 40,
@@ -32,6 +36,10 @@
         }
       },
       "Name": "Chinese Potato Cake",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
       "Tooltip": "Coral Tube Sample mixed with a Chinese Potato",
       "Values": {
         "Food": 40,
@@ -51,6 +59,10 @@
         }
       },
       "Name": "Bladderfish Cake",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
       "Tooltip": "Coral Tube Sample mixed with a Bladderfish",
       "Values": {
         "Food": 40,
@@ -70,6 +82,10 @@
         }
       },
       "Name": "Boomerang Cake",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
       "Tooltip": "Coral Tube Sample mixed with a Boomerang",
       "Values": {
         "Food": 40,
@@ -89,6 +105,10 @@
         }
       },
       "Name": "Hoverfish Cake",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
       "Tooltip": "Coral Tube Sample mixed with a Hoverfish",
       "Values": {
         "Food": 40,
@@ -108,6 +128,10 @@
         }
       },
       "Name": "Spadefish Cake",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
       "Tooltip": "Coral Tube Sample mixed with a Spadefish",
       "Values": {
         "Food": 40,
@@ -130,6 +154,10 @@
         }
       },
       "Name": "Bulbo Tree Juice",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
       "Tooltip": "Water mixed with a Bulbo Tree Sample",
       "Values": {
         "Food": 30,
@@ -149,6 +177,10 @@
         }
       },
       "Name": "Lantern Fruit Juice",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
       "Tooltip": "Water mixed with a Lantern Fruit",
       "Values": {
         "Food": 30,
@@ -168,6 +200,10 @@
         }
       },
       "Name": "Marblemelon Juice",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
       "Tooltip": "Water mixed with a Marblemelon",
       "Values": {
         "Food": 30,
@@ -187,6 +223,10 @@
         }
       },
       "Name": "Creepvine Juice",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
       "Tooltip": "Water mixed with a Creepvine Sample",
       "Values": {
         "Food": 30,
@@ -206,6 +246,10 @@
         }
       },
       "Name": "Gel Sack Juice",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
       "Tooltip": "Water mixed with a Gel Sack",
       "Values": {
         "Food": 30,
@@ -225,6 +269,10 @@
         }
       },
       "Name": "Marblemelon Juice",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
       "Tooltip": "Water mixed with a Bulb Bush Sample",
       "Values": {
         "Food": 30,
