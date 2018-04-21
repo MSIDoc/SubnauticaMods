@@ -97,6 +97,7 @@ namespace CustomFood
             {
                 Log.Info("Started loading");
                 Cfg.Init();
+<<<<<<< HEAD
 
                 CraftTreePatcher.customTabs.Add(new CustomCraftTab("Survival/Juices", "Juices", CraftScheme.Fabricator, Cfg.JuiceSprite));
                 CraftTreePatcher.customTabs.Add(new CustomCraftTab("Survival/Cakes", "Cakes", CraftScheme.Fabricator, Cfg.CakesSprite));
@@ -408,6 +409,23 @@ namespace CustomFood
                         CustomCake6TechType,
                         GetCustomCake6Bottle));
                 }
+=======
+                LoadItem.DummySpriteTechTypes();
+                LoadFabricatorTabs.Load();
+                LoadItem.Load("Juice", 1, "WorldEntities/Food/juice1");
+                LoadItem.Load("Juice", 2, "WorldEntities/Food/juice2");
+                LoadItem.Load("Juice", 3, "WorldEntities/Food/juice3");
+                LoadItem.Load("Juice", 4, "WorldEntities/Food/juice4");
+                LoadItem.Load("Juice", 5, "WorldEntities/Food/juice5");
+                LoadItem.Load("Juice", 6, "WorldEntities/Food/juice6");
+                LoadItem.Load("Cake", 1, "WorldEntities/Food/CustomCake1");
+                LoadItem.Load("Cake", 2, "WorldEntities/Food/CustomCake2");
+                LoadItem.Load("Cake", 3, "WorldEntities/Food/CustomCake3");
+                LoadItem.Load("Cake", 4, "WorldEntities/Food/CustomCake4");
+                LoadItem.Load("Cake", 5, "WorldEntities/Food/CustomCake5");
+                LoadItem.Load("Cake", 6, "WorldEntities/Food/CustomCake6");
+                
+>>>>>>> 80ad826d4af9699d9b3b6f899919ea2742e93e55
                 Log.Info("Finished loading");
             }
             catch (Exception e)
