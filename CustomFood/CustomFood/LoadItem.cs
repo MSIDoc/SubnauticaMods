@@ -290,9 +290,9 @@ namespace CustomFood
                 KnownTechPatcher.unlockedAtStart.Add(techType);
                 if (type == "Cakes")
                 {
+                    ApplySprite.Cake(techType, _sprite);
                     CraftTreePatcher.customNodes.Add(new CustomCraftNode(techType, CraftScheme.Fabricator, "Survival/Cakes/" + internal_name));
                     CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.CuredFood, techType);
-                    CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, Cfg.cake_default));
                 }
                 if (type == "Juices")
                 {

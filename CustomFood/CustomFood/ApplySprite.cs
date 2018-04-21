@@ -40,6 +40,8 @@ namespace CustomFood
                 CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, Cfg.cake_bluegreen));
             if (_sprite == "Green")
                 CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, Cfg.cake_green));
+            if (_sprite == "LightBlue")
+                CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, Cfg.juice_lightblue));
             if (_sprite == "Orange")
                 CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, Cfg.cake_orange));
             if (_sprite == "Pink")
@@ -66,6 +68,8 @@ namespace CustomFood
                 CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, Cfg.juice_bluegreen));
             if (_sprite == "Green")
                 CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, Cfg.juice_green));
+            if (_sprite == "LightBlue")
+                CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, Cfg.juice_lightblue));
             if (_sprite == "Orange")
                 CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, Cfg.juice_orange));
             if (_sprite == "Pink")
