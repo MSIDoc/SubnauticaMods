@@ -31,6 +31,7 @@ namespace CustomFood
             {
                 Log.Info("Started loading");
                 Cfg.Init();
+                LoadItem.DummySpriteTechTypes();
                 LoadFabricatorTabs.Load();
                 LoadItem.Load("Juice", 1, "WorldEntities/Food/juice1");
                 LoadItem.Load("Juice", 2, "WorldEntities/Food/juice2");
@@ -44,6 +45,7 @@ namespace CustomFood
                 LoadItem.Load("Cake", 4, "WorldEntities/Food/CustomCake4");
                 LoadItem.Load("Cake", 5, "WorldEntities/Food/CustomCake5");
                 LoadItem.Load("Cake", 6, "WorldEntities/Food/CustomCake6");
+                
                 Log.Info("Finished loading");
             }
             catch (Exception e)

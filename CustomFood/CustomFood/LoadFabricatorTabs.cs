@@ -32,8 +32,8 @@ namespace CustomFood
         {
             try
             {
-                CraftTreePatcher.customTabs.Add(new CustomCraftTab("Survival/Juices", "Juices", CraftScheme.Fabricator, Cfg.JuiceSprite));
-                CraftTreePatcher.customTabs.Add(new CustomCraftTab("Survival/Cakes", "Cakes", CraftScheme.Fabricator, Cfg.CakesSprite));
+                CraftTreePatcher.customTabs.Add(new CustomCraftTab("Survival/Juices", "Juices", CraftScheme.Fabricator, Cfg.juice_default));
+                CraftTreePatcher.customTabs.Add(new CustomCraftTab("Survival/Cakes", "Cakes", CraftScheme.Fabricator, Cfg.cake_default));
             }
             catch (Exception e)
             {

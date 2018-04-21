@@ -32,8 +32,41 @@ namespace CustomFood
 
         public static bool _debug = false;
 
-        public static Atlas.Sprite JuiceSprite = SpriteManager.Get(TechType.FilteredWater);
-        public static Atlas.Sprite CakesSprite = SpriteManager.Get(TechType.NutrientBlock);
+        public static Sprite juice_blue = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/juice_blue.assets").LoadAsset<Sprite>("JuiceBlue");
+        public static Sprite juice_bluegreen = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/juice_bluegreen.assets").LoadAsset<Sprite>("JuiceBlueGreen");
+        public static Sprite juice_green = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/juice_green.assets").LoadAsset<Sprite>("JuiceGreen");
+        public static Sprite juice_lightblue = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/juice_lightblue.assets").LoadAsset<Sprite>("JuiceLightBlue");
+        public static Sprite juice_orange = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/juice_orange.assets").LoadAsset<Sprite>("JuiceOrange");
+        public static Sprite juice_pink = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/juice_pink.assets").LoadAsset<Sprite>("JuicePink");
+        public static Sprite juice_purple = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/juice_purple.assets").LoadAsset<Sprite>("JuicePurple");
+        public static Sprite juice_red = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/juice_red.assets").LoadAsset<Sprite>("JuiceRed");
+        public static Sprite juice_yellow = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/juice_yellow.assets").LoadAsset<Sprite>("JuiceYellow");
+        public static Sprite juice_default = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/juice_default.assets").LoadAsset<Sprite>("JuiceDefault");
+
+        public static Sprite cake_blue = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/cake_blue.assets").LoadAsset<Sprite>("CakeBlue");
+        public static Sprite cake_bluegreen = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/cake_bluegreen.assets").LoadAsset<Sprite>("CakeBlueGreen");
+        public static Sprite cake_green = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/cake_green.assets").LoadAsset<Sprite>("CakeGreen");
+        public static Sprite cake_lightblue = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/cake_lightblue.assets").LoadAsset<Sprite>("CakeLightBlue");
+        public static Sprite cake_orange = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/cake_orange.assets").LoadAsset<Sprite>("CakeOrange");
+        public static Sprite cake_pink = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/cake_pink.assets").LoadAsset<Sprite>("CakePink");
+        public static Sprite cake_purple = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/cake_purple.assets").LoadAsset<Sprite>("CakePurple");
+        public static Sprite cake_red = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/cake_red.assets").LoadAsset<Sprite>("CakeRed");
+        public static Sprite cake_yellow = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/cake_yellow.assets").LoadAsset<Sprite>("CakeYellow");
+        public static Sprite cake_default = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/cake_default.assets").LoadAsset<Sprite>("CakeDefault");
+
+        public enum SpriteColor
+        {
+            Default,
+            Blue,
+            BlueGreen,
+            Green,
+            LightBlue,
+            Orange,
+            Pink,
+            Purple,
+            Red,
+            Yellow
+        }
 
         public static string _tooltipsuffix = " - Added by the CustomFood mod. You can change all of the values in the config";
 
@@ -48,6 +81,7 @@ namespace CustomFood
         public static int _juice1_ingredient2amount = 1;
         public static int _juice1_x = 1;
         public static int _juice1_y = 1;
+        public static string _juice1_sprite = "Default";
 
         public static bool _juice2_enabled = true;
         public static string _juice2_name = "Lantern Fruit Juice";
@@ -60,6 +94,7 @@ namespace CustomFood
         public static int _juice2_ingredient2amount = 1;
         public static int _juice2_x = 1;
         public static int _juice2_y = 1;
+        public static string _juice2_sprite = "Default";
 
         public static bool _juice3_enabled = true;
         public static string _juice3_name = "Marblemelon Juice";
@@ -72,6 +107,7 @@ namespace CustomFood
         public static int _juice3_ingredient2amount = 1;
         public static int _juice3_x = 1;
         public static int _juice3_y = 1;
+        public static string _juice3_sprite = "Default";
 
         public static bool _juice4_enabled = true;
         public static string _juice4_name = "Creepvine Juice";
@@ -84,6 +120,7 @@ namespace CustomFood
         public static int _juice4_ingredient2amount = 1;
         public static int _juice4_x = 1;
         public static int _juice4_y = 1;
+        public static string _juice4_sprite = "Default";
 
         public static bool _juice5_enabled = true;
         public static string _juice5_name = "Gel Sack Juice";
@@ -96,6 +133,7 @@ namespace CustomFood
         public static int _juice5_ingredient2amount = 1;
         public static int _juice5_x = 1;
         public static int _juice5_y = 1;
+        public static string _juice5_sprite = "Default";
 
         public static bool _juice6_enabled = true;
         public static string _juice6_name = "Marblemelon Juice";
@@ -108,6 +146,7 @@ namespace CustomFood
         public static int _juice6_ingredient2amount = 1;
         public static int _juice6_x = 1;
         public static int _juice6_y = 1;
+        public static string _juice6_sprite = "Default";
 
         public static bool _cake1_enabled = true;
         public static string _cake1_name = "Peeper Cake";
@@ -120,6 +159,7 @@ namespace CustomFood
         public static int _cake1_ingredient2amount = 1;
         public static int _cake1_x = 1;
         public static int _cake1_y = 1;
+        public static string _cake1_sprite = "Default";
 
         public static bool _cake2_enabled = true;
         public static string _cake2_name = "Chinese Potato Cake";
@@ -132,6 +172,7 @@ namespace CustomFood
         public static int _cake2_ingredient2amount = 1;
         public static int _cake2_x = 1;
         public static int _cake2_y = 1;
+        public static string _cake2_sprite = "Default";
 
         public static bool _cake3_enabled = true;
         public static string _cake3_name = "Bladderfish Cake";
@@ -144,6 +185,7 @@ namespace CustomFood
         public static int _cake3_ingredient2amount = 1;
         public static int _cake3_x = 1;
         public static int _cake3_y = 1;
+        public static string _cake3_sprite = "Default";
 
         public static bool _cake4_enabled = true;
         public static string _cake4_name = "Boomerang Cake";
@@ -156,6 +198,7 @@ namespace CustomFood
         public static int _cake4_ingredient2amount = 1;
         public static int _cake4_x = 1;
         public static int _cake4_y = 1;
+        public static string _cake4_sprite = "Default";
 
         public static bool _cake5_enabled = true;
         public static string _cake5_name = "Hoverfish Cake";
@@ -168,6 +211,7 @@ namespace CustomFood
         public static int _cake5_ingredient2amount = 1;
         public static int _cake5_x = 1;
         public static int _cake5_y = 1;
+        public static string _cake5_sprite = "Default";
 
         public static bool _cake6_enabled = true;
         public static string _cake6_name = "Spadefish Cake";
@@ -180,6 +224,7 @@ namespace CustomFood
         public static int _cake6_ingredient2amount = 1;
         public static int _cake6_x = 1;
         public static int _cake6_y = 1;
+        public static string _cake6_sprite = "Default";
 
         /// <summary>
         /// Loads the config
@@ -190,7 +235,9 @@ namespace CustomFood
             {
                 Config.Load();
                 var configChanged =
-                Config.TryGet(ref _debug, "Enable debugging")
+
+                  Config.TryGet(ref _debug, "Enable debugging")
+
                 | Config.TryGet(ref _juice1_enabled, "Juices", "Juice1", "Enabled")
                 | Config.TryGet(ref _juice1_name, "Juices", "Juice1", "Name")
                 | Config.TryGet(ref _juice1_tooltip, "Juices", "Juice1", "Tooltip")
@@ -202,6 +249,8 @@ namespace CustomFood
                 | Config.TryGet(ref _juice1_ingredient2amount, "Juices", "Juice1", "Ingredients", "Ingredient2", "Amount")
                 | Config.TryGet(ref _juice1_x, "Juices", "Juice1", "Size", "X")
                 | Config.TryGet(ref _juice1_y, "Juices", "Juice1", "Size", "Y")
+                | Config.TryGet(ref _juice1_sprite, "Juices", "Juice1", "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'")
+
 
                 | Config.TryGet(ref _juice2_enabled, "Juices", "Juice2", "Enabled")
                 | Config.TryGet(ref _juice2_name, "Juices", "Juice2", "Name")
@@ -214,6 +263,7 @@ namespace CustomFood
                 | Config.TryGet(ref _juice2_ingredient2amount, "Juices", "Juice2", "Ingredients", "Ingredient2", "Amount")
                 | Config.TryGet(ref _juice2_x, "Juices", "Juice2", "Size", "X")
                 | Config.TryGet(ref _juice2_y, "Juices", "Juice2", "Size", "Y")
+                | Config.TryGet(ref _juice2_sprite, "Juices", "Juice2", "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'")
 
                 | Config.TryGet(ref _juice3_enabled, "Juices", "Juice3", "Enabled")
                 | Config.TryGet(ref _juice3_name, "Juices", "Juice3", "Name")
@@ -226,6 +276,7 @@ namespace CustomFood
                 | Config.TryGet(ref _juice3_ingredient2amount, "Juices", "Juice3", "Ingredients", "Ingredient2", "Amount")
                 | Config.TryGet(ref _juice3_x, "Juices", "Juice3", "Size", "X")
                 | Config.TryGet(ref _juice3_y, "Juices", "Juice3", "Size", "Y")
+                | Config.TryGet(ref _juice3_sprite, "Juices", "Juice3", "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'")
 
                 | Config.TryGet(ref _juice4_enabled, "Juices", "Juice4", "Enabled")
                 | Config.TryGet(ref _juice4_name, "Juices", "Juice4", "Name")
@@ -238,6 +289,7 @@ namespace CustomFood
                 | Config.TryGet(ref _juice4_ingredient2amount, "Juices", "Juice4", "Ingredients", "Ingredient2", "Amount")
                 | Config.TryGet(ref _juice4_x, "Juices", "Juice4", "Size", "X")
                 | Config.TryGet(ref _juice4_y, "Juices", "Juice4", "Size", "Y")
+                | Config.TryGet(ref _juice4_sprite, "Juices", "Juice4", "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'")
 
                 | Config.TryGet(ref _juice5_enabled, "Juices", "Juice5", "Enabled")
                 | Config.TryGet(ref _juice5_name, "Juices", "Juice5", "Name")
@@ -250,6 +302,7 @@ namespace CustomFood
                 | Config.TryGet(ref _juice5_ingredient2amount, "Juices", "Juice5", "Ingredients", "Ingredient2", "Amount")
                 | Config.TryGet(ref _juice5_x, "Juices", "Juice5", "Size", "X")
                 | Config.TryGet(ref _juice5_y, "Juices", "Juice5", "Size", "Y")
+                | Config.TryGet(ref _juice5_sprite, "Juices", "Juice5", "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'")
 
                 | Config.TryGet(ref _juice6_enabled, "Juices", "Juice6", "Enabled")
                 | Config.TryGet(ref _juice6_name, "Juices", "Juice6", "Name")
@@ -262,6 +315,7 @@ namespace CustomFood
                 | Config.TryGet(ref _juice6_ingredient2amount, "Juices", "Juice6", "Ingredients", "Ingredient2", "Amount")
                 | Config.TryGet(ref _juice6_x, "Juices", "Juice6", "Size", "X")
                 | Config.TryGet(ref _juice6_y, "Juices", "Juice6", "Size", "Y")
+                | Config.TryGet(ref _juice6_sprite, "Juices", "Juice6", "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'")
 
                 | Config.TryGet(ref _cake1_enabled, "Cakes", "Cake1", "Enabled")
                 | Config.TryGet(ref _cake1_name, "Cakes", "Cake1", "Name")
@@ -274,6 +328,7 @@ namespace CustomFood
                 | Config.TryGet(ref _cake1_ingredient2amount, "Cakes", "Cake1", "Ingredients", "Ingredient2", "Amount")
                 | Config.TryGet(ref _cake1_x, "Cakes", "Cake1", "Size", "X")
                 | Config.TryGet(ref _cake1_y, "Cakes", "Cake1", "Size", "Y")
+                | Config.TryGet(ref _cake1_sprite, "Cakes", "Cake1", "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'")
 
                 | Config.TryGet(ref _cake2_enabled, "Cakes", "Cake2", "Enabled")
                 | Config.TryGet(ref _cake2_name, "Cakes", "Cake2", "Name")
@@ -286,6 +341,7 @@ namespace CustomFood
                 | Config.TryGet(ref _cake2_ingredient2amount, "Cakes", "Cake2", "Ingredients", "Ingredient2", "Amount")
                 | Config.TryGet(ref _cake2_x, "Cakes", "Cake2", "Size", "X")
                 | Config.TryGet(ref _cake2_y, "Cakes", "Cake2", "Size", "Y")
+                | Config.TryGet(ref _cake2_sprite, "Cakes", "Cake2", "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'")
 
                 | Config.TryGet(ref _cake3_enabled, "Cakes", "Cake3", "Enabled")
                 | Config.TryGet(ref _cake3_name, "Cakes", "Cake3", "Name")
@@ -298,6 +354,7 @@ namespace CustomFood
                 | Config.TryGet(ref _cake3_ingredient2amount, "Cakes", "Cake3", "Ingredients", "Ingredient2", "Amount")
                 | Config.TryGet(ref _cake3_x, "Cakes", "Cake3", "Size", "X")
                 | Config.TryGet(ref _cake3_y, "Cakes", "Cake3", "Size", "Y")
+                | Config.TryGet(ref _cake3_sprite, "Cakes", "Cake3", "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'")
 
                 | Config.TryGet(ref _cake4_enabled, "Cakes", "Cake4", "Enabled")
                 | Config.TryGet(ref _cake4_name, "Cakes", "Cake4", "Name")
@@ -310,6 +367,7 @@ namespace CustomFood
                 | Config.TryGet(ref _cake4_ingredient2amount, "Cakes", "Cake4", "Ingredients", "Ingredient2", "Amount")
                 | Config.TryGet(ref _cake4_x, "Cakes", "Cake4", "Size", "X")
                 | Config.TryGet(ref _cake4_y, "Cakes", "Cake4", "Size", "Y")
+                | Config.TryGet(ref _cake4_sprite, "Cakes", "Cake4", "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'")
 
                 | Config.TryGet(ref _cake5_enabled, "Cakes", "Cake5", "Enabled")
                 | Config.TryGet(ref _cake5_name, "Cakes", "Cake5", "Name")
@@ -322,6 +380,7 @@ namespace CustomFood
                 | Config.TryGet(ref _cake5_ingredient2amount, "Cakes", "Cake5", "Ingredients", "Ingredient2", "Amount")
                 | Config.TryGet(ref _cake5_x, "Cakes", "Cake5", "Size", "X")
                 | Config.TryGet(ref _cake5_y, "Cakes", "Cake5", "Size", "Y")
+                | Config.TryGet(ref _cake5_sprite, "Cakes", "Cake5", "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'")
 
                 | Config.TryGet(ref _cake6_enabled, "Cakes", "Cake6", "Enabled")
                 | Config.TryGet(ref _cake6_name, "Cakes", "Cake6", "Name")
@@ -333,7 +392,8 @@ namespace CustomFood
                 | Config.TryGet(ref _cake6_ingredient2, "Cakes", "Cake6", "Ingredients", "Ingredient2", "Item")
                 | Config.TryGet(ref _cake6_ingredient2amount, "Cakes", "Cake6", "Ingredients", "Ingredient2", "Amount")
                 | Config.TryGet(ref _cake6_x, "Cakes", "Cake6", "Size", "X")
-                | Config.TryGet(ref _cake6_y, "Cakes", "Cake6", "Size", "Y");
+                | Config.TryGet(ref _cake6_y, "Cakes", "Cake6", "Size", "Y")
+                | Config.TryGet(ref _cake6_sprite, "Cakes", "Cake6", "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'");
 
                 if (configChanged)
                 {
