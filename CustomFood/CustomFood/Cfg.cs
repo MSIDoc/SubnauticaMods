@@ -237,7 +237,6 @@ namespace CustomFood
                 | Config.TryGet(ref _juice1_y, "Juices", "Juice1", "Size", "Y")
                 | Config.TryGet(ref _juice1_sprite, "Juices", "Juice1", "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'")
 
-
                 | Config.TryGet(ref _juice2_enabled, "Juices", "Juice2", "Enabled")
                 | Config.TryGet(ref _juice2_name, "Juices", "Juice2", "Name")
                 | Config.TryGet(ref _juice2_tooltip, "Juices", "Juice2", "Tooltip")

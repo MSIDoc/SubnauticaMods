@@ -365,6 +365,5 @@ namespace CustomFood
                 CustomSpriteHandler.customSprites.Add(new CustomSprite(cakeyellow, Cfg.cake_yellow));
             }
         }
-
     }
 }

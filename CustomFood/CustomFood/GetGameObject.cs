@@ -18,7 +18,6 @@ using System.IO;
 using UWE;
 using Microsoft.CSharp;
 
-
 namespace CustomFood
 {
     /// <summary>
