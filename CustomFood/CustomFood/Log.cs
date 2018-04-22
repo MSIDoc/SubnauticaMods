@@ -1,22 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Linq;
-using System.Text;
-using Harmony;
-using SMLHelper;
-using SMLHelper.Patchers;
-using UnityEngine;
-using Utilites.Config;
 using Logger = Utilites.Logger.Logger;
 using LogType = Utilites.Logger.LogType;
-using LogLevel = Utilites.Logger.LogLevel;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
-using Oculus.Newtonsoft.Json;
-using System.IO;
-using UWE;
-using Microsoft.CSharp;
 using Utilites.Logger;
 
 namespace CustomFood

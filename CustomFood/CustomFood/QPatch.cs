@@ -1,18 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Linq;
-using System.Text;
-using Harmony;
-using SMLHelper;
-using SMLHelper.Patchers;
-using UnityEngine;
-using Utilites.Config;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
-using Oculus.Newtonsoft.Json;
-using System.IO;
-using UWE;
 
 namespace CustomFood
 {
