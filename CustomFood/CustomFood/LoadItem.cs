@@ -158,13 +158,6 @@ namespace CustomFood
                     Log.Warning(name, "Y Size can't be greater than 8");
                     Log.Info(name, "Y was set to 1");
                 }
-                if (!Enum.IsDefined(typeof(Cfg.SpriteColor), _sprite))
-                {
-                    _sprite = "Default";
-                    Config[type, name, "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'"] = _sprite;
-                    Log.Warning(name, "Sprite is invalid");
-                    Log.Info(name, "Sprite was set to the default value");
-                }
                 Cfg.Save();
                 techType = TechTypePatcher.AddTechType(internal_name, _name, _tooltip + Cfg._tooltipsuffix);
                 Log.Debug("Started patching " + name);

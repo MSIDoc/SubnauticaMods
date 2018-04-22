@@ -54,20 +54,6 @@ namespace CustomFood
         public static Sprite cake_yellow = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/cake_yellow.assets").LoadAsset<Sprite>("CakeYellow");
         public static Sprite cake_default = AssetBundle.LoadFromFile(@"./QMods/CustomFood/Assets/cake_default.assets").LoadAsset<Sprite>("CakeDefault");
 
-        public enum SpriteColor
-        {
-            Default,
-            Blue,
-            BlueGreen,
-            Green,
-            LightBlue,
-            Orange,
-            Pink,
-            Purple,
-            Red,
-            Yellow
-        }
-
         public static string _tooltipsuffix = " - Added by the CustomFood mod.";
 
         public static bool _juice1_enabled = true;
