@@ -47,8 +47,7 @@ namespace CustomFood
         /// </summary>
         /// <param name="typ">Must be "Juice" or "Cake"</param>
         /// <param name="numbr">Must be between 1 and 6</param>
-        /// <param name="prefabpath">The Prefab path</param>
-        public static void Load(string typ, int numbr, string prefabpath)
+        public static void Load(string typ, int numbr)
         {
             try
             {
@@ -69,6 +68,7 @@ namespace CustomFood
                 var name = typ + number;
                 var internal_name = "Custom" + name;
                 var _sprite = "Default";
+                var prefabpath = "WorldEntities/Food/" + internal_name;
                 Config.TryGet(ref _enabled, type, name, "Enabled");
                 Config.TryGet(ref _name, type, name, "Name");
                 Config.TryGet(ref _tooltip, type, name, "Tooltip");
