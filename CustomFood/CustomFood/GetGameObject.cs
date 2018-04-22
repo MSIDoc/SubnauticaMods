@@ -20,215 +20,79 @@ using Microsoft.CSharp;
 
 namespace CustomFood
 {
-    /// <summary>
-    /// Main class for obtaining gameobjects
-    /// </summary>
     public class GetGameObject
     {
-        public static GameObject Juice1()
+        public static GameObject Main(TechType techtype, string internalname, int food, int water, string prefabpath)
         {
-            var prefab = Resources.Load<GameObject>("WorldEntities/Food/FilteredWater");
+            var prefab = Resources.Load<GameObject>("WorldEntities/Food/" + prefabpath);
             var obj = UnityEngine.Object.Instantiate(prefab);
 
             var identifier = obj.GetComponent<PrefabIdentifier>();
             var techTag = obj.GetComponent<TechTag>();
             var eatable = obj.GetComponent<Eatable>();
 
-            identifier.ClassId = "CustomJuice1";
-            techTag.type = LoadItem._juice1tt;
-            eatable.foodValue = Cfg._juice1_foodvalue;
-            eatable.waterValue = Cfg._juice1_watervalue;
+            identifier.ClassId = internalname;
+            techTag.type = techtype;
+            eatable.foodValue = food;
+            eatable.waterValue = water;
 
             return obj;
+        }
+        public static GameObject MainJuice(TechType techtype, string internalname, int food, int water)
+        {
+            return Main(techtype, internalname, food, water, "FilteredWater");
+        }
+        public static GameObject MainCake(TechType techtype, string internalname, int food, int water)
+        {
+            return Main(techtype, internalname, food, water, "NutrientBlock");
+        }
+        public static GameObject Juice1()
+        {
+            return MainJuice(LoadItem._juice1tt, "CustomJuice1", Cfg._juice1_foodvalue, Cfg._juice1_watervalue);
         }
         public static GameObject Juice2()
         {
-            var prefab = Resources.Load<GameObject>("WorldEntities/Food/FilteredWater");
-            var obj = UnityEngine.Object.Instantiate(prefab);
-
-            var identifier = obj.GetComponent<PrefabIdentifier>();
-            var techTag = obj.GetComponent<TechTag>();
-            var eatable = obj.GetComponent<Eatable>();
-
-            identifier.ClassId = "CustomJuice2";
-            techTag.type = LoadItem._juice2tt;
-            eatable.foodValue = Cfg._juice2_foodvalue;
-            eatable.waterValue = Cfg._juice2_watervalue;
-            
-            return obj;
+            return MainJuice(LoadItem._juice2tt, "CustomJuice2", Cfg._juice2_foodvalue, Cfg._juice2_watervalue);
         }
-        /// <summary>
-        /// Juice3 gameobject
-        /// </summary>
-        /// <returns>Returns the object</returns>
         public static GameObject Juice3()
         {
-            var prefab = Resources.Load<GameObject>("WorldEntities/Food/FilteredWater");
-            var obj = UnityEngine.Object.Instantiate(prefab);
-
-            var identifier = obj.GetComponent<PrefabIdentifier>();
-            var techTag = obj.GetComponent<TechTag>();
-            var eatable = obj.GetComponent<Eatable>();
-
-            identifier.ClassId = "CustomJuice3";
-            techTag.type = LoadItem._juice3tt;
-            eatable.foodValue = Cfg._juice3_foodvalue;
-            eatable.waterValue = Cfg._juice3_watervalue;
-
-            return obj;
+            return MainJuice(LoadItem._juice3tt, "CustomJuice3", Cfg._juice3_foodvalue, Cfg._juice3_watervalue);
         }
-        /// <summary>
-        /// Juice4 gameobject
-        /// </summary>
-        /// <returns>Returns the object</returns>
         public static GameObject Juice4()
         {
-            var prefab = Resources.Load<GameObject>("WorldEntities/Food/FilteredWater");
-            var obj = GameObject.Instantiate(prefab);
-
-            var identifier = obj.GetComponent<PrefabIdentifier>();
-            var techTag = obj.GetComponent<TechTag>();
-            var eatable = obj.GetComponent<Eatable>();
-
-            identifier.ClassId = "CustomJuice4";
-            techTag.type = LoadItem._juice4tt;
-            eatable.foodValue = Cfg._juice4_foodvalue;
-            eatable.waterValue = Cfg._juice4_watervalue;
-            return obj;
+            return MainJuice(LoadItem._juice4tt, "CustomJuice4", Cfg._juice4_foodvalue, Cfg._juice4_watervalue);
         }
-        /// <summary>
-        /// Juice5 gameobject
-        /// </summary>
-        /// <returns>Returns the object</returns>
         public static GameObject Juice5()
         {
-            var prefab = Resources.Load<GameObject>("WorldEntities/Food/FilteredWater");
-            var obj = GameObject.Instantiate(prefab);
-
-            var identifier = obj.GetComponent<PrefabIdentifier>();
-            var techTag = obj.GetComponent<TechTag>();
-            var eatable = obj.GetComponent<Eatable>();
-
-            identifier.ClassId = "CustomJuice5";
-            techTag.type = LoadItem._juice5tt;
-            eatable.foodValue = Cfg._juice5_foodvalue;
-            eatable.waterValue = Cfg._juice5_watervalue;
-            return obj;
+            return MainJuice(LoadItem._juice5tt, "CustomJuice5", Cfg._juice5_foodvalue, Cfg._juice5_watervalue);
         }
-        /// <summary>
-        /// Juice6 gameobject
-        /// </summary>
-        /// <returns>Returns the object</returns>
         public static GameObject Juice6()
         {
-            var prefab = Resources.Load<GameObject>("WorldEntities/Food/FilteredWater");
-            var obj = GameObject.Instantiate(prefab);
-
-            var identifier = obj.GetComponent<PrefabIdentifier>();
-            var techTag = obj.GetComponent<TechTag>();
-            var eatable = obj.GetComponent<Eatable>();
-
-            identifier.ClassId = "CustomJuice6";
-            techTag.type = LoadItem._juice6tt;
-            eatable.foodValue = Cfg._juice6_foodvalue;
-            eatable.waterValue = Cfg._juice6_watervalue;
-            return obj;
+            return MainJuice(LoadItem._juice6tt, "CustomJuice6", Cfg._juice6_foodvalue, Cfg._juice6_watervalue);
         }
         public static GameObject Cake1()
         {
-            var prefab = Resources.Load<GameObject>("WorldEntities/Food/NutrientBlock");
-            var obj = GameObject.Instantiate(prefab);
-
-            var identifier = obj.GetComponent<PrefabIdentifier>();
-            var techTag = obj.GetComponent<TechTag>();
-            var eatable = obj.GetComponent<Eatable>();
-
-            identifier.ClassId = "CustomCake1";
-            techTag.type = LoadItem._cake1tt;
-            eatable.foodValue = Cfg._cake1_foodvalue;
-            eatable.waterValue = Cfg._cake1_watervalue;
-
-            return obj;
+            return MainCake(LoadItem._cake1tt, "CustomCake1", Cfg._cake1_foodvalue, Cfg._cake1_watervalue);
         }
         public static GameObject Cake2()
         {
-            var prefab = Resources.Load<GameObject>("WorldEntities/Food/NutrientBlock");
-            var obj = GameObject.Instantiate(prefab);
-
-            var identifier = obj.GetComponent<PrefabIdentifier>();
-            var techTag = obj.GetComponent<TechTag>();
-            var eatable = obj.GetComponent<Eatable>();
-
-            identifier.ClassId = "CustomCake2";
-            techTag.type = LoadItem._cake2tt;
-            eatable.foodValue = Cfg._cake2_foodvalue;
-            eatable.waterValue = Cfg._cake2_watervalue;
-
-            return obj;
+            return MainCake(LoadItem._cake2tt, "CustomCake2", Cfg._cake2_foodvalue, Cfg._cake2_watervalue);
         }
         public static GameObject Cake3()
         {
-            var prefab = Resources.Load<GameObject>("WorldEntities/Food/NutrientBlock");
-            var obj = GameObject.Instantiate(prefab);
-
-            var identifier = obj.GetComponent<PrefabIdentifier>();
-            var techTag = obj.GetComponent<TechTag>();
-            var eatable = obj.GetComponent<Eatable>();
-
-            identifier.ClassId = "CustomCake3";
-            techTag.type = LoadItem._cake3tt;
-            eatable.foodValue = Cfg._cake3_foodvalue;
-            eatable.waterValue = Cfg._cake3_watervalue;
-
-            return obj;
+            return MainCake(LoadItem._cake3tt, "CustomCake3", Cfg._cake3_foodvalue, Cfg._cake3_watervalue);
         }
         public static GameObject Cake4()
         {
-            var prefab = Resources.Load<GameObject>("WorldEntities/Food/NutrientBlock");
-            var obj = UnityEngine.Object.Instantiate(prefab);
-
-            var identifier = obj.GetComponent<PrefabIdentifier>();
-            var techTag = obj.GetComponent<TechTag>();
-            var eatable = obj.GetComponent<Eatable>();
-
-            identifier.ClassId = "CustomCake4";
-            techTag.type = LoadItem._cake4tt;
-            eatable.foodValue = Cfg._cake4_foodvalue;
-            eatable.waterValue = Cfg._cake4_watervalue;
-
-            return obj;
+            return MainCake(LoadItem._cake4tt, "CustomCake4", Cfg._cake4_foodvalue, Cfg._cake4_watervalue);
         }
         public static GameObject Cake5()
         {
-            var prefab = Resources.Load<GameObject>("WorldEntities/Food/NutrientBlock");
-            var obj = GameObject.Instantiate(prefab);
-
-            var identifier = obj.GetComponent<PrefabIdentifier>();
-            var techTag = obj.GetComponent<TechTag>();
-            var eatable = obj.GetComponent<Eatable>();
-
-            identifier.ClassId = "CustomCake5";
-            techTag.type = LoadItem._cake5tt;
-            eatable.foodValue = Cfg._cake5_foodvalue;
-            eatable.waterValue = Cfg._cake5_watervalue;
-
-            return obj;
+            return MainCake(LoadItem._cake5tt, "CustomCake5", Cfg._cake5_foodvalue, Cfg._cake5_watervalue);
         }
         public static GameObject Cake6()
         {
-            var prefab = Resources.Load<GameObject>("WorldEntities/Food/NutrientBlock");
-            var obj = GameObject.Instantiate(prefab);
-
-            var identifier = obj.GetComponent<PrefabIdentifier>();
-            var techTag = obj.GetComponent<TechTag>();
-            var eatable = obj.GetComponent<Eatable>();
-
-            identifier.ClassId = "CustomCake6";
-            techTag.type = LoadItem._cake6tt;
-            eatable.foodValue = Cfg._cake6_foodvalue;
-            eatable.waterValue = Cfg._cake6_watervalue;
-
-            return obj;
+            return MainCake(LoadItem._cake6tt, "CustomCake6", Cfg._cake6_foodvalue, Cfg._cake6_watervalue);
         }
     }
 }
