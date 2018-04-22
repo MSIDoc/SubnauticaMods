@@ -26,9 +26,9 @@ namespace CustomFood
     public class Cfg
     {
         public static readonly ConfigFile Config = new ConfigFile("config");
- 
-        public static Atlas.Sprite JuiceSprite = SpriteManager.Get(TechType.FilteredWater);
-        public static Atlas.Sprite CakesSprite = SpriteManager.Get(TechType.NutrientBlock);
+
+        public static TechType _ingredient1missing = TechTypePatcher.AddTechType("CustomFoodIngredient1Missing", "Ingredient1 Missing", "This should not be in your inventory");
+        public static TechType _ingredient2missing = TechTypePatcher.AddTechType("CustomFoodIngredient2Missing", "Ingredient2 Missing", "This should not be in your inventory");
 
         public static bool _debug = false;
 
@@ -68,9 +68,13 @@ namespace CustomFood
             Yellow
         }
 
-        public static string _tooltipsuffix = " - Added by the CustomFood mod. You can change all of the values in the config";
+        public static string _tooltipsuffix = " - Added by the CustomFood mod.";
 
-        public static string _juice1_namehere = "namehere1";
+        public static bool _juice1_enabled = true;
+        public static string _juice1_name = "Bulbo Tree Juice";
+        public static string _juice1_tooltip = "Water mixed with a Bulbo Tree Sample";
+        public static int _juice1_foodvalue = 30;
+        public static int _juice1_watervalue = 40;
         public static string _juice1_ingredient1 = "FilteredWater";
         public static int _juice1_ingredient1amount = 1;
         public static string _juice1_ingredient2 = "BulboTreePiece";
@@ -144,7 +148,11 @@ namespace CustomFood
         public static int _juice6_y = 1;
         public static string _juice6_sprite = "Default";
 
-        public static string _cake1_namehere = "namehere1";
+        public static bool _cake1_enabled = true;
+        public static string _cake1_name = "Peeper Cake";
+        public static string _cake1_tooltip = "Coral Tube Sample mixed with a Peeper";
+        public static int _cake1_foodvalue = 40;
+        public static int _cake1_watervalue = 30;
         public static string _cake1_ingredient1 = "CoralChunk";
         public static int _cake1_ingredient1amount = 1;
         public static string _cake1_ingredient2 = "Peeper";
@@ -218,6 +226,9 @@ namespace CustomFood
         public static int _cake6_y = 1;
         public static string _cake6_sprite = "Default";
 
+        /// <summary>
+        /// Loads the config
+        /// </summary>
         public static void Load()
         {
             try
@@ -396,6 +407,9 @@ namespace CustomFood
                 Log.e(e);
             }
         }
+        /// <summary>
+        /// Saves the config
+        /// </summary>
         public static void Save()
         {
             try
@@ -409,6 +423,10 @@ namespace CustomFood
                 Log.e(e);
             }
         }
+        /// <summary>
+        /// Saves the config with a prefix for debugging
+        /// </summary>
+        /// <param name="prefix">Prefix for debugging</param>
         public static void Save(string prefix)
         {
             try
@@ -422,6 +440,9 @@ namespace CustomFood
                 Log.e(e);
             }
         }
+        /// <summary>
+        /// Initializes the config
+        /// </summary>
         public static void Init()
         {
             try
