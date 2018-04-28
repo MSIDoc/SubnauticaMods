@@ -12,6 +12,9 @@ namespace CustomFood
     {
         public static TechType _ttt1;
         public static TechType _ttt2;
+        public static TechType _ttt3;
+        public static TechType _ttt4;
+        public static TechType _ttt5;
         public static TechType _juice1tt;
         public static TechType _juice2tt;
         public static TechType _juice3tt;
@@ -45,6 +48,12 @@ namespace CustomFood
                 var _ingredient1amount = 1;
                 var _ingredient2 = "None";
                 var _ingredient2amount = 1;
+                var _ingredient3 = "None";
+                var _ingredient3amount = 1;
+                var _ingredient4 = "None";
+                var _ingredient4amount = 1;
+                var _ingredient5 = "None";
+                var _ingredient5amount = 1;
                 var _x = 1;
                 var _y = 1;
                 var Config = Cfg.Config;
@@ -63,6 +72,12 @@ namespace CustomFood
                 Config.TryGet(ref _ingredient1amount, type, name, "Ingredients", "Ingredient1", "Amount");
                 Config.TryGet(ref _ingredient2, type, name, "Ingredients", "Ingredient2", "Item");
                 Config.TryGet(ref _ingredient2amount, type, name, "Ingredients", "Ingredient2", "Amount");
+                Config.TryGet(ref _ingredient3, type, name, "Ingredients", "Ingredient2", "Item");
+                Config.TryGet(ref _ingredient3amount, type, name, "Ingredients", "Ingredient2", "Amount");
+                Config.TryGet(ref _ingredient4, type, name, "Ingredients", "Ingredient2", "Item");
+                Config.TryGet(ref _ingredient4amount, type, name, "Ingredients", "Ingredient2", "Amount");
+                Config.TryGet(ref _ingredient5, type, name, "Ingredients", "Ingredient2", "Item");
+                Config.TryGet(ref _ingredient5amount, type, name, "Ingredients", "Ingredient2", "Amount");
                 Config.TryGet(ref _x, type, name, "Size", "X");
                 Config.TryGet(ref _y, type, name, "Size", "Y");
                 Config.TryGet(ref _sprite, type, name, "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'");
