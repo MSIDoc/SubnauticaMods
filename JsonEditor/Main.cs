@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 using Utilites.Config;
 
@@ -97,7 +97,7 @@ namespace JsonEditor
                 Console.WriteLine("");
             }
             var enabled3 = true;
-            Config.TryGet(ref enabled1, $"{str}s", $"{str}3", "Enabled");
+            Config.TryGet(ref enabled3, $"{str}s", $"{str}3", "Enabled");
             Console.Write($"3. {str}3");
             if (enabled3 == false)
             {
@@ -108,7 +108,7 @@ namespace JsonEditor
                 Console.WriteLine("");
             }
             var enabled4 = true;
-            Config.TryGet(ref enabled1, $"{str}s", $"{str}4", "Enabled");
+            Config.TryGet(ref enabled4, $"{str}s", $"{str}4", "Enabled");
             Console.Write($"4. {str}4");
             if (enabled4 == false)
             {
@@ -119,7 +119,7 @@ namespace JsonEditor
                 Console.WriteLine("");
             }
             var enabled5 = true;
-            Config.TryGet(ref enabled1, $"{str}s", $"{str}5", "Enabled");
+            Config.TryGet(ref enabled5, $"{str}s", $"{str}5", "Enabled");
             Console.Write($"5. {str}5");
             if (enabled5 == false)
             {
@@ -130,7 +130,7 @@ namespace JsonEditor
                 Console.WriteLine("");
             }
             var enabled6 = true;
-            Config.TryGet(ref enabled1, $"{str}s", $"{str}6", "Enabled");
+            Config.TryGet(ref enabled6, $"{str}s", $"{str}6", "Enabled");
             Console.Write($"6. {str}6");
             if (enabled6 == false)
             {
