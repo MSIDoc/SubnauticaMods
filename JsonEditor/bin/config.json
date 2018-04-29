@@ -2,7 +2,7 @@
   "Cakes": {
     "Cake1": {
       "Enabled": true,
-      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Orange",
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Default",
       "Ingredients": {
         "Ingredient1": {
           "Amount": 1,

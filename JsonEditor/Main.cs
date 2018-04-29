@@ -539,7 +539,7 @@ namespace JsonEditor
             Console.WriteLine("");
             Console.WriteLine("Type a number to select", System.Drawing.Color.LightGray);
             Console.WriteLine("");
-            Console.WriteLine("0. BACK");
+            Console.WriteLine("0. BACK", System.Drawing.Color.LightGray);
             Console.WriteLine("");
             Console.WriteLine($"1. Edit Ingredient1: {ing1a}x {ing1}", System.Drawing.Color.LightGray);
             Console.WriteLine($"2. Edit Ingredient2: {ing2a}x {ing2}", System.Drawing.Color.LightGray);
@@ -574,7 +574,7 @@ namespace JsonEditor
         {
             var inga = 1;
             var str = item.ToString();
-            Config.TryGet(ref ing, $"{str}s", $"{str}{i}", "Ingredients", $"Ingredient{ingno}", "Amount");
+            Config.TryGet(ref inga, $"{str}s", $"{str}{i}", "Ingredients", $"Ingredient{ingno}", "Amount");
             IngredientEditor(ingno, item, i, inga, ing);
         }
         public static void IngredientEditor(int ingno, Item item, int i, int inga, string ing)
@@ -686,12 +686,16 @@ namespace JsonEditor
             var key = Console.ReadLine();
             if (key.ToLower() == "back")
             {
-                IngredientEditor(ingno, item, i, ing);
+                Enum.TryParse(ing, true, out TechType res);
+                var upcase = res.ToString();
+                IngredientEditor(ingno, item, i, upcase);
             }
-            if (Enum.IsDefined(typeof(TechType), ing))
+            if (Enum.TryParse(key, true, out TechType result))
             {
-                Config.Set($"{str}s", $"{str}{i}", "Ingredients", $"Ingredient{ingno}", "Item", ing);
+                var upper = result.ToString();
+                Config.Set($"{str}s", $"{str}{i}", "Ingredients", $"Ingredient{ingno}", "Item", upper);
                 Config.Save();
+                ing = upper;
                 goto changed;
             }
             else
