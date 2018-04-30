@@ -24,6 +24,7 @@ namespace JsonEditor
         }
         public static Item Cake = Item.Cake;
         public static Item Juice = Item.Juice;
+        public static string version = "C9";
         public static void Main()
         {
             WinForms(false);
@@ -31,7 +32,7 @@ namespace JsonEditor
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
             Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
             Console.WriteLine("");
             Console.WriteLine(">", System.Drawing.Color.LightGray);
@@ -81,7 +82,7 @@ namespace JsonEditor
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
             Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
             Console.WriteLine("");
             Console.WriteLine($"> {str}s", System.Drawing.Color.LightGray);
@@ -188,7 +189,7 @@ namespace JsonEditor
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
             Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
             Console.WriteLine("");
             Console.WriteLine($"> {str}s > {str}{i}", System.Drawing.Color.LightGray);
@@ -350,7 +351,7 @@ namespace JsonEditor
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
             Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
             Console.WriteLine("");
             Console.WriteLine($"> {str}s > {str}{i} > Color", System.Drawing.Color.LightGray);
@@ -552,7 +553,7 @@ namespace JsonEditor
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
             Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
             Console.WriteLine("");
             Console.WriteLine($"> {str}s > {str}{i} > Ingredients", System.Drawing.Color.LightGray);
@@ -603,7 +604,7 @@ namespace JsonEditor
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
             Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
             Console.WriteLine("");
             Console.WriteLine($"> {str}s > {str}{i} > Ingredients > Ingredient{ingno}", System.Drawing.Color.LightGray);
@@ -642,7 +643,7 @@ namespace JsonEditor
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
             Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
             Console.WriteLine("");
             Console.WriteLine($"> {str}s > {str}{i} > Ingredients > Ingredient{ingno} > Amount", System.Drawing.Color.LightGray);
@@ -695,7 +696,7 @@ namespace JsonEditor
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
             Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
             Console.WriteLine("");
             Console.WriteLine($"> {str}s > {str}{i} > Ingredients > Ingredient{ingno} > Item", System.Drawing.Color.LightGray);
@@ -738,7 +739,7 @@ namespace JsonEditor
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
             Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
             Console.WriteLine("");
             Console.WriteLine($"> {str}s > {str}{i} > Name", System.Drawing.Color.LightGray);
@@ -790,7 +791,7 @@ namespace JsonEditor
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
             Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
             Console.WriteLine("");
             Console.WriteLine($"> {str}s > {str}{i} > Size", System.Drawing.Color.LightGray);
@@ -829,7 +830,7 @@ namespace JsonEditor
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
             Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
             Console.WriteLine("");
             Console.WriteLine($"> {str}s > {str}{i} > Size > {whatsize.ToString()}", System.Drawing.Color.LightGray);
