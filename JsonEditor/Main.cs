@@ -28,6 +28,7 @@ namespace JsonEditor
         {
             WinForms(false);
             Cfg.Load();
+            Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
             Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
@@ -46,11 +47,11 @@ namespace JsonEditor
             Console.Write($"3. Enable debugging: ", System.Drawing.Color.LightGray);
             if (_debug)
             {
-                Console.WriteLine("True", System.Drawing.Color.LimeGreen);
+                Console.WriteLine("Yes", System.Drawing.Color.LimeGreen);
             }
             else
             {
-                Console.WriteLine("False", System.Drawing.Color.Red);
+                Console.WriteLine("No", System.Drawing.Color.Red);
             }
             Console.WriteLine("");
             key_invalid:;
@@ -77,6 +78,7 @@ namespace JsonEditor
             var str = item.ToString();
             var lower = str.ToLower();
             var disabled = " ";
+            Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
             Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
@@ -183,6 +185,7 @@ namespace JsonEditor
         {
             changed:;
             var str = item.ToString();
+            Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
             Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
@@ -199,11 +202,11 @@ namespace JsonEditor
             Console.Write($"1. Enabled: ", System.Drawing.Color.LightGray);
             if (enabled)
             {
-                Console.WriteLine("True", System.Drawing.Color.LimeGreen);
+                Console.WriteLine("Yes", System.Drawing.Color.LimeGreen);
             }
             else
             {
-                Console.WriteLine("False", System.Drawing.Color.Red);
+                Console.WriteLine("No", System.Drawing.Color.Red);
             }
             var color = "Default";
             Config.TryGet(ref color, $"{str}s", $"{str}{i}", "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'");
@@ -253,33 +256,45 @@ namespace JsonEditor
                 Console.WriteLine("Yellow", System.Drawing.Color.Yellow);
                 goto colordone;
             }
-            Console.WriteLine("Default", System.Drawing.Color.LightGray);
+            if (color == "Default")
+            {
+                Console.WriteLine("Default", System.Drawing.Color.White);
+                goto colordone;
+            }
             colordone:;
-            var ing1 = "None";
-            var ing1a = 1;
-            var ing2 = "None";
-            var ing2a = 1;
+            var ing1 = "SomethingPlaceholder";
+            var ing1a = -1;
+            var ing2 = "SomethingPlaceholder";
+            var ing2a = -1;
             Config.TryGet(ref ing1, $"{str}s", $"{str}{i}", "Ingredients", "Ingredient1", "Item");
             Config.TryGet(ref ing1a, $"{str}s", $"{str}{i}", "Ingredients", "Ingredient1", "Amount");
             Config.TryGet(ref ing2, $"{str}s", $"{str}{i}", "Ingredients", "Ingredient2", "Item");
             Config.TryGet(ref ing2a, $"{str}s", $"{str}{i}", "Ingredients", "Ingredient2", "Amount");
-            Console.WriteLine($"3. Ingredients: {ing1a}x {ing1} + {ing2a}x {ing2}", System.Drawing.Color.LightGray);
-            var name = "Name";
+            Console.Write($"3. Ingredients: ", System.Drawing.Color.LightGray);
+            Console.Write($"{ing1a}x {ing1} + {ing2a}x {ing2}", System.Drawing.Color.White);
+            Console.WriteLine(" (FEATURE DISABLED UNTIL NEXT CUSTOMFOOD UPDATE)", System.Drawing.Color.Red);
+            var name = "Name_Missing";
             Config.TryGet(ref name, $"{str}s", $"{str}{i}", "Name");
-            Console.WriteLine($"4. Name: \"{name}\"", System.Drawing.Color.LightGray);
-            var x = 1;
-            var y = 1;
+            Console.Write($"4. Name: ", System.Drawing.Color.LightGray);
+            Console.WriteLine($"\"{name}\"", System.Drawing.Color.White);
+            var x = -1;
+            var y = -1;
             Config.TryGet(ref x, $"{str}s", $"{str}{i}", "Size", "X");
             Config.TryGet(ref y, $"{str}s", $"{str}{i}", "Size", "Y");
-            Console.WriteLine($"5. Size: {x}x{y}", System.Drawing.Color.LightGray);
-            var tooltip = "Tooltip";
+            Console.Write($"5. Size: ", System.Drawing.Color.LightGray);
+            Console.WriteLine($"{x}x{y}", System.Drawing.Color.White);
+            var tooltip = "Tooltip_Missing";
             Config.TryGet(ref tooltip, $"{str}s", $"{str}{i}", "Tooltip");
-            Console.WriteLine($"6. Tooltip: \"{tooltip}\"", System.Drawing.Color.LightGray);
-            var food = 1;
-            var water = 1;
+            Console.Write($"6. Tooltip: ", System.Drawing.Color.LightGray);
+            Console.Write($"\"{tooltip}\" ", System.Drawing.Color.White);
+            Console.WriteLine("(FEATURE NOT YET IMPLEMENTED)", System.Drawing.Color.Red);
+            var food = -1337;
+            var water = -1337;
             Config.TryGet(ref food, $"{str}s", $"{str}{i}", "Values", "Food");
             Config.TryGet(ref water, $"{str}s", $"{str}{i}", "Values", "Water");
-            Console.WriteLine($"7. Values: {water} H2O, {food} FOOD", System.Drawing.Color.LightGray);
+            Console.Write($"7. Values: ", System.Drawing.Color.LightGray);
+            Console.Write($"+{water} H2O, +{food} FOOD ", System.Drawing.Color.White);
+            Console.WriteLine("(FEATURE NOT YET IMPLEMENTED)", System.Drawing.Color.Red);
             Console.WriteLine("");
             key_invalid:;
             var key = Console.ReadKey().KeyChar;
@@ -300,15 +315,15 @@ namespace JsonEditor
             }
             if (key == '3')
             {
-                Ingredients(item, i, ing1a, ing1, ing2a, ing2);
+                //Ingredients(item, i, ing1a, ing1, ing2a, ing2);
             }
             if (key == '4')
             {
-                //Name(item, i);
+                Name(item, i, name);
             }
             if (key == '5')
             {
-                //Size(item, i);
+                Size(item, i, x, y);
             }
             if (key == '6')
             {
@@ -322,9 +337,9 @@ namespace JsonEditor
             {
                 ItemSelector(item);
             }
-            Console.SetCursorPosition(0, 19);
+            Console.SetCursorPosition(0, 17);
             Console.WriteLine(" ");
-            Console.SetCursorPosition(0, 19);
+            Console.SetCursorPosition(0, 17);
             goto key_invalid;
         }
         public static void Color(Item item, int i, string color)
@@ -332,6 +347,7 @@ namespace JsonEditor
             changed:;
             var str = item.ToString();
             var configstring = "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'";
+            Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
             Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
@@ -399,7 +415,8 @@ namespace JsonEditor
             Config.Set($"{str}s", $"{str}{i}", configstring, "Default");
             Config.Save();
             color = "Default";
-            Console.WriteLine("Default (Default)", System.Drawing.Color.LightGray);
+            Console.Write("Default", System.Drawing.Color.White);
+            Console.WriteLine($" ({color})", System.Drawing.Color.LightGray);
             colordone:;
             Console.WriteLine("");
             Console.WriteLine("0. BACK", System.Drawing.Color.LightGray);
@@ -431,7 +448,9 @@ namespace JsonEditor
             Console.Write("9. Set to", System.Drawing.Color.LightGray);
             Console.Write(" Yellow ", System.Drawing.Color.Yellow);
             Console.WriteLine("(Yellow)", System.Drawing.Color.LightGray);
-            Console.WriteLine("R. Reset (Default)", System.Drawing.Color.LightGray);
+            Console.Write("R. Set to", System.Drawing.Color.LightGray);
+            Console.Write(" Default ", System.Drawing.Color.White);
+            Console.WriteLine("(Default)", System.Drawing.Color.LightGray);
             Console.WriteLine("");
             key_invalid:;
             var key = Console.ReadKey().KeyChar;
@@ -530,6 +549,7 @@ namespace JsonEditor
         public static void Ingredients(Item item, int i, int ing1a, string ing1, int ing2a, string ing2)
         {
             var str = item.ToString();
+            Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
             Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
@@ -580,6 +600,7 @@ namespace JsonEditor
         public static void IngredientEditor(int ingno, Item item, int i, int inga, string ing)
         {
             var str = item.ToString();
+            Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
             Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
@@ -618,6 +639,7 @@ namespace JsonEditor
             changed:;
             var str = item.ToString();
             var clearline = "                                                                                  ";
+            Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
             Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
@@ -639,11 +661,11 @@ namespace JsonEditor
             if (Int32.TryParse(key, out int value))
             {
                 Int32.TryParse(key, out value);
-                Config.Set($"{str}s", $"{str}{i}", "Ingredients", $"Ingredient{ingno}", "Amount", value);
                 if (value < 1)
                 {
                     goto toosmall;
                 }
+                Config.Set($"{str}s", $"{str}{i}", "Ingredients", $"Ingredient{ingno}", "Amount", value);
                 Config.Save();
                 inga = value;
                 goto changed;
@@ -651,7 +673,7 @@ namespace JsonEditor
                 Console.SetCursorPosition(0, 10);
                 Console.WriteLine(clearline);
                 Console.SetCursorPosition(0, 12);
-                Console.WriteLine("ERROR: The number is too small", System.Drawing.Color.Red);
+                Console.WriteLine("ERROR: The number is too small" + clearline, System.Drawing.Color.Red);
                 Console.SetCursorPosition(0, 10);
                 goto key_invalid;
             }
@@ -660,7 +682,7 @@ namespace JsonEditor
                 Console.SetCursorPosition(0, 10);
                 Console.WriteLine(clearline);
                 Console.SetCursorPosition(0, 12);
-                Console.WriteLine("ERROR: The input is not a number or is too big", System.Drawing.Color.Red);
+                Console.WriteLine("ERROR: The input is not a number or is too big" + clearline, System.Drawing.Color.Red);
                 Console.SetCursorPosition(0, 10);
                 goto key_invalid;
             }
@@ -670,6 +692,7 @@ namespace JsonEditor
             changed:;
             var str = item.ToString();
             var clearline = "                                                                                  ";
+            Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
             Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
@@ -704,6 +727,177 @@ namespace JsonEditor
                 Console.WriteLine(clearline);
                 Console.SetCursorPosition(0, 12);
                 Console.WriteLine("ERROR: That item does not exist", System.Drawing.Color.Red);
+                Console.SetCursorPosition(0, 10);
+                goto key_invalid;
+            }
+        }
+        public static void Name(Item item, int i, string name)
+        {
+            changed:;
+            var str = item.ToString();
+            Console.ReplaceAllColorsWithDefaults();
+            Console.Clear();
+            Console.Title = "CustomFood Json Editor";
+            Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
+            Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
+            Console.WriteLine("");
+            Console.WriteLine($"> {str}s > {str}{i} > Name", System.Drawing.Color.LightGray);
+            Console.WriteLine("");
+            Console.WriteLine("Type a new value and press enter to change", System.Drawing.Color.LightGray);
+            Console.WriteLine("Type \"back\" and press enter to go back", System.Drawing.Color.LightGray);
+            Console.WriteLine("");
+            Console.Write($"CURRENT VALUE: ", System.Drawing.Color.LightGray);
+            Console.WriteLine(name, System.Drawing.Color.White);
+            Console.WriteLine("");
+            key_null:;
+            var key = Console.ReadLine();
+            if (key.ToLower() == "back")
+            {
+                ItemEditor(item, i);
+            }
+            if (string.IsNullOrEmpty(key) | string.IsNullOrWhiteSpace(key))
+            {
+                Console.SetCursorPosition(0, 12);
+                Console.WriteLine("ERROR: You must type a name", System.Drawing.Color.Red);
+                Console.SetCursorPosition(0, 10);
+                goto key_null;
+            }
+            else
+            {
+                Config.Set($"{str}s", $"{str}{i}", "Name", key.Trim());
+                Config.Save();
+                name = key.Trim();
+                goto changed;
+            }
+        }
+        public static void Size(Item item, int i, int x)
+        {
+            var str = item.ToString();
+            var y = -1;
+            Config.TryGet(ref y, $"{str}s", $"{str}{i}", "Size", "Y");
+            Size(item, i, x, y);
+        }
+        public static void Size(Item item, int i, int y, bool yIdentifier)
+        {
+            var str = item.ToString();
+            var x = -1;
+            Config.TryGet(ref x, $"{str}s", $"{str}{i}", "Size", "X");
+            Size(item, i, x, y);
+        }
+        public static void Size(Item item, int i, int x, int y)
+        {
+            var str = item.ToString();
+            Console.ReplaceAllColorsWithDefaults();
+            Console.Clear();
+            Console.Title = "CustomFood Json Editor";
+            Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
+            Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
+            Console.WriteLine("");
+            Console.WriteLine($"> {str}s > {str}{i} > Size", System.Drawing.Color.LightGray);
+            Console.WriteLine("");
+            Console.WriteLine("Type a number to select", System.Drawing.Color.LightGray);
+            Console.WriteLine("");
+            Console.WriteLine("0. BACK", System.Drawing.Color.LightGray);
+            Console.WriteLine("");
+            Console.WriteLine($"1. Edit X value: {x}", System.Drawing.Color.LightGray);
+            Console.WriteLine($"2. Edit Y value: {y}", System.Drawing.Color.LightGray);
+            Console.WriteLine("");
+            key_invalid:;
+            var key = Console.ReadKey().KeyChar;
+            if (key == '1')
+            {
+                SizeEditor(item, i, x, 'X');
+            }
+            if (key == '2')
+            {
+                SizeEditor(item, i, y, 'Y');
+            }
+            if (key == '0')
+            {
+                ItemEditor(item, i);
+            }
+            Console.SetCursorPosition(0, 12);
+            Console.WriteLine(" ");
+            Console.SetCursorPosition(0, 12);
+            goto key_invalid;
+        }
+        public static void SizeEditor(Item item, int i, int size, char whatsize)
+        {
+            changed:;
+            var str = item.ToString();
+            var clearline = "                                                                                  ";
+            Console.ReplaceAllColorsWithDefaults();
+            Console.Clear();
+            Console.Title = "CustomFood Json Editor";
+            Console.WriteLine("CustomFood Json Editor", System.Drawing.Color.LightGray);
+            Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
+            Console.WriteLine("");
+            Console.WriteLine($"> {str}s > {str}{i} > Size > {whatsize.ToString()}", System.Drawing.Color.LightGray);
+            Console.WriteLine("");
+            Console.WriteLine("Type a new value and press enter to change", System.Drawing.Color.LightGray);
+            Console.WriteLine("Type \"back\" and press enter to go back", System.Drawing.Color.LightGray);
+            Console.WriteLine("");
+            Console.WriteLine($"CURRENT VALUE: {size}", System.Drawing.Color.LightGray);
+            Console.WriteLine("");
+            key_invalid:;
+            var key = Console.ReadLine();
+            if (key.ToLower() == "back")
+            {
+                if (whatsize == 'X')
+                {
+                    Size(item, i, size);
+                }
+                if (whatsize == 'Y')
+                {
+                    Size(item, i, size, true);
+                }
+            }
+            if (Int32.TryParse(key, out int value))
+            {
+                Int32.TryParse(key, out value);
+                if (value < 1)
+                {
+                    goto toosmall;
+                }
+                if (whatsize == 'X')
+                {
+                    if (value > 6)
+                    {
+                        goto toobig;
+                    }
+                }
+                if (whatsize == 'Y')
+                {
+                    if (value > 8)
+                    {
+                        goto toobig;
+                    }
+                }
+                Config.Set($"{str}s", $"{str}{i}", "Size", whatsize.ToString(), value);
+                Config.Save();
+                size = value;
+                goto changed;
+                toosmall:;
+                Console.SetCursorPosition(0, 10);
+                Console.WriteLine(clearline);
+                Console.SetCursorPosition(0, 12);
+                Console.WriteLine("ERROR: The number is too small" + clearline, System.Drawing.Color.Red);
+                Console.SetCursorPosition(0, 10);
+                goto key_invalid;
+                toobig:;
+                Console.SetCursorPosition(0, 10);
+                Console.WriteLine(clearline);
+                Console.SetCursorPosition(0, 12);
+                Console.WriteLine("ERROR: The number is too big" + clearline, System.Drawing.Color.Red);
+                Console.SetCursorPosition(0, 10);
+                goto key_invalid;
+            }
+            else
+            {
+                Console.SetCursorPosition(0, 10);
+                Console.WriteLine(clearline);
+                Console.SetCursorPosition(0, 12);
+                Console.WriteLine("ERROR: The input is not a number or is too big" + clearline, System.Drawing.Color.Red);
                 Console.SetCursorPosition(0, 10);
                 goto key_invalid;
             }
