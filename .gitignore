@@ -30,9 +30,7 @@ CustomFood/CustomFood/obj/Debug/CustomFood.pdb
 CustomFood/CustomFood/obj/Debug/CustomFood.dll
 CustomFood/CustomFood/obj/Debug/CustomFood.csproj.FileListAbsolute.txt
 CustomFood/CustomFood/obj/Debug/CustomFood.csproj.CopyComplete
-
 CustomFood/CustomFood/CustomFood.csproj
-(AlexejheroYTB: my references paths are different, and i don't want it to commit with mine, because then it wont work for you)
 CustomFood/CustomFood/CustomFood_AlexejheroYTB.csproj
 CustomFood/CustomFood/obj/Debug/CustomFood_AlexejheroYTB.csprojResolveAssemblyReference.cache
 CustomFood/CustomFood/obj/Debug/CustomFood_AlexejheroYTB.csproj.FileListAbsolute.txt
@@ -47,39 +45,39 @@ CustomFood/.vs/CustomFood_AlexejheroYTB/v15/Server/sqlite3/storage.ide-shm
 CustomFood/.vs/CustomFood_AlexejheroYTB/v15/Server/sqlite3/storage.ide-wal
 CustomFood/CustomFood/CustomFood_AlexejheroYTB.csproj.user
 CustomFood/Unity/
-JsonEditor/.vs/JsonEditor/v15/.suo
-JsonEditor/.vs/JsonEditor/v15/Server/sqlite3/db.lock
-JsonEditor/.vs/JsonEditor/v15/Server/sqlite3/storage.ide
-JsonEditor/.vs/JsonEditor/v15/Server/sqlite3/storage.ide-wal
-JsonEditor/.vs/JsonEditor/v15/Server/sqlite3/storage.ide-shm
-JsonEditor/JsonEditor - AlexejheroYTB.csproj
-JsonEditor/obj/Debug/DesignTimeResolveAssemblyReferences.cache
-JsonEditor/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
-JsonEditor/obj/Debug/JsonEditor - AlexejheroYTB.csproj.CoreCompileInputs.cache
-JsonEditor/obj/Debug/JsonEditor - AlexejheroYTB.csprojResolveAssemblyReference.cache
-JsonEditor/obj/Debug/JsonEditor.csproj.CopyComplete
-JsonEditor/obj/Debug/JsonEditor.csproj.CoreCompileInputs.cache
-JsonEditor/obj/Debug/JsonEditor.csproj.FileListAbsolute.txt
-JsonEditor/obj/Debug/JsonEditor.csproj.GenerateResource.cache
-JsonEditor/obj/Debug/JsonEditor.csprojResolveAssemblyReference.cache
-JsonEditor/obj/Debug/JsonEditor.exe
-JsonEditor/obj/Debug/JsonEditor.Form1.resources
-JsonEditor/obj/Debug/JsonEditor.pdb
-JsonEditor/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
-JsonEditor/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
-JsonEditor/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
-JsonEditor/obj/Debug/JsonEditor - AlexejheroYTB.csproj.GenerateResource.cache
-JsonEditor/obj/Debug/JsonEditor - AlexejheroYTB.csproj.FileListAbsolute.txt
-JsonEditor/obj/Debug/JsonEditor - AlexejheroYTB.csproj.CopyComplete
-JsonEditor/JsonEditor - AlexejheroYTB.sln
-JsonEditor/.vs/JsonEditor - AlexejheroYTB/v15/Server/sqlite3/storage.ide-wal
-JsonEditor/.vs/JsonEditor - AlexejheroYTB/v15/Server/sqlite3/storage.ide-shm
-JsonEditor/.vs/JsonEditor - AlexejheroYTB/v15/Server/sqlite3/storage.ide
-JsonEditor/.vs/JsonEditor - AlexejheroYTB/v15/Server/sqlite3/db.lock
-JsonEditor/.vs/JsonEditor - AlexejheroYTB/v15/.suo
-JsonEditor/packages/Colorful.Console.1.2.6/lib/netstandard2.0/Colorful.Console.dll
-JsonEditor/packages/Colorful.Console.1.2.6/lib/net46/Colorful.Console.dll
-JsonEditor/packages/Colorful.Console.1.2.6/lib/net40/Colorful.Console.dll
-JsonEditor/packages/Colorful.Console.1.2.6/lib/net45/Colorful.Console.dll
-JsonEditor/packages/Colorful.Console.1.2.6/lib/net451/Colorful.Console.dll
-JsonEditor/packages/Colorful.Console.1.2.6/lib/net452/Colorful.Console.dll
+CustomFood/JsonEditor/.vs/JsonEditor/v15/.suo
+CustomFood/JsonEditor/.vs/JsonEditor/v15/Server/sqlite3/db.lock
+CustomFood/JsonEditor/.vs/JsonEditor/v15/Server/sqlite3/storage.ide
+CustomFood/JsonEditor/.vs/JsonEditor/v15/Server/sqlite3/storage.ide-wal
+CustomFood/JsonEditor/.vs/JsonEditor/v15/Server/sqlite3/storage.ide-shm
+CustomFood/JsonEditor/JsonEditor - AlexejheroYTB.csproj
+CustomFood/JsonEditor/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+CustomFood/JsonEditor/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+CustomFood/JsonEditor/obj/Debug/JsonEditor - AlexejheroYTB.csproj.CoreCompileInputs.cache
+CustomFood/JsonEditor/obj/Debug/JsonEditor - AlexejheroYTB.csprojResolveAssemblyReference.cache
+CustomFood/JsonEditor/obj/Debug/JsonEditor.csproj.CopyComplete
+CustomFood/JsonEditor/obj/Debug/JsonEditor.csproj.CoreCompileInputs.cache
+CustomFood/JsonEditor/obj/Debug/JsonEditor.csproj.FileListAbsolute.txt
+CustomFood/JsonEditor/obj/Debug/JsonEditor.csproj.GenerateResource.cache
+CustomFood/JsonEditor/obj/Debug/JsonEditor.csprojResolveAssemblyReference.cache
+CustomFood/JsonEditor/obj/Debug/JsonEditor.exe
+CustomFood/JsonEditor/obj/Debug/JsonEditor.Form1.resources
+CustomFood/JsonEditor/obj/Debug/JsonEditor.pdb
+CustomFood/JsonEditor/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+CustomFood/JsonEditor/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+CustomFood/JsonEditor/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+CustomFood/JsonEditor/obj/Debug/JsonEditor - AlexejheroYTB.csproj.GenerateResource.cache
+CustomFood/JsonEditor/obj/Debug/JsonEditor - AlexejheroYTB.csproj.FileListAbsolute.txt
+CustomFood/JsonEditor/obj/Debug/JsonEditor - AlexejheroYTB.csproj.CopyComplete
+CustomFood/JsonEditor/JsonEditor - AlexejheroYTB.sln
+CustomFood/JsonEditor/.vs/JsonEditor - AlexejheroYTB/v15/Server/sqlite3/storage.ide-wal
+CustomFood/JsonEditor/.vs/JsonEditor - AlexejheroYTB/v15/Server/sqlite3/storage.ide-shm
+CustomFood/JsonEditor/.vs/JsonEditor - AlexejheroYTB/v15/Server/sqlite3/storage.ide
+CustomFood/JsonEditor/.vs/JsonEditor - AlexejheroYTB/v15/Server/sqlite3/db.lock
+CustomFood/JsonEditor/.vs/JsonEditor - AlexejheroYTB/v15/.suo
+CustomFood/JsonEditor/packages/Colorful.Console.1.2.6/lib/netstandard2.0/Colorful.Console.dll
+CustomFood/JsonEditor/packages/Colorful.Console.1.2.6/lib/net46/Colorful.Console.dll
+CustomFood/JsonEditor/packages/Colorful.Console.1.2.6/lib/net40/Colorful.Console.dll
+CustomFood/JsonEditor/packages/Colorful.Console.1.2.6/lib/net45/Colorful.Console.dll
+CustomFood/JsonEditor/packages/Colorful.Console.1.2.6/lib/net451/Colorful.Console.dll
+CustomFood/JsonEditor/packages/Colorful.Console.1.2.6/lib/net452/Colorful.Console.dll

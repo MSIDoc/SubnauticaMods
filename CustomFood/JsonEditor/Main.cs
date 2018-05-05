@@ -24,7 +24,7 @@ namespace JsonEditor
         }
         public static Item Cake = Item.Cake;
         public static Item Juice = Item.Juice;
-        public static string version = "C9";
+        public static string version = "version C-10";
         public static void Main()
         {
             WinForms(false);
