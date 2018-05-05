@@ -1,0 +1,11 @@
+{
+  "Id": "EggInfo",
+  "DisplayName": "EggInfo",
+  "Author": "YenZen",
+  "Version": "1.0.0",
+  "Enable": true,
+  "AssemblyName": "EggInfo.dll",
+  "EntryMethod": "EggInfo.QPatch.Patch",
+  "Config": {
+  }
+}
