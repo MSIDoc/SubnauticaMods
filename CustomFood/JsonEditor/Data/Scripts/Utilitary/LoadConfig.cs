@@ -1,8 +1,8 @@
-﻿using static JsonEditor.CustomFoodJsonEditor;
+﻿using static JsonEditor.Data.Scripts.Utilitary.Settings;
 
-namespace JsonEditor
+namespace JsonEditor.Data.Scripts.Utilitary.Config
 {
-    public class Cfg
+    public partial class Load
     {
         public static bool _debug = false;
 
@@ -14,6 +14,7 @@ namespace JsonEditor
         public static string _juice1_ingredient1 = "FilteredWater";
         public static int _juice1_ingredient1amount = 1;
         public static string _juice1_ingredient2 = "BulboTreePiece";
+
         public static int _juice1_ingredient2amount = 1;
         public static string _juice1_ingredient3 = "None";
         public static int _juice1_ingredient3amount = 1;
@@ -236,8 +237,9 @@ namespace JsonEditor
 
         public static bool previewcolors = false;
 
-        public static void Load()
+        public static void Config()
         {
+            var Config = Settings.Config;
             Config.Load();
             var configChanged =
                 Config.TryGet(ref _debug, "Enable debugging")

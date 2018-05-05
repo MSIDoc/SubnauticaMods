@@ -1,34 +1,15 @@
 using System;
-using System.Windows.Forms;
-using Utilites.Config;
 using Console = Colorful.Console;
+using static JsonEditor.Data.Scripts.Utilitary.Settings;
+using JsonEditor.Data.Scripts.Utilitary.Config;
 
-namespace JsonEditor
+namespace JsonEditor.Data.Scripts
 {
-    public class CustomFoodJsonEditor
+    public partial class Tree
     {
-        public static void WinForms(bool bl = false)
-        {
-            if (bl == false) return;
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-
-        }
-        public static readonly ConfigFile Config = new ConfigFile(@"../../../config");
-        public static readonly ConfigFile Setting = new ConfigFile(@"../../settings");
-        public enum Item
-        {
-            Cake,
-            Juice
-        }
-        public static Item Cake = Item.Cake;
-        public static Item Juice = Item.Juice;
-        public static string version = "(Development Build)";
         public static void Main()
         {
-            WinForms(false);
-            Cfg.Load();
+            Load.Config();
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
@@ -48,12 +29,13 @@ namespace JsonEditor
             Console.Write($"3. Enable debugging: ", System.Drawing.Color.LightGray);
             if (_debug)
             {
-                Console.WriteLine("Yes", System.Drawing.Color.LimeGreen);
+                Console.Write("Yes ", System.Drawing.Color.LimeGreen);
             }
             else
             {
-                Console.WriteLine("No", System.Drawing.Color.Red);
+                Console.Write("No ", System.Drawing.Color.Red);
             }
+            Console.WriteLine("(FEATURE NOT YET IMPLEMENTED)", System.Drawing.Color.Red);
             Console.WriteLine("");
             key_invalid:;
             var key = Console.ReadKey().KeyChar;
@@ -72,114 +54,6 @@ namespace JsonEditor
             Console.SetCursorPosition(0, 13);
             Console.WriteLine(" ");
             Console.SetCursorPosition(0, 13);
-            goto key_invalid;
-        }
-        public static void ItemSelector(Item item)
-        {
-            var str = item.ToString();
-            var lower = str.ToLower();
-            var disabled = " ";
-            Console.ReplaceAllColorsWithDefaults();
-            Console.Clear();
-            Console.Title = "CustomFood Json Editor";
-            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
-            Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
-            Console.WriteLine("");
-            Console.WriteLine($"> {str}s", System.Drawing.Color.LightGray);
-            Console.WriteLine("");
-            Console.WriteLine("Type a number to select", System.Drawing.Color.LightGray);
-            Console.WriteLine("");
-            Console.WriteLine("0. BACK", System.Drawing.Color.LightGray);
-            Console.WriteLine("");
-            var enabled1 = true;
-            Config.TryGet(ref enabled1, $"{str}s", $"{str}1", "Enabled");
-            if (enabled1 == false)
-            {
-                disabled = "(DISABLED)";
-            }
-            Console.Write($"1. {str}1 ", System.Drawing.Color.LightGray);
-            Console.WriteLine(disabled, System.Drawing.Color.Orange);
-            disabled = " ";
-            var enabled2 = true;
-            Config.TryGet(ref enabled2, $"{str}s", $"{str}2", "Enabled");
-            if (enabled2 == false)
-            {
-                disabled = "(DISABLED)";
-            }
-            Console.Write($"2. {str}2 ", System.Drawing.Color.LightGray);
-            Console.WriteLine(disabled, System.Drawing.Color.Orange);
-            disabled = " ";
-            var enabled3 = true;
-            Config.TryGet(ref enabled3, $"{str}s", $"{str}3", "Enabled");
-            if (enabled3 == false)
-            {
-                disabled = "(DISABLED)";
-            }
-            Console.Write($"3. {str}3 ", System.Drawing.Color.LightGray);
-            Console.WriteLine(disabled, System.Drawing.Color.Orange);
-            disabled = " ";
-            var enabled4 = true;
-            Config.TryGet(ref enabled4, $"{str}s", $"{str}4", "Enabled");
-            if (enabled4 == false)
-            {
-                disabled = "(DISABLED)";
-            }
-            Console.Write($"4. {str}4 ", System.Drawing.Color.LightGray);
-            Console.WriteLine(disabled, System.Drawing.Color.Orange);
-            disabled = " ";
-            var enabled5 = true;
-            Config.TryGet(ref enabled5, $"{str}s", $"{str}5", "Enabled");
-            if (enabled5 == false)
-            {
-                disabled = "(DISABLED)";
-            }
-            Console.Write($"5. {str}5 ", System.Drawing.Color.LightGray);
-            Console.WriteLine(disabled, System.Drawing.Color.Orange);
-            disabled = " ";
-            var enabled6 = true;
-            Config.TryGet(ref enabled6, $"{str}s", $"{str}6", "Enabled");
-            if (enabled6 == false)
-            {
-                disabled = "(DISABLED)";
-            }
-            Console.Write($"6. {str}6 ", System.Drawing.Color.LightGray);
-            Console.WriteLine(disabled, System.Drawing.Color.Orange);
-
-            disabled = " ";
-            Console.WriteLine("");
-            key_invalid:;
-            var key = Console.ReadKey().KeyChar;
-            if (key == '1')
-            {
-                ItemEditor(item, 1);
-            }
-            if (key == '2')
-            {
-                ItemEditor(item, 2);
-            }
-            if (key == '3')
-            {
-                ItemEditor(item, 3);
-            }
-            if (key == '4')
-            {
-                ItemEditor(item, 4);
-            }
-            if (key == '5')
-            {
-                ItemEditor(item, 5);
-            }
-            if (key == '6')
-            {
-                ItemEditor(item, 6);
-            }
-            if (key == '0')
-            {
-                Main();
-            }
-            Console.SetCursorPosition(0, 14);
-            Console.WriteLine(" ");
-            Console.SetCursorPosition(0, 14);
             goto key_invalid;
         }
         public static void ItemEditor(Item item, int i)
