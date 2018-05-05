@@ -334,7 +334,7 @@ namespace CustomFood
         }
         public static void CheckIngredients(string item, int amount, int ingNo)
         {
-            if (amount != 0)
+            if ((amount != 0) || (item != "None"))
             {
                 if (amount < 0)
                 {
@@ -358,7 +358,7 @@ namespace CustomFood
             }
             else
             {
-                Log.Debug(name, $"Ingredient {ingNo} amount is set to 0. Ignoring...");
+                Log.Debug(name, $"Ingredient {ingNo} is disabled. Ignoring...");
             }
         }
         public static void ApplyTechData()
