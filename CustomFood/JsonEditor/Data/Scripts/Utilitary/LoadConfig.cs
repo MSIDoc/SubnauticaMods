@@ -1,8 +1,8 @@
 ﻿using static JsonEditor.Data.Scripts.Utilitary.Settings;
 
-namespace JsonEditor.Data.Scripts.Utilitary.Config
+namespace JsonEditor.Data.Scripts.Utilitary
 {
-    public partial class Load
+    public partial class Config
     {
         public static bool _debug = false;
 
@@ -237,7 +237,7 @@ namespace JsonEditor.Data.Scripts.Utilitary.Config
 
         public static bool previewcolors = false;
 
-        public static void Config()
+        public static void Load()
         {
             var Config = Settings.Config;
             Config.Load();

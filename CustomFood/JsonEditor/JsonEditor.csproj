@@ -94,9 +94,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Scripts\ItemSelector.cs" />
+    <Compile Include="Data\Scripts\Tree\ColorEditor.cs" />
+    <Compile Include="Data\Scripts\Tree\IngredientAmountEditor.cs" />
+    <Compile Include="Data\Scripts\Tree\IngredientEditSelector.cs" />
+    <Compile Include="Data\Scripts\Tree\IngredientItemEditor.cs" />
+    <Compile Include="Data\Scripts\Tree\IngredientSelector.cs" />
+    <Compile Include="Data\Scripts\Tree\ItemEditor.cs" />
+    <Compile Include="Data\Scripts\Tree\ItemSelector.cs" />
+    <Compile Include="Data\Scripts\Tree\NameEditor.cs" />
+    <Compile Include="Data\Scripts\Tree\SizeEditor.cs" />
+    <Compile Include="Data\Scripts\Tree\SizeSelector.cs" />
     <Compile Include="Data\Scripts\Utilitary\LoadConfig.cs" />
-    <Compile Include="Data\Scripts\Main.cs" />
+    <Compile Include="Data\Scripts\Tree\Main.cs" />
     <Compile Include="Data\Scripts\Utilitary\Settings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
