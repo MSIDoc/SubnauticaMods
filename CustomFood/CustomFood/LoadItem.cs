@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using SMLHelper;
 using SMLHelper.Patchers;
+using Utilites;
+using Utilites.Config;
 
 namespace CustomFood
 {
@@ -10,11 +12,9 @@ namespace CustomFood
     /// </summary>
     public class LoadItem
     {
-        public static TechType _ttt1;
-        public static TechType _ttt2;
-        public static TechType _ttt3;
-        public static TechType _ttt4;
-        public static TechType _ttt5;
+        private const string configColorPath = Cfg.configColorPath;
+        public static ConfigFile Config = Cfg.Config;
+
         public static TechType _juice1tt;
         public static TechType _juice2tt;
         public static TechType _juice3tt;
@@ -27,8 +27,17 @@ namespace CustomFood
         public static TechType _cake4tt;
         public static TechType _cake5tt;
         public static TechType _cake6tt;
+
         public static TechType techType;
+
         public static string _sprite;
+
+        private static string type;
+        private static string name;
+
+        public static List<IngredientHelper> ingredients = new List<IngredientHelper>();
+
+        public static TechDataHelper techData;
 
         /// <summary>
         /// Loads an item
@@ -56,10 +65,9 @@ namespace CustomFood
                 var _ingredient5amount = 1;
                 var _x = 1;
                 var _y = 1;
-                var Config = Cfg.Config;
                 var number = numbr.ToString();
-                var type = typ + "s";
-                var name = typ + number;
+                type = typ + "s";
+                name = typ + number;
                 var internal_name = "Custom" + name;
                 var _sprite = "Default";
                 var prefabpath = "WorldEntities/Food/" + internal_name;
@@ -72,15 +80,16 @@ namespace CustomFood
                 Config.TryGet(ref _ingredient1amount, type, name, "Ingredients", "Ingredient1", "Amount");
                 Config.TryGet(ref _ingredient2, type, name, "Ingredients", "Ingredient2", "Item");
                 Config.TryGet(ref _ingredient2amount, type, name, "Ingredients", "Ingredient2", "Amount");
-                Config.TryGet(ref _ingredient3, type, name, "Ingredients", "Ingredient2", "Item");
-                Config.TryGet(ref _ingredient3amount, type, name, "Ingredients", "Ingredient2", "Amount");
-                Config.TryGet(ref _ingredient4, type, name, "Ingredients", "Ingredient2", "Item");
-                Config.TryGet(ref _ingredient4amount, type, name, "Ingredients", "Ingredient2", "Amount");
-                Config.TryGet(ref _ingredient5, type, name, "Ingredients", "Ingredient2", "Item");
-                Config.TryGet(ref _ingredient5amount, type, name, "Ingredients", "Ingredient2", "Amount");
+                Config.TryGet(ref _ingredient3, type, name, "Ingredients", "Ingredient3", "Item");
+                Config.TryGet(ref _ingredient3amount, type, name, "Ingredients", "Ingredient3", "Amount");
+                Config.TryGet(ref _ingredient4, type, name, "Ingredients", "Ingredient4", "Item");
+                Config.TryGet(ref _ingredient4amount, type, name, "Ingredients", "Ingredient4", "Amount");
+                Config.TryGet(ref _ingredient5, type, name, "Ingredients", "Ingredient5", "Item");
+                Config.TryGet(ref _ingredient5amount, type, name, "Ingredients", "Ingredient5", "Amount");
                 Config.TryGet(ref _x, type, name, "Size", "X");
                 Config.TryGet(ref _y, type, name, "Size", "Y");
-                Config.TryGet(ref _sprite, type, name, "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'");
+                Config.TryGet(ref _sprite, type, name, configColorPath);
+                Log.Debug("Started loading " + name);
                 if (_enabled == false)
                 {
                     return;
@@ -91,44 +100,6 @@ namespace CustomFood
                     Config[type, name, "Name"] = _name;
                     Log.Warning(name, "Name can't be blank");
                     Log.Info(name, "Name was set to 'Name can't be blank'");
-                }
-                if (!Enum.IsDefined(typeof(TechType), _ingredient1))
-                {
-                    _ingredient1 = "Ingredient 1 invalid";
-                    Config[type, name, "Ingredients", "Ingredient1", "Item"] = _ingredient1;
-                    Log.Warning(name, "Ingredient1 must be a TechType");
-                    Log.Info(name, "Ingredient1 was set to a dummy value");
-                    _ttt1 = Cfg._ingredient1missing;
-                }
-                else
-                {
-                    _ttt1 = (TechType)Enum.Parse(typeof(TechType), _ingredient1);
-                }
-                if (_ingredient1amount < 1)
-                {
-                    _ingredient1amount = 1;
-                    Config[type, name, "Ingredients", "Ingredient1", "Amount"] = _ingredient1amount;
-                    Log.Warning(name, "Ingredient1 amount must not be less than 1");
-                    Log.Info(name, "Ingredient1 amount was set to 1");
-                }
-                if (!Enum.IsDefined(typeof(TechType), _ingredient2))
-                {
-                    _ingredient2 = "Ingredient 2 invalid";
-                    Config[type, name, "Ingredients", "Ingredient2", "Item"] = _ingredient2;
-                    Log.Warning(name, "Ingredient2 must be a TechType");
-                    Log.Info(name, "Ingredient2 was set to a dummy value");
-                    _ttt2 = Cfg._ingredient2missing;
-                }
-                else
-                {
-                    _ttt2 = (TechType)Enum.Parse(typeof(TechType), _ingredient2);
-                }
-                if (_ingredient2amount < 1)
-                {
-                    _ingredient2amount = 1;
-                    Config[type, name, "Ingredients", "Ingredient2", "Amount"] = _ingredient2amount;
-                    Log.Warning(name, "Ingredient2 amount must not be less than 1");
-                    Log.Info(name, "Ingredient2 amount was set to 1");
                 }
                 if (_x < 1)
                 {
@@ -158,9 +129,13 @@ namespace CustomFood
                     Log.Warning(name, "Y Size can't be greater than 8");
                     Log.Info(name, "Y was set to 1");
                 }
+                CheckIngredients(_ingredient1, _ingredient1amount, 1);
+                CheckIngredients(_ingredient2, _ingredient2amount, 2);
+                CheckIngredients(_ingredient3, _ingredient3amount, 3);
+                CheckIngredients(_ingredient4, _ingredient4amount, 4);
+                CheckIngredients(_ingredient5, _ingredient5amount, 5);
                 Cfg.Save();
                 techType = TechTypePatcher.AddTechType(internal_name, _name, _tooltip + Cfg._tooltipsuffix);
-                Log.Debug("Started patching " + name);
                 if (name == "Juice1")
                 {
                     _juice1tt = techType;
@@ -269,17 +244,7 @@ namespace CustomFood
                         techType,
                         GetGameObject.Cake6));
                 }
-                var techData = new TechDataHelper
-                {
-                    _craftAmount = 1,
-                    _ingredients = new List<IngredientHelper>()
-                {
-                    new IngredientHelper(_ttt1, _ingredient1amount),
-                    new IngredientHelper(_ttt2, _ingredient2amount)
-                },
-                    _techType = techType
-                };
-                CraftDataPatcher.customTechData.Add(techType, techData);
+                ApplyTechData();
                 KnownTechPatcher.unlockedAtStart.Add(techType);
                 if (type == "Cakes")
                 {
@@ -294,6 +259,8 @@ namespace CustomFood
                     CraftDataPatcher.AddToCustomGroup(TechGroup.Survival, TechCategory.Water, techType);
                 }
                 CraftDataPatcher.customItemSizes[key: techType] = new Vector2int(_x, _y);
+                ingredients.Clear();
+                Log.Debug("Finished loading " + name);
             }
             catch (Exception e)
             {
@@ -364,6 +331,133 @@ namespace CustomFood
                 var cakeyellow = TechTypePatcher.AddTechType("SpriteCakeYellow", "Yellow Cake", "The sprite should be yellow");
                 CustomSpriteHandler.customSprites.Add(new CustomSprite(cakeyellow, Cfg.cake_yellow));
             }
+        }
+        public static void CheckIngredients(string item, int amount, int ingNo)
+        {
+            if (amount != 0)
+            {
+                if (amount < 0)
+                {
+                    amount = 1;
+                    Config[type, name, "Ingredients", $"Ingredient{ingNo}", "Amount"] = amount;
+                    Log.Warning(name, $"Ingredient{ingNo} amount must not be less than 1");
+                    Log.Info(name, $"Ingredient{ingNo} amount was set to 1");
+                }
+                if (!Enum.IsDefined(typeof(TechType), item))
+                {
+                    item = $"Ingredient {ingNo} invalid (Old value: {item})";
+                    Config[type, name, "Ingredients", $"Ingredient{ingNo}", "Item"] = item;
+                    Log.Warning(name, $"Ingredient{ingNo} must be a TechType");
+                    Log.Info(name, $"Ingredient{ingNo} was set to a dummy value and disabled");
+                    amount = 0;
+                }
+                else
+                {
+                    ingredients.Add(new IngredientHelper((TechType)Enum.Parse(typeof(TechType), item), amount));
+                }
+            }
+            else
+            {
+                Log.Debug(name, $"Ingredient {ingNo} amount is set to 0. Ignoring...");
+            }
+        }
+        public static void ApplyTechData()
+        {
+            if (ingredients.Count == 1)
+            {
+                techData = new TechDataHelper
+                {
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
+                {
+                    ingredients.GetLast()
+                },
+                    _techType = techType
+                };
+            }
+            if (ingredients.Count == 2)
+            {
+                var i1 = ingredients.GetLast();
+                ingredients.Remove(i1);
+
+                techData = new TechDataHelper
+                {
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
+                    {
+                        i1,
+                        ingredients.GetLast()
+                    },
+                    _techType = techType
+                };
+            }
+            if (ingredients.Count == 3)
+            {
+                var i1 = ingredients.GetLast();
+                ingredients.Remove(i1);
+                var i2 = ingredients.GetLast();
+                ingredients.Remove(i2);
+
+                techData = new TechDataHelper
+                {
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
+                    {
+                        i1,
+                        i2,
+                        ingredients.GetLast()
+                    },
+                    _techType = techType
+                };
+            }
+            if (ingredients.Count == 4)
+            {
+                var i1 = ingredients.GetLast();
+                ingredients.Remove(i1);
+                var i2 = ingredients.GetLast();
+                ingredients.Remove(i2);
+                var i3 = ingredients.GetLast();
+                ingredients.Remove(i3);
+
+                techData = new TechDataHelper
+                {
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
+                    {
+                        i1,
+                        i2,
+                        i3,
+                        ingredients.GetLast()
+                    },
+                    _techType = techType
+                };
+            }
+            if (ingredients.Count == 5)
+            {
+                var i1 = ingredients.GetLast();
+                ingredients.Remove(i1);
+                var i2 = ingredients.GetLast();
+                ingredients.Remove(i2);
+                var i3 = ingredients.GetLast();
+                ingredients.Remove(i3);
+                var i4 = ingredients.GetLast();
+                ingredients.Remove(i4);
+
+                techData = new TechDataHelper
+                {
+                    _craftAmount = 1,
+                    _ingredients = new List<IngredientHelper>()
+                    {
+                        i1,
+                        i2,
+                        i3,
+                        i4,
+                        ingredients.GetLast()
+                    },
+                    _techType = techType
+                };
+            }
+            CraftDataPatcher.customTechData.Add(techType, techData);
         }
     }
 }
