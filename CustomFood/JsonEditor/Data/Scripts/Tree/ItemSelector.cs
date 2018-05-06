@@ -13,14 +13,14 @@ namespace JsonEditor.Data.Scripts
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
-            Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", LightGray);
+            Console.WriteLine("Created by AlexejheroYTB and yenzgaming", LightGray);
             Console.WriteLine("");
-            Console.WriteLine($"> {str}s", System.Drawing.Color.LightGray);
+            Console.WriteLine($"> {str}s", LightGray);
             Console.WriteLine("");
-            Console.WriteLine("Type a number to select", System.Drawing.Color.LightGray);
+            Console.WriteLine("Type a number to select", LightGray);
             Console.WriteLine("");
-            Console.WriteLine("0. BACK", System.Drawing.Color.LightGray);
+            Console.WriteLine("0. BACK", LightGray);
             Console.WriteLine("");
             var enabled1 = true;
             Config.TryGet(ref enabled1, $"{str}s", $"{str}1", "Enabled");
@@ -28,7 +28,7 @@ namespace JsonEditor.Data.Scripts
             {
                 disabled = "(DISABLED)";
             }
-            Console.Write($"1. {str}1 ", System.Drawing.Color.LightGray);
+            Console.Write($"1. {str}1 ", LightGray);
             Console.WriteLine(disabled, System.Drawing.Color.Orange);
             disabled = " ";
             var enabled2 = true;
@@ -37,7 +37,7 @@ namespace JsonEditor.Data.Scripts
             {
                 disabled = "(DISABLED)";
             }
-            Console.Write($"2. {str}2 ", System.Drawing.Color.LightGray);
+            Console.Write($"2. {str}2 ", LightGray);
             Console.WriteLine(disabled, System.Drawing.Color.Orange);
             disabled = " ";
             var enabled3 = true;
@@ -46,7 +46,7 @@ namespace JsonEditor.Data.Scripts
             {
                 disabled = "(DISABLED)";
             }
-            Console.Write($"3. {str}3 ", System.Drawing.Color.LightGray);
+            Console.Write($"3. {str}3 ", LightGray);
             Console.WriteLine(disabled, System.Drawing.Color.Orange);
             disabled = " ";
             var enabled4 = true;
@@ -55,7 +55,7 @@ namespace JsonEditor.Data.Scripts
             {
                 disabled = "(DISABLED)";
             }
-            Console.Write($"4. {str}4 ", System.Drawing.Color.LightGray);
+            Console.Write($"4. {str}4 ", LightGray);
             Console.WriteLine(disabled, System.Drawing.Color.Orange);
             disabled = " ";
             var enabled5 = true;
@@ -64,7 +64,7 @@ namespace JsonEditor.Data.Scripts
             {
                 disabled = "(DISABLED)";
             }
-            Console.Write($"5. {str}5 ", System.Drawing.Color.LightGray);
+            Console.Write($"5. {str}5 ", LightGray);
             Console.WriteLine(disabled, System.Drawing.Color.Orange);
             disabled = " ";
             var enabled6 = true;
@@ -73,7 +73,7 @@ namespace JsonEditor.Data.Scripts
             {
                 disabled = "(DISABLED)";
             }
-            Console.Write($"6. {str}6 ", System.Drawing.Color.LightGray);
+            Console.Write($"6. {str}6 ", LightGray);
             Console.WriteLine(disabled, System.Drawing.Color.Orange);
 
             disabled = " ";

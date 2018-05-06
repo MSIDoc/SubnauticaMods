@@ -1,4 +1,0 @@
-﻿// PLEASE DO NOT CHANGE ANYTHING LOCATED IN THIS FILE //
-
-# Version
-(Development Build)

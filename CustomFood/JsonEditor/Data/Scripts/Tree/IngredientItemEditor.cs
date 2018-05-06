@@ -14,15 +14,24 @@ namespace JsonEditor.Data.Scripts
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
-            Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", LightGray);
+            Console.WriteLine("Created by AlexejheroYTB and yenzgaming", LightGray);
             Console.WriteLine("");
-            Console.WriteLine($"> {str}s > {str}{i} > Ingredients > Ingredient{ingno} > Item", System.Drawing.Color.LightGray);
+            Console.WriteLine($"> {str}s > {str}{i} > Ingredients > Ingredient{ingno} > Item", LightGray);
             Console.WriteLine("");
-            Console.WriteLine("Type a new value and press enter to change", System.Drawing.Color.LightGray);
-            Console.WriteLine("Type \"back\" and press enter to go back", System.Drawing.Color.LightGray);
+            Console.WriteLine("Type a new value and press enter to change", LightGray);
+            Console.WriteLine("Type \"back\" and press enter to go back", LightGray);
             Console.WriteLine("");
-            Console.WriteLine($"CURRENT VALUE: {ing}", System.Drawing.Color.LightGray);
+            Console.Write($"CURRENT VALUE: ", LightGray);
+            if (Enum.TryParse(ing, true, out TechType toType))
+            {
+                ing = toType.ToString();
+                Console.WriteLine(ing, White);
+            }
+            else
+            {
+                Console.WriteLine($"{ing} (INVALID - NOT AN ITEM)");
+            }
             Console.WriteLine("");
             key_invalid:;
             var key = Console.ReadLine();
@@ -45,7 +54,7 @@ namespace JsonEditor.Data.Scripts
                 Console.SetCursorPosition(0, 10);
                 Console.WriteLine(clearline);
                 Console.SetCursorPosition(0, 12);
-                Console.WriteLine("ERROR: That item does not exist", System.Drawing.Color.Red);
+                Console.WriteLine("ERROR: That item does not exist", Red);
                 Console.SetCursorPosition(0, 10);
                 goto key_invalid;
             }

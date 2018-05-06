@@ -18,5 +18,10 @@ namespace JsonEditor.Data.Scripts.Utilitary
         public static Item Juice = Item.Juice;
         public static string version = File.ReadLines("data.txt").Skip(3).Take(1).First();
         public static string clearline = "                                                                                  ";
+        public static System.Drawing.Color LightGray = System.Drawing.Color.LightGray;
+        public static System.Drawing.Color White = System.Drawing.Color.White;
+        public static System.Drawing.Color Green = System.Drawing.Color.Green;
+        public static System.Drawing.Color Red = System.Drawing.Color.Red;
+        public const string configColorPath = "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'";
     }
 }

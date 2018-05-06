@@ -1,55 +1,73 @@
 ﻿using Console = Colorful.Console;
 using static JsonEditor.Data.Scripts.Utilitary.Settings;
+using System;
 
 namespace JsonEditor.Data.Scripts
 {
     public partial class Tree
     {
-        public static void IngredientEditSelector(int ingno, Item item, int i, int inga)
+        public static void IngredientEditSelector(int ingno, Item item, int itemNo, int inga)
         {
-            var ing = "None";
+            var ing = "SomethingPlaceholder";
             var str = item.ToString();
-            Config.TryGet(ref ing, $"{str}s", $"{str}{i}", "Ingredients", $"Ingredient{ingno}", "Item");
-            IngredientEditSelector(ingno, item, i, inga, ing);
+            Config.TryGet(ref ing, $"{str}s", $"{str}{itemNo}", "Ingredients", $"Ingredient{ingno}", "Item");
+            IngredientEditSelector(ingno, item, itemNo, inga, ing);
         }
-        public static void IngredientEditSelector(int ingno, Item item, int i, string ing)
+        public static void IngredientEditSelector(int ingno, Item item, int itemNo, string ing)
         {
-            var inga = 1;
+            var inga = -1;
             var str = item.ToString();
-            Config.TryGet(ref inga, $"{str}s", $"{str}{i}", "Ingredients", $"Ingredient{ingno}", "Amount");
-            IngredientEditSelector(ingno, item, i, inga, ing);
+            Config.TryGet(ref inga, $"{str}s", $"{str}{itemNo}", "Ingredients", $"Ingredient{ingno}", "Amount");
+            IngredientEditSelector(ingno, item, itemNo, inga, ing);
         }
-        public static void IngredientEditSelector(int ingno, Item item, int i, int inga, string ing)
+        public static void IngredientEditSelector(int ingno, Item item, int itemNo, int inga, string ing)
         {
             var str = item.ToString();
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
-            Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", LightGray);
+            Console.WriteLine("Created by AlexejheroYTB and yenzgaming", LightGray);
             Console.WriteLine("");
-            Console.WriteLine($"> {str}s > {str}{i} > Ingredients > Ingredient{ingno}", System.Drawing.Color.LightGray);
+            Console.WriteLine($"> {str}s > {str}{itemNo} > Ingredients > Ingredient{ingno}", LightGray);
             Console.WriteLine("");
-            Console.WriteLine("Type a number to select", System.Drawing.Color.LightGray);
+            Console.WriteLine("Type a number to select", LightGray);
             Console.WriteLine("");
-            Console.WriteLine("0. BACK", System.Drawing.Color.LightGray);
+            Console.WriteLine("0. BACK", LightGray);
             Console.WriteLine("");
-            Console.WriteLine($"1. Edit Item: {ing}", System.Drawing.Color.LightGray);
-            Console.WriteLine($"2. Edit Amount: {inga}", System.Drawing.Color.LightGray);
+            Console.Write($"1. Edit Item: ", LightGray);
+            if (Enum.TryParse(ing, true, out TechType toType))
+            {
+                ing = toType.ToString();
+                Console.WriteLine(ing, White);
+            }
+            else
+            {
+                Console.WriteLine($"{ing} (INVALID - NOT AN ITEM)");
+            }
+            Console.Write($"2. Edit Amount: {inga}", LightGray);
+            if (inga < 1)
+            {
+                Console.WriteLine($"{inga} (INVALID - TOO SMALL)");
+            }
+            else
+            {
+                Console.WriteLine(inga, White);
+            }
             Console.WriteLine("");
             key_invalid:;
             var key = Console.ReadKey().KeyChar;
             if (key == '1')
             {
-                IngredientItemEditor(ingno, item, i, ing);
+                IngredientItemEditor(ingno, item, itemNo, ing);
             }
             if (key == '2')
             {
-                IngredientAmountEditor(ingno, item, i, inga);
+                IngredientAmountEditor(ingno, item, itemNo, inga);
             }
             if (key == '0')
             {
-                IngredientSelector(item, i);
+                IngredientSelector(item, itemNo);
             }
             Console.SetCursorPosition(0, 12);
             Console.WriteLine(" ");

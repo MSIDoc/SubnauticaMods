@@ -363,6 +363,10 @@ namespace CustomFood
         }
         public static void ApplyTechData()
         {
+            if (ingredients.Count == 0)
+            {
+                Log.Warning(name, "The item has no valid ingredients and will not be able to be crafted!");
+            }
             if (ingredients.Count == 1)
             {
                 techData = new TechDataHelper

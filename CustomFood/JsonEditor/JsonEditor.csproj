@@ -104,6 +104,7 @@
     <Compile Include="Data\Scripts\Tree\NameEditor.cs" />
     <Compile Include="Data\Scripts\Tree\SizeEditor.cs" />
     <Compile Include="Data\Scripts\Tree\SizeSelector.cs" />
+    <Compile Include="Data\Scripts\Utilitary\CheckIngredients.cs" />
     <Compile Include="Data\Scripts\Utilitary\LoadConfig.cs" />
     <Compile Include="Data\Scripts\Tree\Main.cs" />
     <Compile Include="Data\Scripts\Utilitary\Settings.cs" />

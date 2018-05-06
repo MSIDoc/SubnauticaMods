@@ -13,29 +13,29 @@ namespace JsonEditor.Data.Scripts
             Console.ReplaceAllColorsWithDefaults();
             Console.Clear();
             Console.Title = "CustomFood Json Editor";
-            Console.WriteLine($"CustomFood Json Editor {version}", System.Drawing.Color.LightGray);
-            Console.WriteLine("Created by AlexejheroYTB and yenzgaming", System.Drawing.Color.LightGray);
+            Console.WriteLine($"CustomFood Json Editor {version}", LightGray);
+            Console.WriteLine("Created by AlexejheroYTB and yenzgaming", LightGray);
             Console.WriteLine("");
-            Console.WriteLine(">", System.Drawing.Color.LightGray);
+            Console.WriteLine(">", LightGray);
             Console.WriteLine("");
-            Console.WriteLine("Type a number to select", System.Drawing.Color.LightGray);
+            Console.WriteLine("Type a number to select", LightGray);
             Console.WriteLine("");
-            Console.WriteLine("0. EXIT", System.Drawing.Color.LightGray);
+            Console.WriteLine("0. EXIT", LightGray);
             Console.WriteLine("");
-            Console.WriteLine("1. Edit Cakes", System.Drawing.Color.LightGray);
-            Console.WriteLine("2. Edit Juices", System.Drawing.Color.LightGray);
+            Console.WriteLine("1. Edit Cakes", LightGray);
+            Console.WriteLine("2. Edit Juices", LightGray);
             var _debug = false;
             Config.TryGet(ref _debug, "Enable debugging");
-            Console.Write($"3. Enable debugging: ", System.Drawing.Color.LightGray);
+            Console.Write($"3. Enable debugging: ", LightGray);
             if (_debug)
             {
                 Console.Write("Yes ", System.Drawing.Color.LimeGreen);
             }
             else
             {
-                Console.Write("No ", System.Drawing.Color.Red);
+                Console.Write("No ", Red);
             }
-            Console.WriteLine("(FEATURE NOT YET IMPLEMENTED)", System.Drawing.Color.Red);
+            Console.WriteLine("(FEATURE NOT YET IMPLEMENTED)", Red);
             Console.WriteLine("");
             key_invalid:;
             var key = Console.ReadKey().KeyChar;

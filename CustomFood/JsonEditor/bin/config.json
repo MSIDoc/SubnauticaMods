@@ -5,12 +5,24 @@
       "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Default",
       "Ingredients": {
         "Ingredient1": {
-          "Amount": 1,
+          "Amount": 0,
           "Item": "CoralChunk"
         },
         "Ingredient2": {
-          "Amount": 1,
+          "Amount": 0,
           "Item": "Peeper"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
         }
       },
       "Name": "Peeper Cake",
@@ -35,6 +47,18 @@
         "Ingredient2": {
           "Amount": 1,
           "Item": "PurpleVegetable"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
         }
       },
       "Name": "Chinese Potato Cake",
@@ -59,6 +83,18 @@
         "Ingredient2": {
           "Amount": 1,
           "Item": "Bladderfish"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
         }
       },
       "Name": "Bladderfish Cake",
@@ -83,6 +119,18 @@
         "Ingredient2": {
           "Amount": 1,
           "Item": "Boomerang"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
         }
       },
       "Name": "Boomerang Cake",
@@ -107,6 +155,18 @@
         "Ingredient2": {
           "Amount": 1,
           "Item": "Hoverfish"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
         }
       },
       "Name": "Hoverfish Cake",
@@ -131,6 +191,18 @@
         "Ingredient2": {
           "Amount": 1,
           "Item": "Spadefish"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
         }
       },
       "Name": "Spadefish Cake",
@@ -158,6 +230,18 @@
         "Ingredient2": {
           "Amount": 1,
           "Item": "BulboTreePiece"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
         }
       },
       "Name": "Bulbo Tree Juice",
@@ -182,6 +266,18 @@
         "Ingredient2": {
           "Amount": 1,
           "Item": "HangingFruit"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
         }
       },
       "Name": "Lantern Fruit Juice",
@@ -206,6 +302,18 @@
         "Ingredient2": {
           "Amount": 1,
           "Item": "Melon"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
         }
       },
       "Name": "Marblemelon Juice",
@@ -230,6 +338,18 @@
         "Ingredient2": {
           "Amount": 1,
           "Item": "CreepvinePiece"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
         }
       },
       "Name": "Creepvine Juice",
@@ -254,6 +374,18 @@
         "Ingredient2": {
           "Amount": 1,
           "Item": "JellyPlant"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
         }
       },
       "Name": "Gel Sack Juice",
@@ -278,6 +410,18 @@
         "Ingredient2": {
           "Amount": 1,
           "Item": "KooshChunk"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
         }
       },
       "Name": "Marblemelon Juice",
