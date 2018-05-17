@@ -56,11 +56,15 @@
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="Utilites">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Subnautica\QMods\Utilites\Utilites.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Subnautica\QMods\Utilites\Utilites.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplySprite.cs" />
     <Compile Include="Cfg.cs" />
+    <Compile Include="GetGameObject.cs" />
+    <Compile Include="LoadFabricatorTabs.cs" />
+    <Compile Include="LoadItem.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="QPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

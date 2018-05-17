@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 332693621
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 69dcccdf70b19cc31c86f6cf40f744e2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 21f0dc8ebad690f009368069428e0a1a
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/JuiceDefault.png
+Dependencies: []

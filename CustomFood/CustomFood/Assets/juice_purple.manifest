@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 3933476146
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 430dcd012a5cc0a5a5396b33a3ff8724
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 21f0dc8ebad690f009368069428e0a1a
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/JuicePurple.png
+Dependencies: []

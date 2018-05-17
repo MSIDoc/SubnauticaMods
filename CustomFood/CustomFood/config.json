@@ -1,0 +1,583 @@
+{
+  "Cakes": {
+    "Cake1": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "BlueGreen",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "CoralChunk"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "Peeper"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Peeper Cake",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Coral Tube Sample mixed with a Peeper",
+      "Values": {
+        "Food": 35,
+        "Water": 5
+      }
+    },
+    "Cake2": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Green",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "CoralChunk"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "PurpleVegetable"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Chinese Potato Cake",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Coral Tube Sample mixed with a Chinese Potato",
+      "Values": {
+        "Food": 40,
+        "Water": 5
+      }
+    },
+    "Cake3": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Pink",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "CoralChunk"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "Bladderfish"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Bladderfish Cake",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Coral Tube Sample mixed with a Bladderfish",
+      "Values": {
+        "Food": 35,
+        "Water": 15
+      }
+    },
+    "Cake4": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Yellow",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "CoralChunk"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "Boomerang"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Boomerang Cake",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Coral Tube Sample mixed with a Boomerang",
+      "Values": {
+        "Food": 30,
+        "Water": 10
+      }
+    },
+    "Cake5": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "LightBlue",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "CoralChunk"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "Hoverfish"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Hoverfish Cake",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Coral Tube Sample mixed with a Hoverfish",
+      "Values": {
+        "Food": 25,
+        "Water": 25
+      }
+    },
+    "Cake6": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Red",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "CoralChunk"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "Spadefish"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Spadefish Cake",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Coral Tube Sample mixed with a Spadefish",
+      "Values": {
+        "Food": 30,
+        "Water": 10
+      }
+    },
+    "Cake7": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Orange",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "CoralChunk"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "GarryFish"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Garryfish Cake",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Coral Tube Sample mixed with a Garryfish",
+      "Values": {
+        "Food": 20,
+        "Water": 15
+      }
+    },
+    "Cake8": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Purple",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "CoralChunk"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "Reginald"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Reginald Cake",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Coral Tube Sample mixed with a Reginald",
+      "Values": {
+        "Food": 40,
+        "Water": 10
+      }
+    }
+  },
+  "Enable debugging": false,
+  "Juices": {
+    "Juice1": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "LightBlue",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "FilteredWater"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "BulboTreePiece"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Bulbo Tree Juice",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Water mixed with a Bulbo Tree Sample",
+      "Values": {
+        "Food": 10,
+        "Water": 35
+      }
+    },
+    "Juice2": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Orange",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "FilteredWater"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "HangingFruit"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Lantern Fruit Juice",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Water mixed with a Lantern Fruit",
+      "Values": {
+        "Food": 10,
+        "Water": 35
+      }
+    },
+    "Juice3": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Red",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "FilteredWater"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "Melon"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Marblemelon Juice",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Water mixed with a Marblemelon",
+      "Values": {
+        "Food": 20,
+        "Water": 45
+      }
+    },
+    "Juice4": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Green",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "FilteredWater"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "CreepvinePiece"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Creepvine Juice",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Water mixed with a Creepvine Sample",
+      "Values": {
+        "Food": 15,
+        "Water": 25
+      }
+    },
+    "Juice5": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Pink",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "FilteredWater"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "JellyPlant"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Gel Sack Juice",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Water mixed with a Gel Sack",
+      "Values": {
+        "Food": 10,
+        "Water": 35
+      }
+    },
+    "Juice6": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Blue",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "FilteredWater"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "KooshChunk"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Bulb Bush Juice",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Water mixed with a Bulb Bush Sample",
+      "Values": {
+        "Food": 20,
+        "Water": 35
+      }
+    },
+    "Juice7": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Purple",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "FilteredWater"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "PurpleVasePlant"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Ming Plant Juice",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Water mixed with a Ming Plant",
+      "Values": {
+        "Food": 20,
+        "Water": 25
+      }
+    },
+    "Juice8": {
+      "Enabled": true,
+      "Icon color. Must be: 'Blue', 'BlueGreen', 'Green', 'LightBlue', 'Orange', 'Pink', 'Purple', 'Red', 'Yellow' or 'Default'": "Yellow",
+      "Ingredients": {
+        "Ingredient1": {
+          "Amount": 1,
+          "Item": "FilteredWater"
+        },
+        "Ingredient2": {
+          "Amount": 1,
+          "Item": "SpikePlant"
+        },
+        "Ingredient3": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient4": {
+          "Amount": 0,
+          "Item": "None"
+        },
+        "Ingredient5": {
+          "Amount": 0,
+          "Item": "None"
+        }
+      },
+      "Name": "Tiger Plant Juice",
+      "Size": {
+        "X": 1,
+        "Y": 1
+      },
+      "Tooltip": "Water mixed with a Tiger Plant",
+      "Values": {
+        "Food": 15,
+        "Water": 25
+      }
+    }
+  }
+}
