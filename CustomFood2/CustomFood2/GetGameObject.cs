@@ -62,6 +62,22 @@ namespace CustomFood2
         {
             return MainJuice(LoadItem._juice4tt, "CustomJuice4", Cfg._juice4_foodvalue, Cfg._juice4_watervalue);
         }
+        public static GameObject Juice5()
+        {
+            return MainJuice(LoadItem._juice5tt, "CustomJuice5", Cfg._juice5_foodvalue, Cfg._juice5_watervalue);
+        }
+        public static GameObject Juice6()
+        {
+            return MainJuice(LoadItem._juice6tt, "CustomJuice6", Cfg._juice6_foodvalue, Cfg._juice6_watervalue);
+        }
+        public static GameObject Juice7()
+        {
+            return MainJuice(LoadItem._juice7tt, "CustomJuice7", Cfg._juice7_foodvalue, Cfg._juice7_watervalue);
+        }
+        public static GameObject Juice8()
+        {
+            return MainJuice(LoadItem._juice8tt, "CustomJuice8", Cfg._juice8_foodvalue, Cfg._juice8_watervalue);
+        }
         public static GameObject Cake1()
         {
             return MainCake(LoadItem._cake1tt, "CustomCake1", Cfg._cake1_foodvalue, Cfg._cake1_watervalue);
@@ -77,6 +93,22 @@ namespace CustomFood2
         public static GameObject Cake4()
         {
             return MainCake(LoadItem._cake4tt, "CustomCake4", Cfg._cake4_foodvalue, Cfg._cake4_watervalue);
+        }
+        public static GameObject Cake5()
+        {
+            return MainCake(LoadItem._cake5tt, "CustomCake5", Cfg._cake5_foodvalue, Cfg._cake5_watervalue);
+        }
+        public static GameObject Cake6()
+        {
+            return MainCake(LoadItem._cake6tt, "CustomCake6", Cfg._cake6_foodvalue, Cfg._cake6_watervalue);
+        }
+        public static GameObject Cake7()
+        {
+            return MainCake(LoadItem._cake7tt, "CustomCake7", Cfg._cake7_foodvalue, Cfg._cake7_watervalue);
+        }
+        public static GameObject Cake8()
+        {
+            return MainCake(LoadItem._cake8tt, "CustomCake8", Cfg._cake8_foodvalue, Cfg._cake8_watervalue);
         }
     }
 }

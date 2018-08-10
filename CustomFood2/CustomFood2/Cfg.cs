@@ -16,8 +16,6 @@ namespace CustomFood2
 
         public static bool _debug = false;
 
-        public static string _tooltipsuffix = " - Added by the CustomFood2 mod.";
-
         public static bool _juice1_enabled = true;
         public static string _juice1_name = "Bulbo Tree Juice";
         public static string _juice1_tooltip = "Water mixed with a Bulbo Tree Sample";
@@ -90,6 +88,78 @@ namespace CustomFood2
         public static int _juice4_x = 1;
         public static int _juice4_y = 1;
 
+        public static bool _juice5_enabled = true;
+        public static string _juice5_name = "Gel Sack Juice";
+        public static string _juice5_tooltip = "Water mixed with a Gel Sack";
+        public static int _juice5_foodvalue = 10;
+        public static int _juice5_watervalue = 35;
+        public static string _juice5_ingredient1 = "FilteredWater";
+        public static int _juice5_ingredient1amount = 1;
+        public static string _juice5_ingredient2 = "JellyPlant";
+        public static int _juice5_ingredient2amount = 1;
+        public static string _juice5_ingredient3 = "None";
+        public static int _juice5_ingredient3amount = 0;
+        public static string _juice5_ingredient4 = "None";
+        public static int _juice5_ingredient4amount = 0;
+        public static string _juice5_ingredient5 = "None";
+        public static int _juice5_ingredient5amount = 0;
+        public static int _juice5_x = 1;
+        public static int _juice5_y = 1;
+
+        public static bool _juice6_enabled = true;
+        public static string _juice6_name = "Bulb Bush Juice";
+        public static string _juice6_tooltip = "Water mixed with a Bulb Bush Sample";
+        public static int _juice6_foodvalue = 20;
+        public static int _juice6_watervalue = 35;
+        public static string _juice6_ingredient1 = "FilteredWater";
+        public static int _juice6_ingredient1amount = 1;
+        public static string _juice6_ingredient2 = "KooshChunk";
+        public static int _juice6_ingredient2amount = 1;
+        public static string _juice6_ingredient3 = "None";
+        public static int _juice6_ingredient3amount = 0;
+        public static string _juice6_ingredient4 = "None";
+        public static int _juice6_ingredient4amount = 0;
+        public static string _juice6_ingredient5 = "None";
+        public static int _juice6_ingredient5amount = 0;
+        public static int _juice6_x = 1;
+        public static int _juice6_y = 1;
+
+        public static bool _juice7_enabled = true;
+        public static string _juice7_name = "Ming Plant Juice";
+        public static string _juice7_tooltip = "Water mixed with a Ming Plant";
+        public static int _juice7_foodvalue = 20;
+        public static int _juice7_watervalue = 25;
+        public static string _juice7_ingredient1 = "FilteredWater";
+        public static int _juice7_ingredient1amount = 1;
+        public static string _juice7_ingredient2 = "PurpleVasePlant";
+        public static int _juice7_ingredient2amount = 1;
+        public static string _juice7_ingredient3 = "None";
+        public static int _juice7_ingredient3amount = 0;
+        public static string _juice7_ingredient4 = "None";
+        public static int _juice7_ingredient4amount = 0;
+        public static string _juice7_ingredient5 = "None";
+        public static int _juice7_ingredient5amount = 0;
+        public static int _juice7_x = 1;
+        public static int _juice7_y = 1;
+
+        public static bool _juice8_enabled = true;
+        public static string _juice8_name = "Tiger Plant Juice";
+        public static string _juice8_tooltip = "Water mixed with a Tiger Plant";
+        public static int _juice8_foodvalue = 15;
+        public static int _juice8_watervalue = 25;
+        public static string _juice8_ingredient1 = "FilteredWater";
+        public static int _juice8_ingredient1amount = 1;
+        public static string _juice8_ingredient2 = "SpikePlant";
+        public static int _juice8_ingredient2amount = 1;
+        public static string _juice8_ingredient3 = "None";
+        public static int _juice8_ingredient3amount = 0;
+        public static string _juice8_ingredient4 = "None";
+        public static int _juice8_ingredient4amount = 0;
+        public static string _juice8_ingredient5 = "None";
+        public static int _juice8_ingredient5amount = 0;
+        public static int _juice8_x = 1;
+        public static int _juice8_y = 1;
+
         public static bool _cake1_enabled = true;
         public static string _cake1_name = "Peeper Cake";
         public static string _cake1_tooltip = "Coral Tube Sample mixed with a Peeper";
@@ -161,6 +231,78 @@ namespace CustomFood2
         public static int _cake4_ingredient5amount = 0;
         public static int _cake4_x = 1;
         public static int _cake4_y = 1;
+
+        public static bool _cake5_enabled = true;
+        public static string _cake5_name = "Hoverfish Cake";
+        public static string _cake5_tooltip = "Coral Tube Sample mixed with a Hoverfish";
+        public static int _cake5_foodvalue = 25;
+        public static int _cake5_watervalue = 25;
+        public static string _cake5_ingredient1 = "CoralChunk";
+        public static int _cake5_ingredient1amount = 1;
+        public static string _cake5_ingredient2 = "Hoverfish";
+        public static int _cake5_ingredient2amount = 1;
+        public static string _cake5_ingredient3 = "None";
+        public static int _cake5_ingredient3amount = 0;
+        public static string _cake5_ingredient4 = "None";
+        public static int _cake5_ingredient4amount = 0;
+        public static string _cake5_ingredient5 = "None";
+        public static int _cake5_ingredient5amount = 0;
+        public static int _cake5_x = 1;
+        public static int _cake5_y = 1;
+
+        public static bool _cake6_enabled = true;
+        public static string _cake6_name = "Spadefish Cake";
+        public static string _cake6_tooltip = "Coral Tube Sample mixed with a Spadefish";
+        public static int _cake6_foodvalue = 30;
+        public static int _cake6_watervalue = 10;
+        public static string _cake6_ingredient1 = "CoralChunk";
+        public static int _cake6_ingredient1amount = 1;
+        public static string _cake6_ingredient2 = "Spadefish";
+        public static int _cake6_ingredient2amount = 1;
+        public static string _cake6_ingredient3 = "None";
+        public static int _cake6_ingredient3amount = 0;
+        public static string _cake6_ingredient4 = "None";
+        public static int _cake6_ingredient4amount = 0;
+        public static string _cake6_ingredient5 = "None";
+        public static int _cake6_ingredient5amount = 0;
+        public static int _cake6_x = 1;
+        public static int _cake6_y = 1;
+
+        public static bool _cake7_enabled = true;
+        public static string _cake7_name = "Garryfish Cake";
+        public static string _cake7_tooltip = "Coral Tube Sample mixed with a Garryfish";
+        public static int _cake7_foodvalue = 20;
+        public static int _cake7_watervalue = 15;
+        public static string _cake7_ingredient1 = "CoralChunk";
+        public static int _cake7_ingredient1amount = 1;
+        public static string _cake7_ingredient2 = "GarryFish";
+        public static int _cake7_ingredient2amount = 1;
+        public static string _cake7_ingredient3 = "None";
+        public static int _cake7_ingredient3amount = 0;
+        public static string _cake7_ingredient4 = "None";
+        public static int _cake7_ingredient4amount = 0;
+        public static string _cake7_ingredient5 = "None";
+        public static int _cake7_ingredient5amount = 0;
+        public static int _cake7_x = 1;
+        public static int _cake7_y = 1;
+
+        public static bool _cake8_enabled = true;
+        public static string _cake8_name = "Reginald Cake";
+        public static string _cake8_tooltip = "Coral Tube Sample mixed with a Reginald";
+        public static int _cake8_foodvalue = 40;
+        public static int _cake8_watervalue = 10;
+        public static string _cake8_ingredient1 = "CoralChunk";
+        public static int _cake8_ingredient1amount = 1;
+        public static string _cake8_ingredient2 = "Reginald";
+        public static int _cake8_ingredient2amount = 1;
+        public static string _cake8_ingredient3 = "None";
+        public static int _cake8_ingredient3amount = 0;
+        public static string _cake8_ingredient4 = "None";
+        public static int _cake8_ingredient4amount = 0;
+        public static string _cake8_ingredient5 = "None";
+        public static int _cake8_ingredient5amount = 0;
+        public static int _cake8_x = 1;
+        public static int _cake8_y = 1;
 
         /// <summary>
         /// Loads the config
@@ -246,6 +388,78 @@ namespace CustomFood2
                 | Config.TryGet(ref _juice4_x, "Juices", "Juice4", "Size", "X")
                 | Config.TryGet(ref _juice4_y, "Juices", "Juice4", "Size", "Y")
 
+                | Config.TryGet(ref _juice5_enabled, "Juices", "Juice5", "Enabled")
+                | Config.TryGet(ref _juice5_name, "Juices", "Juice5", "Name")
+                | Config.TryGet(ref _juice5_tooltip, "Juices", "Juice5", "Tooltip")
+                | Config.TryGet(ref _juice5_foodvalue, "Juices", "Juice5", "Values", "Food")
+                | Config.TryGet(ref _juice5_watervalue, "Juices", "Juice5", "Values", "Water")
+                | Config.TryGet(ref _juice5_ingredient1, "Juices", "Juice5", "Ingredients", "Ingredient1", "Item")
+                | Config.TryGet(ref _juice5_ingredient1amount, "Juices", "Juice5", "Ingredients", "Ingredient1", "Amount")
+                | Config.TryGet(ref _juice5_ingredient2, "Juices", "Juice5", "Ingredients", "Ingredient2", "Item")
+                | Config.TryGet(ref _juice5_ingredient2amount, "Juices", "Juice5", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _juice5_ingredient3, "Juices", "Juice5", "Ingredients", "Ingredient3", "Item")
+                | Config.TryGet(ref _juice5_ingredient3amount, "Juices", "Juice5", "Ingredients", "Ingredient3", "Amount")
+                | Config.TryGet(ref _juice5_ingredient4, "Juices", "Juice5", "Ingredients", "Ingredient4", "Item")
+                | Config.TryGet(ref _juice5_ingredient4amount, "Juices", "Juice5", "Ingredients", "Ingredient4", "Amount")
+                | Config.TryGet(ref _juice5_ingredient5, "Juices", "Juice5", "Ingredients", "Ingredient5", "Item")
+                | Config.TryGet(ref _juice5_ingredient5amount, "Juices", "Juice5", "Ingredients", "Ingredient5", "Amount")
+                | Config.TryGet(ref _juice5_x, "Juices", "Juice5", "Size", "X")
+                | Config.TryGet(ref _juice5_y, "Juices", "Juice5", "Size", "Y")
+
+                | Config.TryGet(ref _juice6_enabled, "Juices", "Juice6", "Enabled")
+                | Config.TryGet(ref _juice6_name, "Juices", "Juice6", "Name")
+                | Config.TryGet(ref _juice6_tooltip, "Juices", "Juice6", "Tooltip")
+                | Config.TryGet(ref _juice6_foodvalue, "Juices", "Juice6", "Values", "Food")
+                | Config.TryGet(ref _juice6_watervalue, "Juices", "Juice6", "Values", "Water")
+                | Config.TryGet(ref _juice6_ingredient1, "Juices", "Juice6", "Ingredients", "Ingredient1", "Item")
+                | Config.TryGet(ref _juice6_ingredient1amount, "Juices", "Juice6", "Ingredients", "Ingredient1", "Amount")
+                | Config.TryGet(ref _juice6_ingredient2, "Juices", "Juice6", "Ingredients", "Ingredient2", "Item")
+                | Config.TryGet(ref _juice6_ingredient2amount, "Juices", "Juice6", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _juice6_ingredient3, "Juices", "Juice6", "Ingredients", "Ingredient3", "Item")
+                | Config.TryGet(ref _juice6_ingredient3amount, "Juices", "Juice6", "Ingredients", "Ingredient3", "Amount")
+                | Config.TryGet(ref _juice6_ingredient4, "Juices", "Juice6", "Ingredients", "Ingredient4", "Item")
+                | Config.TryGet(ref _juice6_ingredient4amount, "Juices", "Juice6", "Ingredients", "Ingredient4", "Amount")
+                | Config.TryGet(ref _juice6_ingredient5, "Juices", "Juice6", "Ingredients", "Ingredient5", "Item")
+                | Config.TryGet(ref _juice6_ingredient5amount, "Juices", "Juice6", "Ingredients", "Ingredient5", "Amount")
+                | Config.TryGet(ref _juice6_x, "Juices", "Juice6", "Size", "X")
+                | Config.TryGet(ref _juice6_y, "Juices", "Juice6", "Size", "Y")
+
+                | Config.TryGet(ref _juice7_enabled, "Juices", "Juice7", "Enabled")
+                | Config.TryGet(ref _juice7_name, "Juices", "Juice7", "Name")
+                | Config.TryGet(ref _juice7_tooltip, "Juices", "Juice7", "Tooltip")
+                | Config.TryGet(ref _juice7_foodvalue, "Juices", "Juice7", "Values", "Food")
+                | Config.TryGet(ref _juice7_watervalue, "Juices", "Juice7", "Values", "Water")
+                | Config.TryGet(ref _juice7_ingredient1, "Juices", "Juice7", "Ingredients", "Ingredient1", "Item")
+                | Config.TryGet(ref _juice7_ingredient1amount, "Juices", "Juice7", "Ingredients", "Ingredient1", "Amount")
+                | Config.TryGet(ref _juice7_ingredient2, "Juices", "Juice7", "Ingredients", "Ingredient2", "Item")
+                | Config.TryGet(ref _juice7_ingredient2amount, "Juices", "Juice7", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _juice7_ingredient3, "Juices", "Juice7", "Ingredients", "Ingredient3", "Item")
+                | Config.TryGet(ref _juice7_ingredient3amount, "Juices", "Juice7", "Ingredients", "Ingredient3", "Amount")
+                | Config.TryGet(ref _juice7_ingredient4, "Juices", "Juice7", "Ingredients", "Ingredient4", "Item")
+                | Config.TryGet(ref _juice7_ingredient4amount, "Juices", "Juice7", "Ingredients", "Ingredient4", "Amount")
+                | Config.TryGet(ref _juice7_ingredient5, "Juices", "Juice7", "Ingredients", "Ingredient5", "Item")
+                | Config.TryGet(ref _juice7_ingredient5amount, "Juices", "Juice7", "Ingredients", "Ingredient5", "Amount")
+                | Config.TryGet(ref _juice7_x, "Juices", "Juice7", "Size", "X")
+                | Config.TryGet(ref _juice7_y, "Juices", "Juice7", "Size", "Y")
+
+                | Config.TryGet(ref _juice8_enabled, "Juices", "Juice8", "Enabled")
+                | Config.TryGet(ref _juice8_name, "Juices", "Juice8", "Name")
+                | Config.TryGet(ref _juice8_tooltip, "Juices", "Juice8", "Tooltip")
+                | Config.TryGet(ref _juice8_foodvalue, "Juices", "Juice8", "Values", "Food")
+                | Config.TryGet(ref _juice8_watervalue, "Juices", "Juice8", "Values", "Water")
+                | Config.TryGet(ref _juice8_ingredient1, "Juices", "Juice8", "Ingredients", "Ingredient1", "Item")
+                | Config.TryGet(ref _juice8_ingredient1amount, "Juices", "Juice8", "Ingredients", "Ingredient1", "Amount")
+                | Config.TryGet(ref _juice8_ingredient2, "Juices", "Juice8", "Ingredients", "Ingredient2", "Item")
+                | Config.TryGet(ref _juice8_ingredient2amount, "Juices", "Juice8", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _juice8_ingredient3, "Juices", "Juice8", "Ingredients", "Ingredient3", "Item")
+                | Config.TryGet(ref _juice8_ingredient3amount, "Juices", "Juice8", "Ingredients", "Ingredient3", "Amount")
+                | Config.TryGet(ref _juice8_ingredient4, "Juices", "Juice8", "Ingredients", "Ingredient4", "Item")
+                | Config.TryGet(ref _juice8_ingredient4amount, "Juices", "Juice8", "Ingredients", "Ingredient4", "Amount")
+                | Config.TryGet(ref _juice8_ingredient5, "Juices", "Juice8", "Ingredients", "Ingredient5", "Item")
+                | Config.TryGet(ref _juice8_ingredient5amount, "Juices", "Juice8", "Ingredients", "Ingredient5", "Amount")
+                | Config.TryGet(ref _juice8_x, "Juices", "Juice8", "Size", "X")
+                | Config.TryGet(ref _juice8_y, "Juices", "Juice8", "Size", "Y")
+
                 | Config.TryGet(ref _cake1_enabled, "Cakes", "Cake1", "Enabled")
                 | Config.TryGet(ref _cake1_name, "Cakes", "Cake1", "Name")
                 | Config.TryGet(ref _cake1_tooltip, "Cakes", "Cake1", "Tooltip")
@@ -316,8 +530,80 @@ namespace CustomFood2
                 | Config.TryGet(ref _cake4_ingredient5, "Cakes", "Cake4", "Ingredients", "Ingredient5", "Item")
                 | Config.TryGet(ref _cake4_ingredient5amount, "Cakes", "Cake4", "Ingredients", "Ingredient5", "Amount")
                 | Config.TryGet(ref _cake4_x, "Cakes", "Cake4", "Size", "X")
-                | Config.TryGet(ref _cake4_y, "Cakes", "Cake4", "Size", "Y");
-                
+                | Config.TryGet(ref _cake4_y, "Cakes", "Cake4", "Size", "Y")
+
+                | Config.TryGet(ref _cake5_enabled, "Cakes", "Cake5", "Enabled")
+                | Config.TryGet(ref _cake5_name, "Cakes", "Cake5", "Name")
+                | Config.TryGet(ref _cake5_tooltip, "Cakes", "Cake5", "Tooltip")
+                | Config.TryGet(ref _cake5_foodvalue, "Cakes", "Cake5", "Values", "Food")
+                | Config.TryGet(ref _cake5_watervalue, "Cakes", "Cake5", "Values", "Water")
+                | Config.TryGet(ref _cake5_ingredient1, "Cakes", "Cake5", "Ingredients", "Ingredient1", "Item")
+                | Config.TryGet(ref _cake5_ingredient1amount, "Cakes", "Cake5", "Ingredients", "Ingredient1", "Amount")
+                | Config.TryGet(ref _cake5_ingredient2, "Cakes", "Cake5", "Ingredients", "Ingredient2", "Item")
+                | Config.TryGet(ref _cake5_ingredient2amount, "Cakes", "Cake5", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _cake5_ingredient3, "Cakes", "Cake5", "Ingredients", "Ingredient3", "Item")
+                | Config.TryGet(ref _cake5_ingredient3amount, "Cakes", "Cake5", "Ingredients", "Ingredient3", "Amount")
+                | Config.TryGet(ref _cake5_ingredient4, "Cakes", "Cake5", "Ingredients", "Ingredient4", "Item")
+                | Config.TryGet(ref _cake5_ingredient4amount, "Cakes", "Cake5", "Ingredients", "Ingredient4", "Amount")
+                | Config.TryGet(ref _cake5_ingredient5, "Cakes", "Cake5", "Ingredients", "Ingredient5", "Item")
+                | Config.TryGet(ref _cake5_ingredient5amount, "Cakes", "Cake5", "Ingredients", "Ingredient5", "Amount")
+                | Config.TryGet(ref _cake5_x, "Cakes", "Cake5", "Size", "X")
+                | Config.TryGet(ref _cake5_y, "Cakes", "Cake5", "Size", "Y")
+
+                | Config.TryGet(ref _cake6_enabled, "Cakes", "Cake6", "Enabled")
+                | Config.TryGet(ref _cake6_name, "Cakes", "Cake6", "Name")
+                | Config.TryGet(ref _cake6_tooltip, "Cakes", "Cake6", "Tooltip")
+                | Config.TryGet(ref _cake6_foodvalue, "Cakes", "Cake6", "Values", "Food")
+                | Config.TryGet(ref _cake6_watervalue, "Cakes", "Cake6", "Values", "Water")
+                | Config.TryGet(ref _cake6_ingredient1, "Cakes", "Cake6", "Ingredients", "Ingredient1", "Item")
+                | Config.TryGet(ref _cake6_ingredient1amount, "Cakes", "Cake6", "Ingredients", "Ingredient1", "Amount")
+                | Config.TryGet(ref _cake6_ingredient2, "Cakes", "Cake6", "Ingredients", "Ingredient2", "Item")
+                | Config.TryGet(ref _cake6_ingredient2amount, "Cakes", "Cake6", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _cake6_ingredient3, "Cakes", "Cake6", "Ingredients", "Ingredient3", "Item")
+                | Config.TryGet(ref _cake6_ingredient3amount, "Cakes", "Cake6", "Ingredients", "Ingredient3", "Amount")
+                | Config.TryGet(ref _cake6_ingredient4, "Cakes", "Cake6", "Ingredients", "Ingredient4", "Item")
+                | Config.TryGet(ref _cake6_ingredient4amount, "Cakes", "Cake6", "Ingredients", "Ingredient4", "Amount")
+                | Config.TryGet(ref _cake6_ingredient5, "Cakes", "Cake6", "Ingredients", "Ingredient5", "Item")
+                | Config.TryGet(ref _cake6_ingredient5amount, "Cakes", "Cake6", "Ingredients", "Ingredient5", "Amount")
+                | Config.TryGet(ref _cake6_x, "Cakes", "Cake6", "Size", "X")
+                | Config.TryGet(ref _cake6_y, "Cakes", "Cake6", "Size", "Y")
+
+                | Config.TryGet(ref _cake7_enabled, "Cakes", "Cake7", "Enabled")
+                | Config.TryGet(ref _cake7_name, "Cakes", "Cake7", "Name")
+                | Config.TryGet(ref _cake7_tooltip, "Cakes", "Cake7", "Tooltip")
+                | Config.TryGet(ref _cake7_foodvalue, "Cakes", "Cake7", "Values", "Food")
+                | Config.TryGet(ref _cake7_watervalue, "Cakes", "Cake7", "Values", "Water")
+                | Config.TryGet(ref _cake7_ingredient1, "Cakes", "Cake7", "Ingredients", "Ingredient1", "Item")
+                | Config.TryGet(ref _cake7_ingredient1amount, "Cakes", "Cake7", "Ingredients", "Ingredient1", "Amount")
+                | Config.TryGet(ref _cake7_ingredient2, "Cakes", "Cake7", "Ingredients", "Ingredient2", "Item")
+                | Config.TryGet(ref _cake7_ingredient2amount, "Cakes", "Cake7", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _cake7_ingredient3, "Cakes", "Cake7", "Ingredients", "Ingredient3", "Item")
+                | Config.TryGet(ref _cake7_ingredient3amount, "Cakes", "Cake7", "Ingredients", "Ingredient3", "Amount")
+                | Config.TryGet(ref _cake7_ingredient4, "Cakes", "Cake7", "Ingredients", "Ingredient4", "Item")
+                | Config.TryGet(ref _cake7_ingredient4amount, "Cakes", "Cake7", "Ingredients", "Ingredient4", "Amount")
+                | Config.TryGet(ref _cake7_ingredient5, "Cakes", "Cake7", "Ingredients", "Ingredient5", "Item")
+                | Config.TryGet(ref _cake7_ingredient5amount, "Cakes", "Cake7", "Ingredients", "Ingredient5", "Amount")
+                | Config.TryGet(ref _cake7_x, "Cakes", "Cake7", "Size", "X")
+                | Config.TryGet(ref _cake7_y, "Cakes", "Cake7", "Size", "Y")
+
+                | Config.TryGet(ref _cake8_enabled, "Cakes", "Cake8", "Enabled")
+                | Config.TryGet(ref _cake8_name, "Cakes", "Cake8", "Name")
+                | Config.TryGet(ref _cake8_tooltip, "Cakes", "Cake8", "Tooltip")
+                | Config.TryGet(ref _cake8_foodvalue, "Cakes", "Cake8", "Values", "Food")
+                | Config.TryGet(ref _cake8_watervalue, "Cakes", "Cake8", "Values", "Water")
+                | Config.TryGet(ref _cake8_ingredient1, "Cakes", "Cake8", "Ingredients", "Ingredient1", "Item")
+                | Config.TryGet(ref _cake8_ingredient1amount, "Cakes", "Cake8", "Ingredients", "Ingredient1", "Amount")
+                | Config.TryGet(ref _cake8_ingredient2, "Cakes", "Cake8", "Ingredients", "Ingredient2", "Item")
+                | Config.TryGet(ref _cake8_ingredient2amount, "Cakes", "Cake8", "Ingredients", "Ingredient2", "Amount")
+                | Config.TryGet(ref _cake8_ingredient3, "Cakes", "Cake8", "Ingredients", "Ingredient3", "Item")
+                | Config.TryGet(ref _cake8_ingredient3amount, "Cakes", "Cake8", "Ingredients", "Ingredient3", "Amount")
+                | Config.TryGet(ref _cake8_ingredient4, "Cakes", "Cake8", "Ingredients", "Ingredient4", "Item")
+                | Config.TryGet(ref _cake8_ingredient4amount, "Cakes", "Cake8", "Ingredients", "Ingredient4", "Amount")
+                | Config.TryGet(ref _cake8_ingredient5, "Cakes", "Cake8", "Ingredients", "Ingredient5", "Item")
+                | Config.TryGet(ref _cake8_ingredient5amount, "Cakes", "Cake8", "Ingredients", "Ingredient5", "Amount")
+                | Config.TryGet(ref _cake8_x, "Cakes", "Cake8", "Size", "X")
+                | Config.TryGet(ref _cake8_y, "Cakes", "Cake8", "Size", "Y");
+				
                 if (configChanged)
                 {
                     Log.Info("Config", "Some values are missing from the config, adding them now...");

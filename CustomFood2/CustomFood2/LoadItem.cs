@@ -22,10 +22,19 @@ namespace CustomFood2
         public static TechType _juice2tt;
         public static TechType _juice3tt;
         public static TechType _juice4tt;
+        public static TechType _juice5tt;
+        public static TechType _juice6tt;
+        public static TechType _juice7tt;
+        public static TechType _juice8tt;
+		
         public static TechType _cake1tt;
         public static TechType _cake2tt;
         public static TechType _cake3tt;
         public static TechType _cake4tt;
+        public static TechType _cake5tt;
+        public static TechType _cake6tt;
+        public static TechType _cake7tt;
+        public static TechType _cake8tt;
 
         public static TechType techType;
 
@@ -130,7 +139,7 @@ namespace CustomFood2
                 CheckIngredients(_ingredient4, _ingredient4amount, 4);
                 CheckIngredients(_ingredient5, _ingredient5amount, 5);
                 Cfg.Save();
-                techType = TechTypeHandler.AddTechType(internal_name, _name, _tooltip + Cfg._tooltipsuffix);
+                techType = TechTypeHandler.AddTechType(internal_name, _name, _tooltip);
                 if (name == "Juice1")
                 {
                     _juice1tt = techType;
@@ -171,7 +180,47 @@ namespace CustomFood2
                         GetGameObject.Juice4));
                     CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, new Atlas.Sprite(ImageUtils.LoadTextureFromFile("./QMods/CustomFood2/Assets/juice4.png"))));
                 }
-                if (name == "Cake1")
+                if (name == "Juice5")
+                {
+                    _juice5tt = techType;
+                    CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                        internal_name,
+                        prefabpath,
+                        techType,
+                        GetGameObject.Juice5));
+                    CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, new Atlas.Sprite(ImageUtils.LoadTextureFromFile("./QMods/CustomFood2/Assets/juice5.png"))));
+                }
+                if (name == "Juice6")
+                {
+                    _juice6tt = techType;
+                    CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                        internal_name,
+                        prefabpath,
+                        techType,
+                        GetGameObject.Juice6));
+                    CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, new Atlas.Sprite(ImageUtils.LoadTextureFromFile("./QMods/CustomFood2/Assets/juice6.png"))));
+                }
+                if (name == "Juice7")
+                {
+                    _juice7tt = techType;
+                    CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                        internal_name,
+                        prefabpath,
+                        techType,
+                        GetGameObject.Juice7));
+                    CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, new Atlas.Sprite(ImageUtils.LoadTextureFromFile("./QMods/CustomFood2/Assets/juice7.png"))));
+                }
+                if (name == "Juice8")
+                {
+                    _juice8tt = techType;
+                    CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                        internal_name,
+                        prefabpath,
+                        techType,
+                        GetGameObject.Juice8));
+                    CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, new Atlas.Sprite(ImageUtils.LoadTextureFromFile("./QMods/CustomFood2/Assets/juice8.png"))));
+                }
+				if (name == "Cake1")
                 {
                     _cake1tt = techType;
                     CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
@@ -211,19 +260,57 @@ namespace CustomFood2
                         GetGameObject.Cake4));
                     CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, new Atlas.Sprite(ImageUtils.LoadTextureFromFile("./QMods/CustomFood2/Assets/cake4.png"))));
                 }
+				if (name == "Cake5")
+                {
+                    _cake5tt = techType;
+                    CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                        internal_name,
+                        prefabpath,
+                        techType,
+                        GetGameObject.Cake5));
+                    CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, new Atlas.Sprite(ImageUtils.LoadTextureFromFile("./QMods/CustomFood2/Assets/cake5.png"))));
+                }
+                if (name == "Cake6")
+                {
+                    _cake6tt = techType;
+                    CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                        internal_name,
+                        prefabpath,
+                        techType,
+                        GetGameObject.Cake6));
+                    CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, new Atlas.Sprite(ImageUtils.LoadTextureFromFile("./QMods/CustomFood2/Assets/cake6.png"))));
+                }
+                if (name == "Cake7")
+                {
+                    _cake7tt = techType;
+                    CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                        internal_name,
+                        prefabpath,
+                        techType,
+                        GetGameObject.Cake7));
+                    CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, new Atlas.Sprite(ImageUtils.LoadTextureFromFile("./QMods/CustomFood2/Assets/cake7.png"))));
+                }
+                if (name == "Cake8")
+                {
+                    _cake8tt = techType;
+                    CustomPrefabHandler.customPrefabs.Add(new CustomPrefab(
+                        internal_name,
+                        prefabpath,
+                        techType,
+                        GetGameObject.Cake8));
+                    CustomSpriteHandler.customSprites.Add(new CustomSprite(techType, new Atlas.Sprite(ImageUtils.LoadTextureFromFile("./QMods/CustomFood2/Assets/cake8.png"))));
+                }
                 ApplyTechData();
                 if (type == "Cakes")
                 {
-                    var CakeSprite = SpriteManager.Get(TechType.NutrientBlock);
-                    CraftTreeHandler.AddTabNode(CraftTree.Type.Fabricator, "Cakes", "Cakes", CakeSprite, "Survival");
-                    CraftTreeHandler.AddCraftingNode(CraftTree.Type.Fabricator, techType, "Survival", "Cakes");
+                    CraftTreeHandler.AddTabNode(CraftTree.Type.Fabricator, "CakeTab", "Cakes", SpriteManager.Get(TechType.NutrientBlock), "Survival");
+                    CraftTreeHandler.AddCraftingNode(CraftTree.Type.Fabricator, techType, "Survival", "CakeTab");
                     CraftDataHandler.AddToGroup(TechGroup.Survival, TechCategory.CuredFood, techType);
                 }
                 if (type == "Juices")
                 {
-                    var JuiceSprite = SpriteManager.Get(TechType.FilteredWater);
-                    CraftTreeHandler.AddTabNode(CraftTree.Type.Fabricator, "Juices", "Juices", JuiceSprite, "Survival");
-                    CraftTreeHandler.AddCraftingNode(CraftTree.Type.Fabricator, techType, "Survival", "Juices");
+                    CraftTreeHandler.AddTabNode(CraftTree.Type.Fabricator, "JuiceTab", "Juices", SpriteManager.Get(TechType.FilteredWater), "Survival");
+                    CraftTreeHandler.AddCraftingNode(CraftTree.Type.Fabricator, techType, "Survival", "JuiceTab");
                     CraftDataHandler.AddToGroup(TechGroup.Survival, TechCategory.Water, techType);
                 }
                 CraftDataHandler.SetItemSize(techType, new Vector2int(_x, _y));
